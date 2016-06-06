@@ -49,15 +49,27 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
+  $dark-green: #006940,
+  $light-green: #62a745,
+  $orange: #db8835,
+  $yellow: #e0b636,
+  $brown: #906328,
   primary: #2199e8,
   secondary: #777,
   success: #3adb76,
   warning: #ffae00,
   alert: #ec5840,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$heideandcook-palette: (
+  $dark-green: #006940,
+  $light-green: #62a745,
+  $orange: #db8835,
+  $yellow: #e0b636,
+  $brown: #906328,
+);
+$light-gray: #f3f4f4;
+$medium-gray: #dddddd;
+$dark-gray: #4a4a4a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
