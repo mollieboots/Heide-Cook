@@ -2205,7 +2205,23 @@
 .hcslider {
   height: 500px;
   margin-top: 0px;
-  border-bottom: 12px solid #db8835; }
+  margin-bottom: 65px;
+  border-bottom: 12px solid #db8835;
+  position: relative; }
+
+.hcslider::after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #db8835;
+  border-width: 60px;
+  margin-left: -60px; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
