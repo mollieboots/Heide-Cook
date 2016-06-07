@@ -67,7 +67,7 @@ $dark-gray: #4a4a4a;
 $black: #0a0a0a;
 $white: #fff;
 $body-background: $white;
-$body-font-color: $green;
+$body-font-color: $dark-gray;
 $body-font-family: 'Cabin', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -108,7 +108,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: 'Montserrat', sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -135,7 +135,7 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
-$header-small-font-color: $medium-gray;
+$header-small-font-color: $dark-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
