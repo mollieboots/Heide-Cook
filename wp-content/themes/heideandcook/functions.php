@@ -64,3 +64,13 @@ HTML;
         }
     );
 });
+
+
+///Stylesheets
+add_action('wp_enqueue_scripts', function() {
+    wp_register_style( 'Cabin', 'https://fonts.googleapis.com/css?family=Cabin' );
+    // wp_register_style( 'Raleway', 'https://fonts.googleapis.com/css?family=Raleway:400,700' );
+    // wp_register_style( 'Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,700' );
+    wp_register_style( 'app', get_template_directory_uri() . '/web/stylesheets/app.css', 'Cabin' );
+    wp_enqueue_style( 'app' );
+});
