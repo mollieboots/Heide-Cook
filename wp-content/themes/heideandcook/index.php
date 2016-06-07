@@ -10,4 +10,5 @@ $twig = $container->get("twig.environment");
 // if (is_home()) {
 //     $twig->render('index.html.twig')
 // }
+
 echo $twig->render('basic.html.twig', array('title' => get_the_title(), 'head' => $head));
