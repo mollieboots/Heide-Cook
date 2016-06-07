@@ -11,4 +11,4 @@ $twig = $container->get("twig.environment");
 //     $twig->render('index.html.twig')
 // }
 
-echo $twig->render('basic.html.twig', array('title' => get_the_title(), 'head' => $head));
+echo $twig->render('index.html.twig', array('title' => get_the_title(), 'head' => $head));

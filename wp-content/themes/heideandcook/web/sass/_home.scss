@@ -12,6 +12,19 @@
     margin-bottom: 65px;
     border-bottom: 12px solid $orange;
     position: relative;
+    text-align: center;
+
+    .green {
+        width: 100%;
+        height:100%;
+        background: $dark-green;
+    }
+
+    .orange {
+        width: 100%;
+        height:100%;
+        background: $orange;
+    }
 }
 
 .hcslider::after {
@@ -27,4 +40,35 @@
 	border-top-color: $orange;
 	border-width: 60px;
 	margin-left: -60px;
+}
+
+.content-services {
+    text-align: center;
+
+    .content-services::after {
+        top: 100%;
+    	left: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-color: rgba(136, 183, 213, 0);
+    	border-top-color: $white;
+    	border-width: 60px;
+    	margin-left: -60px;
+    }
+}
+
+.why-choose-us {
+    background: $light-gray;
+}
+
+.recent-work {
+    text-align: center;
+}
+
+.green-header {
+    color: $dark-green;
 }
