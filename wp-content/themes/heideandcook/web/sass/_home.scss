@@ -1,0 +1,13 @@
+@import "settings";
+
+.header {
+    height: 108px;
+    margin-top: -32px;
+    background-color: $light-gray;
+}
+
+.hcslider {
+    height: 500px;
+    margin-top: 0px;
+    border-bottom: 12px solid $orange;
+}
