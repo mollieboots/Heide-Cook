@@ -25,7 +25,7 @@ var options = {
             'web/libs/foundation-sites/dist/foundation.js',
             'web/scripts/app.js'
         ],
-        dist: 'scripts-min'
+        dist: 'web/scripts-min'
     },
     styles: {
         src: 'web/sass/**/*.scss',
