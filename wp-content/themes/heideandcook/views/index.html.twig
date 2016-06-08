@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <title> {{ title }}</title>
+        <title>Heide & Cook | {{ title }}</title>
     {% endblock %}
 
     {% block stylesheets %}
@@ -18,8 +18,8 @@
         {% include "layout/header.html.twig" %}
     {% endblock %}
 
-    {% block slider %}
-        {% include "layout/slider.html.twig" %}
+    {% block lightbox %}
+        {% include "layout/lightbox.html.twig" %}
     {% endblock %}
 
 
@@ -48,10 +48,12 @@
             </div>
         </section>
 
-        <section class="recent-work">
-            <div class="row">
-                <h1 class="green-header">RECENT WORK</h1>
-            </div>
+        {% block slider %}
+            {% include "layout/slider.html.twig" %}
+        {% endblock %}
+
+        <section class="locations">
+
         </section>
     {% endblock %}
 
@@ -61,6 +63,8 @@
 {% endblock %}
 
 {% block scripts %}
+
+    {{ foot|raw }}
 
 {% endblock %}
 </body>

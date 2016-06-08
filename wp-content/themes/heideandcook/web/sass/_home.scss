@@ -1,12 +1,15 @@
 @import "settings";
 
+//header
 .header {
     height: 108px;
+    width: 100%;
     margin-top: -32px;
     background-color: $light-gray;
 }
 
-.hcslider {
+//sliders
+.index-lightbox {
     height: 500px;
     margin-top: 0px;
     margin-bottom: 65px;
@@ -42,8 +45,10 @@
 	margin-left: -60px;
 }
 
+//Homepage Sections in decsending order
 .content-services {
     text-align: center;
+    margin-bottom: 40px;
 
     .content-services::after {
         top: 100%;
@@ -63,12 +68,43 @@
 
 .why-choose-us {
     background: $light-gray;
+    height: 490px;
 }
 
 .recent-work {
+    text-align: center;
+    position: relative;
+    height: 400px;
+
+    .recent-work-slider {
+        height: 235px;
+
+        .recent-work-img {
+            height: 100%;
+            float:left;
+        }
+    }
+}
+
+//Misc. classes
+.centered {
     text-align: center;
 }
 
 .green-header {
     color: $dark-green;
+}
+
+//footer
+.footer {
+    height: 312px;
+    background-color: $light-green;
+    padding: 70px 0px 30px 0px;
+
+    .footer-input {
+        width: 348px;
+        height: 50px;
+        margin: 0px auto;
+        color: $dark-green;
+    }
 }
