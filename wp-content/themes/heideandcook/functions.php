@@ -73,8 +73,10 @@ add_action('wp_enqueue_scripts', function() {
     wp_register_style( 'Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,700' );
     wp_register_style( 'app', get_template_directory_uri() . '/web/stylesheets/app.css',  ['Cabin', 'Raleway', 'Montserrat'] );
     wp_register_script( 'slick', get_template_directory_uri() . '/src/slick/slick', array('jQuery'));
-    wp_register_script( 'app_script', get_template_directory_uri() . '/web/scripts-min/app.js', ['slick']);
+    wp_register_script( 'fancybox', get_template_directory_uri() . 'src/fancybox', array('jQuery'));
+    wp_register_script( 'app_script', get_template_directory_uri() . '/web/scripts-min/app.js', ['slick', 'fancybox']);
     wp_enqueue_style( 'app' );
     wp_enqueue_script( 'slick' );
+    wp_enqueue_script( 'fancybox' );
     wp_enqueue_script( 'app_script' );
 });

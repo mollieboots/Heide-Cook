@@ -16,6 +16,8 @@
     border-bottom: 12px solid $orange;
     position: relative;
     text-align: center;
+    background-image: url('http://www.marketergizmo.com/wp-content/uploads/2015/03/vince-vaughn-images-1.png');
+    background-size: cover;
 
     .green {
         width: 100%;
@@ -64,6 +66,35 @@
     	border-width: 60px;
     	margin-left: -60px;
     }
+
+    .column-left, .column-middle, .column-right {
+        float: left;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .column-left, .column-right {
+        width: 25%;
+    }
+
+    .column-middle {
+        width: 35%;
+    }
+
+    .bold-orange {
+        font-weight: bold;
+        color: $orange;
+    }
+
+    .bold-light-green {
+        font-weight: bold;
+        color: $light-green;
+    }
+
+    .bold-yellow {
+        font-weight: bold;
+        color: $yellow;
+    }
 }
 
 .why-choose-us {
@@ -105,6 +136,6 @@
         width: 348px;
         height: 50px;
         margin: 0px auto;
-        color: $dark-green;
+        color: $dark-green !important;
     }
 }
