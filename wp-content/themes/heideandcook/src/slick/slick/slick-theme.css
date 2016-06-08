@@ -36,7 +36,7 @@
 
     cursor: pointer;
 
-    color: transparent;
+    background: #006940;
     border: none;
     outline: none;
     background: transparent;
@@ -71,7 +71,7 @@
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color:#006940 !important;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -79,11 +79,12 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 250px;
+    top: -2rem;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: 250px;
     left: auto;
 }
 .slick-prev:before
@@ -97,12 +98,13 @@
 
 .slick-next
 {
-    right: -25px;
+    right: 250px;
+    top: -2rem;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -25px;
+    left: 250px;
 }
 .slick-next:before
 {
