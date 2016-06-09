@@ -2276,13 +2276,24 @@
 
 .why-choose-us {
   background: #f3f4f4;
-  height: 490px;
+  padding: 2rem;
   padding-top: 75px; }
   .why-choose-us .left-col {
     float: left;
     width: 50%; }
     .why-choose-us .left-col .bold-orange {
       font-size: 1.2rem; }
+    .why-choose-us .left-col .row {
+      margin: 0px 0px 1rem 3px; }
+    .why-choose-us .left-col img {
+      float: left;
+      margin-right: .8rem; }
+    .why-choose-us .left-col li {
+      list-style: none; }
+  .why-choose-us .quote-container img {
+    float: left;
+    display: inline;
+    margin-right: .2rem; }
   .why-choose-us .right-col {
     float: right;
     width: 50%; }
@@ -2328,6 +2339,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 2.375rem; }
+  .recent-work .slick-next:hover, .recent-work .slick-prev:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60); }
 
 .locations {
   text-align: center;
@@ -2353,6 +2367,9 @@
   color: #006940;
   text-transform: uppercase; }
 
+.green-paragraph {
+  color: #62a745; }
+
 .bold-orange {
   font-weight: bold;
   color: #db8835;
@@ -2371,6 +2388,9 @@
 .italic {
   font-style: italic;
   font-size: 1.1rem; }
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**

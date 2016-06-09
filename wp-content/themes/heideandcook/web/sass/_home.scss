@@ -101,7 +101,7 @@
 
 .why-choose-us {
     background: $light-gray;
-    height: 490px;
+    padding: 2rem;
     padding-top: 75px;
 
     .left-col {
@@ -110,6 +110,27 @@
 
         .bold-orange {
             font-size: 1.2rem;
+        }
+
+        .row {
+            margin: 0px 0px 1rem 3px;
+        }
+
+        img {
+            float: left;
+            margin-right: .8rem;
+        }
+
+        li {
+            list-style: none;
+        }
+    }
+
+    .quote-container {
+        img {
+            float: left;
+            display: inline;
+            margin-right: .2rem;
         }
     }
 
@@ -174,7 +195,10 @@
         height: 2.375rem;
     }
 
-
+    .slick-next:hover, .slick-prev:hover {
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+    }
 }
 
 .locations {
@@ -211,6 +235,10 @@
     text-transform: uppercase;
 }
 
+.green-paragraph {
+    color: $light-green;
+}
+
 .bold-orange {
     font-weight: bold;
     color: $orange;
@@ -232,4 +260,8 @@
 .italic {
     font-style: italic;
     font-size: 1.1rem;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
 }
