@@ -2197,6 +2197,108 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+.header {
+  height: 108px;
+  width: 100%;
+  margin-top: -32px;
+  background-color: #f3f4f4; }
+
+.index-lightbox {
+  height: 500px;
+  margin-top: 0px;
+  margin-bottom: 65px;
+  border-bottom: 12px solid #db8835;
+  position: relative;
+  text-align: center;
+  background-image: url("http://www.marketergizmo.com/wp-content/uploads/2015/03/vince-vaughn-images-1.png");
+  background-size: cover; }
+  .index-lightbox .green {
+    width: 100%;
+    height: 100%;
+    background: #006940; }
+  .index-lightbox .orange {
+    width: 100%;
+    height: 100%;
+    background: #db8835; }
+
+.hcslider::after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #db8835;
+  border-width: 60px;
+  margin-left: -60px; }
+
+.content-services {
+  text-align: center;
+  margin-bottom: 40px; }
+  .content-services .content-services::after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #fff;
+    border-width: 60px;
+    margin-left: -60px; }
+  .content-services .column-left, .content-services .column-middle, .content-services .column-right {
+    float: left;
+    margin-left: 2.5%;
+    margin-right: 2.5%; }
+  .content-services .column-left, .content-services .column-right {
+    width: 25%; }
+  .content-services .column-middle {
+    width: 35%; }
+  .content-services .bold-orange {
+    font-weight: bold;
+    color: #db8835; }
+  .content-services .bold-light-green {
+    font-weight: bold;
+    color: #62a745; }
+  .content-services .bold-yellow {
+    font-weight: bold;
+    color: #e0b636; }
+
+.why-choose-us {
+  background: #f3f4f4;
+  height: 490px; }
+
+.recent-work {
+  text-align: center;
+  position: relative;
+  height: 400px; }
+  .recent-work .recent-work-slider {
+    height: 235px; }
+    .recent-work .recent-work-slider .recent-work-img {
+      height: 100%;
+      float: left; }
+
+.centered {
+  text-align: center; }
+
+.green-header {
+  color: #006940; }
+
+.footer {
+  height: 312px;
+  background-color: #62a745;
+  padding: 70px 0px 30px 0px; }
+  .footer .footer-input {
+    width: 348px;
+    height: 50px;
+    margin: 0px auto;
+    color: #006940 !important; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
    * 1. Set default font family to sans-serif.
