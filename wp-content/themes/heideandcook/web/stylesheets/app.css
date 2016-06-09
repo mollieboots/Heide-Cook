@@ -2290,6 +2290,12 @@
       margin-right: .8rem; }
     .why-choose-us .left-col li {
       list-style: none; }
+    .why-choose-us .left-col .expanded-info {
+      padding: .5rem 4rem;
+      padding-bottom: 0px;
+      display: none; }
+    .why-choose-us .left-col .active {
+      display: inline-block; }
   .why-choose-us .quote-container img {
     float: left;
     display: inline;
@@ -2299,20 +2305,6 @@
     width: 50%; }
     .why-choose-us .right-col .quote-container {
       width: 75%; }
-
-.why-choose-us::after {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(136, 183, 213, 0);
-  border-top-color: #f3f4f4;
-  border-width: 60px;
-  margin-left: -60px; }
 
 .recent-work {
   text-align: center;

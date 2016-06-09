@@ -124,6 +124,16 @@
         li {
             list-style: none;
         }
+
+        .expanded-info {
+            padding: .5rem 4rem;
+            padding-bottom: 0px;
+            display: none;
+        }
+
+        .active {
+            display: inline-block;
+        }
     }
 
     .quote-container {
@@ -144,20 +154,20 @@
     }
 }
 
-.why-choose-us::after {
-    top: 100%;
-    left: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-top-color: $light-gray;
-    border-width: 60px;
-    margin-left: -60px;
-}
+// .why-choose-us::after {
+//     top: 100%;
+//     left: 50%;
+//     border: solid transparent;
+//     content: " ";
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     pointer-events: none;
+//     border-color: rgba(136, 183, 213, 0);
+//     border-top-color: $light-gray;
+//     border-width: 60px;
+//     margin-left: -60px;
+// }
 
 .recent-work {
     text-align: center;

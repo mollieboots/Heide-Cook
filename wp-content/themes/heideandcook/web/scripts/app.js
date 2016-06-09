@@ -9,9 +9,11 @@ jQuery(document).ready(function(){
   });
 
   jQuery(".fancybox").fancybox();
-    openEffect  : 'fade',
-    closeEffect : 'fade',
-    helpers: {
-            media: {}
-        }
+    openEffect  : 'fade';
+    closeEffect : 'fade';
+
+  jQuery(".expandable").click(function(){
+    jQuery(".active").removeClass("active");
+    jQuery(this).siblings().toggleClass("active");
+  });
 });
