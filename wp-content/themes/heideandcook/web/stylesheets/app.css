@@ -2209,7 +2209,15 @@
   border-bottom: 12px solid #db8835;
   position: relative;
   text-align: center;
-  position: relative; }
+  position: relative;
+  background-image: url("http://www.marketergizmo.com/wp-content/uploads/2015/03/vince-vaughn-images-1.png");
+  background-size: cover; }
+  .index-lightbox img.play-icon {
+    position: absolute;
+    top: 60%;
+    left: 48%;
+    height: 65px;
+    width: 65px; }
   .index-lightbox h3 {
     position: absolute;
     top: 40%;
@@ -2287,7 +2295,8 @@
 
 .footer {
   height: 312px;
-  background-color: #62a745;
+  background-image: url("/wp-content/themes/heideandcook/web/images/footer-background.png");
+  background-size: cover;
   padding: 70px 0px 30px 0px; }
   .footer .footer-input {
     width: 348px;

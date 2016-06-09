@@ -16,6 +16,16 @@
     position: relative;
     text-align: center;
     position: relative;
+    background-image: url("http://www.marketergizmo.com/wp-content/uploads/2015/03/vince-vaughn-images-1.png");
+    background-size: cover;
+
+    img.play-icon {
+      position: absolute;
+      top: 60%;
+      left: 48%;
+      height:65px;
+      width: 65px;
+    }
 
     h3 {
         position: absolute;
@@ -124,7 +134,8 @@
 //footer
 .footer {
     height: 312px;
-    background-color: $light-green;
+    background-image: url("/wp-content/themes/heideandcook/web/images/footer-background.png");
+    background-size: cover;
     padding: 70px 0px 30px 0px;
 
     .footer-input {
