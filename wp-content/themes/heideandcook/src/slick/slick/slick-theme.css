@@ -36,7 +36,7 @@
 
     cursor: pointer;
 
-    background: #006940;
+    color: transparent;
     border: none;
     outline: none;
     background: transparent;
@@ -71,7 +71,7 @@
     line-height: 1;
 
     opacity: .75;
-    color:#006940 !important;
+    color: white;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -79,48 +79,38 @@
 
 .slick-prev
 {
-    left: 250px;
-    top: -2rem;
-    background-image: url("/wp-content/themes/heideandcook/web/images/left-slider-arrow.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 2.375rem;
+    left: -25px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: 250px;
+    right: -25px;
     left: auto;
 }
 .slick-prev:before
 {
-
+    content: '←';
 }
 [dir='rtl'] .slick-prev:before
 {
-
+    content: '→';
 }
 
 .slick-next
 {
-    right: 250px;
-    top: -2rem;
-    background-image: url("/wp-content/themes/heideandcook/web/images/right-slider-arrow.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 2.375rem;
+    right: -25px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: 250px;
+    left: -25px;
 }
 .slick-next:before
 {
-
+    content: '→';
 }
 [dir='rtl'] .slick-next:before
 {
-
+    content: '←';
 }
 
 /* Dots */
