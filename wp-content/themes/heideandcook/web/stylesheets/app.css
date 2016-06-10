@@ -2198,9 +2198,25 @@
  * Licensed under MIT Open Source
  */
 .header {
-  height: 108px;
-  width: 100%;
-  background-color: #f3f4f4; }
+  height: 6.8rem;
+  width: 100%; }
+  .header .header-row {
+    width: 100%; }
+  .header .logo {
+    height: 5rem;
+    top: .9rem;
+    position: absolute; }
+  .header .header-upper {
+    height: 2.8rem;
+    background-color: #dddddd;
+    max-width: 100%; }
+  .header .header-lower {
+    text-align: right;
+    height: 4rem;
+    background: white;
+    padding: 1.1rem; }
+    .header .header-lower .header-link {
+      margin: 1.5rem; }
 
 .index-lightbox {
   height: 500px;
@@ -2216,9 +2232,9 @@
   .index-lightbox img.play-icon {
     position: absolute;
     top: 60%;
-    left: 48%;
-    height: 65px;
-    width: 65px; }
+    left: 47.5%;
+    height: 4rem;
+    width: 4rem; }
   .index-lightbox h3 {
     position: absolute;
     top: 40%;
@@ -2291,11 +2307,8 @@
     .why-choose-us .left-col li {
       list-style: none; }
     .why-choose-us .left-col .expanded-info {
-      padding: .5rem 4rem;
-      padding-bottom: 0px;
+      margin: 1rem 4rem;
       display: none; }
-    .why-choose-us .left-col .active {
-      display: inline-block; }
   .why-choose-us .quote-container img {
     float: left;
     display: inline;
@@ -2311,10 +2324,7 @@
   position: relative;
   margin-top: 2rem; }
   .recent-work .recent-work-slider {
-    height: 235px; }
-    .recent-work .recent-work-slider .recent-work-img {
-      height: 100%;
-      float: left; }
+    height: 14rem; }
   .recent-work .slick-prev {
     left: 250px;
     top: -2rem;

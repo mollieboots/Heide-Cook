@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
     closeEffect : 'fade';
 
   jQuery(".expandable").click(function(){
-    jQuery(".active").removeClass("active");
-    jQuery(this).siblings().toggleClass("active");
+    
+    jQuery(this).siblings(".expanded-info").slideToggle();
   });
 });

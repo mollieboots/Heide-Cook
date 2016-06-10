@@ -2,9 +2,35 @@
 
 //header
 .header {
-    height: 108px;
+    height: 6.8rem;
     width: 100%;
-    background-color: $light-gray;
+
+    .header-row {
+        width: 100%;
+    }
+
+    .logo {
+        height:5rem;
+        top: .9rem;
+        position: absolute;
+    }
+
+    .header-upper {
+        height: 2.8rem;
+        background-color: $medium-gray;
+        max-width: 100%;
+    }
+
+    .header-lower {
+        text-align: right;
+        height:4rem;
+        background: white;
+        padding: 1.1rem;
+
+        .header-link {
+            margin: 1.5rem;
+        }
+    }
 }
 
 //sliders
@@ -23,9 +49,9 @@
     img.play-icon {
       position: absolute;
       top: 60%;
-      left: 48%;
-      height:65px;
-      width: 65px;
+      left: 47.5%;
+      height:4rem;
+      width: 4rem;
     }
 
     h3 {
@@ -126,13 +152,8 @@
         }
 
         .expanded-info {
-            padding: .5rem 4rem;
-            padding-bottom: 0px;
+            margin: 1rem 4rem;
             display: none;
-        }
-
-        .active {
-            display: inline-block;
         }
     }
 
@@ -175,12 +196,7 @@
     margin-top: 2rem;
 
     .recent-work-slider {
-        height: 235px;
-
-        .recent-work-img {
-            height: 100%;
-            float:left;
-        }
+        height: 14rem;
     }
 
     .slick-prev {
