@@ -2276,6 +2276,8 @@
   .content-services .service-icon {
     height: 100px;
     margin-bottom: 10px; }
+  .content-services div:nth-child(1) > p {
+    margin-bottom: 4rem; }
 
 .content-services::after {
   left: 50%;
@@ -2293,7 +2295,10 @@
 .why-choose-us {
   background: #f3f4f4;
   padding: 2rem;
-  padding-top: 75px; }
+  padding-top: 75px;
+  background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
+  background-repeat: no-repeat;
+  background-position: bottom right; }
   .why-choose-us .left-col {
     float: left;
     width: 50%; }
@@ -2317,7 +2322,7 @@
     float: right;
     width: 50%; }
     .why-choose-us .right-col .quote-container {
-      width: 75%; }
+      width: 65%; }
 
 .recent-work {
   text-align: center;
@@ -2357,10 +2362,36 @@
   background-size: cover;
   padding: 70px 0px 30px 0px; }
   .footer .footer-input {
-    width: 348px;
+    width: 390px;
     height: 50px;
     margin: 0px auto;
-    color: #006940 !important; }
+    color: #006940 !important;
+    position: relative; }
+    .footer .footer-input input {
+      width: 348px; }
+    .footer .footer-input .button {
+      width: 2.6rem;
+      height: 100%;
+      background-color: #006940;
+      display: inline;
+      position: absolute;
+      top: 0px;
+      right: 0px; }
+    .footer .footer-input .progress-bar {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      height: 10px;
+      background-color: #62a745; }
+  .footer .social-media {
+    margin-top: 1rem; }
+    .footer .social-media img {
+      height: 45px;
+      margin: 0px .25rem; }
+  .footer .copyright {
+    color: #006940;
+    font-size: .75rem;
+    margin-top: 1rem; }
 
 .centered {
   text-align: center; }
