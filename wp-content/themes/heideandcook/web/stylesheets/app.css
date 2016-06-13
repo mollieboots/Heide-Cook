@@ -2239,14 +2239,16 @@
   .index-lightbox h3 {
     position: absolute;
     top: 40%;
-    left: 25%;
+    left: 50%;
     margin: 0px auto;
+    margin-left: -19.4375rem;
     font-size: 2.5rem;
     color: #fff; }
   .index-lightbox h4 {
     position: absolute;
     top: 50%;
-    left: 27%;
+    left: 50%;
+    margin-left: -17.6875rem;
     color: #a7a7a7; }
 
 .index-lightbox::after {
@@ -2362,9 +2364,47 @@
 
 .locations {
   text-align: center;
-  padding: 2rem; }
-  .locations a.location-link {
-    margin: .5rem 1rem; }
+  height: 13.75rem;
+  background-color: #f3f4f4;
+  margin-top: 0.3125rem;
+  color: #a7a7a7; }
+  .locations .tabs-row {
+    border-bottom: 0.1875rem solid #a7a7a7;
+    margin: 0px auto;
+    width: 100%; }
+  .locations .tabs {
+    border: none;
+    background-color: #f3f4f4;
+    display: inline-block; }
+  .locations .tabs-title > a {
+    font-size: 1.2rem;
+    padding: 2.25rem 4.5rem;
+    color: #a7a7a7; }
+  .locations .tabs-title.is-active > a {
+    color: #006940 !important; }
+  .locations .tabs-title:hover > a {
+    background-color: #f3f4f4;
+    color: #4a4a4a; }
+  .locations .tabs-content {
+    background-color: #f3f4f4;
+    border: none; }
+  .locations .tabs-panel {
+    padding: 0px; }
+  .locations .left {
+    float: left;
+    width: 30%;
+    padding: 3.125rem; }
+  .locations .middle {
+    float: left;
+    width: 40%;
+    padding: 3.125rem; }
+  .locations .right {
+    float: right;
+    width: 30%;
+    padding: 2.1875rem; }
+    .locations .right p {
+      margin: 0.3125rem;
+      line-height: 1.2rem; }
 
 .footer {
   height: 312px;
@@ -3720,7 +3760,7 @@ hr {
   height: 0;
   border-right: 0;
   border-top: 0;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #a7a7a7;
   border-left: 0;
   margin: 1.25rem auto;
   clear: both; }
@@ -3755,7 +3795,7 @@ dl {
 blockquote {
   margin: 0 0 1rem;
   padding: 0.5625rem 1.25rem 0 1.1875rem;
-  border-left: 1px solid #dddddd; }
+  border-left: 1px solid #a7a7a7; }
   blockquote, blockquote p {
     line-height: 1.6;
     color: #4a4a4a; }
@@ -3777,7 +3817,7 @@ code {
   font-weight: normal;
   color: #0a0a0a;
   background-color: #f3f4f4;
-  border: 1px solid #dddddd;
+  border: 1px solid #a7a7a7;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
 kbd {
@@ -3905,7 +3945,7 @@ textarea {
   width: 100%;
   height: 2.4375rem;
   padding: 0.5rem;
-  border: 1px solid #dddddd;
+  border: 1px solid #a7a7a7;
   margin: 0 0 1rem;
   font-family: inherit;
   font-size: 1rem;
@@ -3921,7 +3961,7 @@ textarea {
     border: 1px solid #4a4a4a;
     background-color: #fff;
     outline: none;
-    box-shadow: 0 0 5px #dddddd;
+    box-shadow: 0 0 5px #a7a7a7;
     transition: box-shadow 0.5s, border-color 0.25s ease-in-out; }
 
 textarea {
@@ -3931,19 +3971,19 @@ textarea {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #dddddd; }
+  color: #a7a7a7; }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #dddddd; }
+  color: #a7a7a7; }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #dddddd; }
+  color: #a7a7a7; }
 
 input::placeholder,
 textarea::placeholder {
-  color: #dddddd; }
+  color: #a7a7a7; }
 
 input:disabled, input[readonly],
 textarea:disabled,
@@ -4020,7 +4060,7 @@ label {
   padding: 0 1rem;
   background: #f3f4f4;
   color: #0a0a0a;
-  border: 1px solid #dddddd;
+  border: 1px solid #a7a7a7;
   white-space: nowrap;
   width: 1%;
   height: 100%; }
@@ -4057,7 +4097,7 @@ legend {
   max-width: 100%; }
 
 .fieldset {
-  border: 1px solid #dddddd;
+  border: 1px solid #a7a7a7;
   padding: 1.25rem;
   margin: 1.125rem 0; }
   .fieldset legend {
@@ -4069,7 +4109,7 @@ legend {
 select {
   height: 2.4375rem;
   padding: 0.5rem;
-  border: 1px solid #dddddd;
+  border: 1px solid #a7a7a7;
   margin: 0 0 1rem;
   font-size: 1rem;
   font-family: inherit;
@@ -4343,7 +4383,7 @@ select {
     cursor: default;
     text-transform: uppercase; }
     .breadcrumbs li:not(:last-child)::after {
-      color: #dddddd;
+      color: #a7a7a7;
       content: "/";
       margin: 0 0.75rem;
       position: relative;
@@ -4354,7 +4394,7 @@ select {
     .breadcrumbs a:hover {
       text-decoration: underline; }
   .breadcrumbs .disabled {
-    color: #dddddd;
+    color: #a7a7a7;
     cursor: not-allowed; }
 
 .button-group {
@@ -4616,8 +4656,8 @@ select {
     left: 0;
     box-shadow: 0 7px 0 #fff, 0 14px 0 #fff; }
   .menu-icon:hover::after {
-    background: #dddddd;
-    box-shadow: 0 7px 0 #dddddd, 0 14px 0 #dddddd; }
+    background: #a7a7a7;
+    box-shadow: 0 7px 0 #a7a7a7, 0 14px 0 #a7a7a7; }
 
 .menu-icon.dark {
   position: relative;
@@ -4700,7 +4740,7 @@ select {
 
 .dropdown-pane {
   background-color: #fff;
-  border: 1px solid #dddddd;
+  border: 1px solid #a7a7a7;
   border-radius: 0;
   display: block;
   font-size: 1rem;
@@ -4929,7 +4969,7 @@ select {
   min-width: 200px;
   z-index: 1;
   background: #fff;
-  border: 1px solid #dddddd; }
+  border: 1px solid #a7a7a7; }
   .is-dropdown-submenu .is-dropdown-submenu-parent > a::after {
     right: 14px;
     margin-top: -3px; }
@@ -5197,7 +5237,7 @@ body {
     width: 1.2rem;
     height: 1.2rem;
     margin: 0.1rem;
-    background-color: #dddddd;
+    background-color: #a7a7a7;
     border-radius: 50%; }
     .orbit-bullets button:hover {
       background-color: #4a4a4a; }
@@ -5238,7 +5278,7 @@ body {
     cursor: default; }
   .pagination .disabled {
     padding: 0.1875rem 0.625rem;
-    color: #dddddd;
+    color: #a7a7a7;
     cursor: not-allowed; }
     .pagination .disabled:hover {
       background: transparent; }
@@ -5260,7 +5300,7 @@ body {
   margin-left: 0.5rem; }
 
 .progress {
-  background-color: #dddddd;
+  background-color: #a7a7a7;
   height: 1rem;
   margin-bottom: 1rem;
   border-radius: 0; }
@@ -5317,7 +5357,7 @@ body {
   display: inline-block;
   max-width: 100%;
   height: 0.5rem;
-  background-color: #dddddd;
+  background-color: #a7a7a7;
   transition: all 0.2s ease-in-out; }
   .slider-fill.is-dragging {
     transition: all 0s linear; }
@@ -5424,7 +5464,7 @@ html.is-reveal-open body {
   display: none;
   z-index: 1006;
   padding: 1rem;
-  border: 1px solid #dddddd;
+  border: 1px solid #a7a7a7;
   background-color: #fff;
   border-radius: 0;
   position: relative;
@@ -5508,7 +5548,7 @@ html.is-reveal-open body {
   position: absolute; }
 
 .switch-paddle {
-  background: #dddddd;
+  background: #a7a7a7;
   cursor: pointer;
   display: block;
   position: relative;
