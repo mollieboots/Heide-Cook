@@ -13,7 +13,9 @@ jQuery(document).ready(function(){
     closeEffect : 'fade';
 
   jQuery(".expandable").click(function(){
-    
-    jQuery(this).siblings(".expanded-info").slideToggle();
+    jQuery(this).parent().siblings().children().next().slideUp("slow");
+    jQuery(this).siblings(".expanded-info").slideToggle("slow");
   });
+
+  jQuery(document).foundation();
 });

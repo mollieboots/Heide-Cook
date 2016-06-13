@@ -7,8 +7,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3");
+  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2209,7 +2209,7 @@
   .header .header-upper {
     height: 2.8rem;
     background-color: #dddddd;
-    max-width: 100%; }
+    width: 100% !important; }
   .header .header-lower {
     text-align: right;
     height: 4rem;
@@ -2231,10 +2231,11 @@
   background-size: cover; }
   .index-lightbox img.play-icon {
     position: absolute;
-    top: 60%;
-    left: 47.5%;
+    top: 18rem;
+    left: 50%;
     height: 4rem;
-    width: 4rem; }
+    width: 4rem;
+    margin-left: -2rem; }
   .index-lightbox h3 {
     position: absolute;
     top: 40%;
@@ -2259,12 +2260,15 @@
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #db8835;
-  border-width: 60px;
-  margin-left: -60px; }
+  border-width: 50px;
+  margin-left: -50px; }
 
 .content-services {
   text-align: center;
   padding-bottom: 1.5rem; }
+  .content-services p {
+    max-width: 50rem;
+    margin: .8rem auto; }
   .content-services .column-left, .content-services .column-middle, .content-services .column-right {
     float: left;
     margin-left: 2.5%;
@@ -2273,9 +2277,13 @@
     width: 25%; }
   .content-services .column-middle {
     width: 35%; }
+  .content-services .column-left p {
+    margin-left: -1rem; }
+  .content-services .column-right p {
+    margin-right: -1.3rem; }
   .content-services .service-icon {
     height: 100px;
-    margin-bottom: 10px; }
+    margin-bottom: 1.5rem; }
   .content-services div:nth-child(1) > p {
     margin-bottom: 4rem; }
 
@@ -2296,9 +2304,8 @@
   background: #f3f4f4;
   padding: 2rem;
   padding-top: 75px;
-  background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
-  background-repeat: no-repeat;
-  background-position: bottom right; }
+  min-height: 25rem;
+  max-height: 32rem; }
   .why-choose-us .left-col {
     float: left;
     width: 50%; }
@@ -2323,6 +2330,9 @@
     width: 50%; }
     .why-choose-us .right-col .quote-container {
       width: 65%; }
+  .why-choose-us img.photo {
+    position: absolute;
+    right: 10%; }
 
 .recent-work {
   text-align: center;
@@ -2375,6 +2385,8 @@
       background-color: #006940;
       display: inline;
       position: absolute;
+      padding: 0px;
+      font-size: 2em;
       top: 0px;
       right: 0px; }
     .footer .footer-input .progress-bar {
@@ -2385,9 +2397,19 @@
       background-color: #62a745; }
   .footer .social-media {
     margin-top: 1rem; }
-    .footer .social-media img {
-      height: 45px;
-      margin: 0px .25rem; }
+    .footer .social-media i.fa {
+      margin: 0px .25rem;
+      color: white;
+      font-size: 1.25rem; }
+    .footer .social-media .circle-icon {
+      background: #4a4a4a;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      vertical-align: middle;
+      padding: 5px; }
   .footer .copyright {
     color: #006940;
     font-size: .75rem;
@@ -2395,6 +2417,9 @@
 
 .centered {
   text-align: center; }
+
+.row {
+  max-width: 70rem !important; }
 
 .green-header {
   color: #006940;
