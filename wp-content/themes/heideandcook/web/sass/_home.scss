@@ -2,10 +2,35 @@
 
 //header
 .header {
-    height: 108px;
+    height: 6.8rem;
     width: 100%;
-    margin-top: -32px;
-    background-color: $light-gray;
+
+    .header-row {
+        width: 100%;
+    }
+
+    .logo {
+        height:5rem;
+        top: .9rem;
+        position: absolute;
+    }
+
+    .header-upper {
+        height: 2.8rem;
+        background-color: $medium-light-gray;
+        width: 100% !important;
+    }
+
+    .header-lower {
+        text-align: right;
+        height:4rem;
+        background: white;
+        padding: 1.1rem;
+
+        .header-link {
+            margin: 1.5rem;
+        }
+    }
 }
 
 //sliders
@@ -16,23 +41,40 @@
     border-bottom: 12px solid $orange;
     position: relative;
     text-align: center;
-    background-image: url('http://www.marketergizmo.com/wp-content/uploads/2015/03/vince-vaughn-images-1.png');
+    position: relative;
+    background-image: url("/wp-content/themes/heideandcook/web/images/pipes.png");
+    background-size: cover;
     background-size: cover;
 
-    .green {
-        width: 100%;
-        height:100%;
-        background: $dark-green;
+    img.play-icon {
+      position: absolute;
+      top: 18rem;
+      left: 50%;
+      height:4rem;
+      width: 4rem;
+      margin-left: -2rem;
     }
 
-    .orange {
-        width: 100%;
-        height:100%;
-        background: $orange;
+    h3 {
+        position: absolute;
+        top: 40%;
+        left:50%;
+        margin: 0px auto;
+        margin-left: -(rem-calc(311));
+        font-size: 2.5rem;
+        color: $white;
+    }
+
+    h4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -(rem-calc(283));
+        color: #a7a7a7;
     }
 }
 
-.hcslider::after {
+.index-lightbox::after {
     top: 100%;
 	left: 50%;
 	border: solid transparent;
@@ -43,28 +85,18 @@
 	pointer-events: none;
 	border-color: rgba(136, 183, 213, 0);
 	border-top-color: $orange;
-	border-width: 60px;
-	margin-left: -60px;
+	border-width: 50px;
+	margin-left: -50px;
 }
 
 //Homepage Sections in decsending order
 .content-services {
     text-align: center;
-    margin-bottom: 40px;
+    padding-bottom: 1.5rem;
 
-    .content-services::after {
-        top: 100%;
-    	left: 50%;
-    	border: solid transparent;
-    	content: " ";
-    	height: 0;
-    	width: 0;
-    	position: absolute;
-    	pointer-events: none;
-    	border-color: rgba(136, 183, 213, 0);
-    	border-top-color: $white;
-    	border-width: 60px;
-    	margin-left: -60px;
+    p {
+        max-width: 50rem;
+        margin: .8rem auto;
     }
 
     .column-left, .column-middle, .column-right {
@@ -81,39 +113,311 @@
         width: 35%;
     }
 
-    .bold-orange {
-        font-weight: bold;
-        color: $orange;
+    .column-left {
+        p {
+            margin-left: -1rem;
+        }
     }
 
-    .bold-light-green {
-        font-weight: bold;
-        color: $light-green;
+    .column-right {
+        p {
+            margin-right: -1.3rem;
+        }
     }
 
-    .bold-yellow {
-        font-weight: bold;
-        color: $yellow;
+    .service-icon {
+        height: 100px;
+        margin-bottom: 1.5rem;;
     }
+
+    div:nth-child(1) > p {
+        margin-bottom: 4rem;
+    }
+}
+
+.content-services::after {
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: $white;
+    border-width: 60px;
+    margin-left: -60px;
 }
 
 .why-choose-us {
     background: $light-gray;
-    height: 490px;
+    padding: 2rem;
+    padding-top: 75px;
+    min-height:25rem;
+    max-height: 32rem;
+
+    .left-col {
+        float: left;
+        width: 50%;
+
+        .bold-orange {
+            font-size: 1.2rem;
+        }
+
+        .row {
+            margin: 0px 0px 1rem 3px;
+        }
+
+        img {
+            float: left;
+            margin-right: .8rem;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .expanded-info {
+            margin: 1rem 4rem;
+            display: none;
+        }
+    }
+
+    .quote-container {
+        img {
+            float: left;
+            display: inline;
+            margin-right: .2rem;
+        }
+    }
+
+    .right-col {
+        float: right;
+        width: 50%;
+
+        .quote-container {
+            width: 65%;
+        }
+    }
+
+    img.photo {
+        position: absolute;
+        right: 10%;
+    }
 }
+
+// .why-choose-us::after {
+//     top: 100%;
+//     left: 50%;
+//     border: solid transparent;
+//     content: " ";
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     pointer-events: none;
+//     border-color: rgba(136, 183, 213, 0);
+//     border-top-color: $light-gray;
+//     border-width: 60px;
+//     margin-left: -60px;
+// }
 
 .recent-work {
     text-align: center;
     position: relative;
-    height: 400px;
+    margin-top: 2rem;
 
     .recent-work-slider {
-        height: 235px;
+        height: 14rem;
 
-        .recent-work-img {
+        img {
             height: 100%;
-            float:left;
         }
+    }
+
+    .slick-prev {
+        left: 250px;
+        top: -2rem;
+        background-image: url("/wp-content/themes/heideandcook/web/images/left-slider-arrow.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 2.375rem;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        content: "";
+    }
+
+    .slick-next {
+        right: 250px;
+        top: -2rem;
+        background-image: url("/wp-content/themes/heideandcook/web/images/right-slider-arrow.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 2.375rem;
+    }
+
+    .slick-next:hover, .slick-prev:hover {
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+    }
+}
+
+//locations tabs
+.locations {
+    text-align: center;
+    min-height: rem-calc(220);
+    background-color: $light-gray;
+    margin-top: rem-calc(5);
+    color: $medium-gray;
+
+    .tabs-row {
+        border-bottom: rem-calc(3) solid $medium-gray;
+        margin: 0px auto;
+        width: 100%;
+    }
+
+    .tabs {
+        border: none;
+        background-color: $light-gray;
+        display: inline-block;
+    }
+
+    .tabs-title > a {
+        font-size: 1.2rem;
+        padding: 2.25rem 4.5rem;
+        color: $medium-gray;
+    }
+
+    .tabs-title.is-active > a {
+        color: $dark-green !important;
+    }
+
+    .tabs-title.is-active > a:after {
+    }
+
+    .tabs-title:hover > a {
+        background-color: $light-gray;
+        color: $dark-gray;
+    }
+
+    .tabs-content {
+        background-color: $light-gray;
+        border: none;
+    }
+
+    .tabs-panel {
+        padding: 0px;
+    }
+
+    .left {
+        float: left;
+        text-align: left;
+        width: 30%;
+        padding: rem-calc(50) 0px;
+
+        img {
+            float: left;
+            margin-left: 3.5rem;
+            margin-right: rem-calc(10px);
+        }
+    }
+
+    .middle {
+        float: left;
+        text-align: left;
+        width: 40%;
+        padding: rem-calc(50) 0px;
+
+        img {
+            float: left;
+            margin-left: 5rem;
+            margin-right: rem-calc(10px);
+        }
+    }
+
+    .right {
+        float: right;
+        width: 30%;
+        text-align: left;
+        padding: rem-calc(35) 0px;
+
+        p {
+            margin: rem-calc(5);
+            line-height: 1.2rem;
+        }
+
+        img {
+            float: left;
+            margin-right: rem-calc(10px);
+            margin-top: .5rem;
+        }
+    }
+}
+
+//footer
+.footer {
+    height: 312px;
+    background-image: url("/wp-content/themes/heideandcook/web/images/footer-background.png");
+    background-size: cover;
+    padding: 70px 0px 30px 0px;
+
+    .footer-input {
+        width: 390px;
+        height: 50px;
+        margin: 0px auto;
+        color: $dark-green !important;
+        position: relative;
+
+        input {
+            width: 348px;
+        }
+
+        .button {
+            width: 2.6rem;
+            height: 100%;
+            background-color: $dark-green;
+            display: inline;
+            position: absolute;
+            padding: 0px;
+            font-size: 2em;
+            top: 0px;
+            right:0px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            height: 10px;
+            background-color: $light-green;
+        }
+    }
+
+    .social-media {
+        margin-top: 1rem;
+
+        i.fa {
+            margin: 0px .25rem;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .circle-icon {
+            background: $dark-gray;
+            width: 2.5rem;
+            height: 2.5rem;;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            vertical-align: middle;
+            padding: 5px;
+        }
+    }
+
+    .copyright {
+        color: $dark-green;
+        font-size: .75rem;
+        margin-top: 1rem;
     }
 }
 
@@ -122,20 +426,84 @@
     text-align: center;
 }
 
-.green-header {
-    color: $dark-green;
+.row {
+    max-width: 70rem !important;
 }
 
-//footer
-.footer {
-    height: 312px;
-    background-color: $light-green;
-    padding: 70px 0px 30px 0px;
+.green-header {
+    color: $dark-green;
+    text-transform: uppercase;
+}
 
-    .footer-input {
-        width: 348px;
-        height: 50px;
-        margin: 0px auto;
-        color: $dark-green !important;
+.green-paragraph {
+    color: $light-green;
+}
+
+.bold-orange {
+    font-weight: bold;
+    color: $orange;
+    text-transform: uppercase;
+}
+
+.bold-light-green {
+    font-weight: bold;
+    color: $light-green;
+    text-transform: uppercase;
+}
+
+.bold-yellow {
+    font-weight: bold;
+    color: $yellow;
+    text-transform: uppercase;
+}
+
+.italic {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+//breakpoints
+@media only screen and (max-width: rem-calc(1200)) {
+    .row {
+        max-width: 60rem !important;
+    }
+
+    .slick-prev {
+        left: rem-calc(150) !important;
+    }
+
+    .slick-next {
+        right: rem-calc(150) !important;
+    }
+}
+
+@media only screen and (max-width: rem-calc(1024)) {
+    .row {
+        max-width: 50rem !important;
+    }
+
+    a.header-link {
+        font-size: .8rem;
+    }
+
+    img.logo {
+        height: rem-calc(60) !important;
+        top: 1.4rem !important;
+    }
+
+    .recent-work-slider {
+        height: auto !important;
+
+        .slick-slide {
+            height: auto !important;
+        }
+
+        .hc-work > img {
+            height: auto !important;
+        }
     }
 }

@@ -1,10 +1,21 @@
 jQuery(document).foundation();
-console.log('im working');
+
 jQuery(document).ready(function(){
   jQuery('.recent-work-slider').slick({
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    dots: true
+    arrows: true
   });
+
+  jQuery(".fancybox").fancybox();
+    openEffect  : 'fade';
+    closeEffect : 'fade';
+
+  jQuery(".expandable").click(function(){
+    jQuery(this).parent().siblings().children().next().slideUp("slow");
+    jQuery(this).siblings(".expanded-info").slideToggle("slow");
+  });
+
+  jQuery(document).foundation();
 });
