@@ -228,6 +228,10 @@
 
     .recent-work-slider {
         height: 14rem;
+
+        img {
+            height: 100%;
+        }
     }
 
     .slick-prev {
@@ -261,7 +265,7 @@
 //locations tabs
 .locations {
     text-align: center;
-    height: rem-calc(220);
+    min-height: rem-calc(220);
     background-color: $light-gray;
     margin-top: rem-calc(5);
     color: $medium-gray;
@@ -288,6 +292,9 @@
         color: $dark-green !important;
     }
 
+    .tabs-title.is-active > a:after {
+    }
+
     .tabs-title:hover > a {
         background-color: $light-gray;
         color: $dark-gray;
@@ -304,24 +311,45 @@
 
     .left {
         float: left;
+        text-align: left;
         width: 30%;
-        padding: rem-calc(50);
+        padding: rem-calc(50) 0px;
+
+        img {
+            float: left;
+            margin-left: 3.5rem;
+            margin-right: rem-calc(10px);
+        }
     }
 
     .middle {
         float: left;
+        text-align: left;
         width: 40%;
-        padding: rem-calc(50);
+        padding: rem-calc(50) 0px;
+
+        img {
+            float: left;
+            margin-left: 5rem;
+            margin-right: rem-calc(10px);
+        }
     }
 
     .right {
         float: right;
         width: 30%;
-        padding: rem-calc(35);
+        text-align: left;
+        padding: rem-calc(35) 0px;
 
         p {
             margin: rem-calc(5);
             line-height: 1.2rem;
+        }
+
+        img {
+            float: left;
+            margin-right: rem-calc(10px);
+            margin-top: .5rem;
         }
     }
 }
@@ -436,4 +464,46 @@
 
 .montserrat {
     font-family: 'Montserrat', sans-serif;
+}
+
+//breakpoints
+@media only screen and (max-width: rem-calc(1200)) {
+    .row {
+        max-width: 60rem !important;
+    }
+
+    .slick-prev {
+        left: rem-calc(150) !important;
+    }
+
+    .slick-next {
+        right: rem-calc(150) !important;
+    }
+}
+
+@media only screen and (max-width: rem-calc(1024)) {
+    .row {
+        max-width: 50rem !important;
+    }
+
+    a.header-link {
+        font-size: .8rem;
+    }
+
+    img.logo {
+        height: rem-calc(60) !important;
+        top: 1.4rem !important;
+    }
+
+    .recent-work-slider {
+        height: auto !important;
+
+        .slick-slide {
+            height: auto !important;
+        }
+
+        .hc-work > img {
+            height: auto !important;
+        }
+    }
 }

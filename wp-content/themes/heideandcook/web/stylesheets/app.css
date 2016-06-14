@@ -2342,6 +2342,8 @@
   margin-top: 2rem; }
   .recent-work .recent-work-slider {
     height: 14rem; }
+    .recent-work .recent-work-slider img {
+      height: 100%; }
   .recent-work .slick-prev {
     left: 250px;
     top: -2rem;
@@ -2364,7 +2366,7 @@
 
 .locations {
   text-align: center;
-  height: 13.75rem;
+  min-height: 13.75rem;
   background-color: #f3f4f4;
   margin-top: 0.3125rem;
   color: #a7a7a7; }
@@ -2392,19 +2394,34 @@
     padding: 0px; }
   .locations .left {
     float: left;
+    text-align: left;
     width: 30%;
-    padding: 3.125rem; }
+    padding: 3.125rem 0px; }
+    .locations .left img {
+      float: left;
+      margin-left: 3.5rem;
+      margin-right: 0.625rem; }
   .locations .middle {
     float: left;
+    text-align: left;
     width: 40%;
-    padding: 3.125rem; }
+    padding: 3.125rem 0px; }
+    .locations .middle img {
+      float: left;
+      margin-left: 5rem;
+      margin-right: 0.625rem; }
   .locations .right {
     float: right;
     width: 30%;
-    padding: 2.1875rem; }
+    text-align: left;
+    padding: 2.1875rem 0px; }
     .locations .right p {
       margin: 0.3125rem;
       line-height: 1.2rem; }
+    .locations .right img {
+      float: left;
+      margin-right: 0.625rem;
+      margin-top: .5rem; }
 
 .footer {
   height: 312px;
@@ -2489,6 +2506,29 @@
 
 .montserrat {
   font-family: 'Montserrat', sans-serif; }
+
+@media only screen and (max-width: 75rem) {
+  .row {
+    max-width: 60rem !important; }
+  .slick-prev {
+    left: 9.375rem !important; }
+  .slick-next {
+    right: 9.375rem !important; } }
+
+@media only screen and (max-width: 64rem) {
+  .row {
+    max-width: 50rem !important; }
+  a.header-link {
+    font-size: .8rem; }
+  img.logo {
+    height: 3.75rem !important;
+    top: 1.4rem !important; }
+  .recent-work-slider {
+    height: auto !important; }
+    .recent-work-slider .slick-slide {
+      height: auto !important; }
+    .recent-work-slider .hc-work > img {
+      height: auto !important; } }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
