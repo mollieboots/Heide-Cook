@@ -2552,19 +2552,31 @@
     .header img.logo {
       left: 50%;
       margin-left: -3.25rem; }
+    .header .header-lower {
+      text-align: center !important;
+      margin-bottom: .5rem; }
+      .header .header-lower .header-link {
+        margin: 1rem !important; }
   .index-lightbox h4 {
-    margin-left: -11.14375rem !important; }
+    margin-left: -11.14375rem !important;
+    top: 48% !important; }
   .index-lightbox h3 {
     font-size: 2rem;
-    margin-left: -13.625rem !important; }
+    margin-left: -13.625rem !important;
+    top: 30% !important; }
   .why-choose-us {
     background-image: none; }
   .tabs-title > a {
     font-size: .75rem !important; }
+  .tabs-panel > img {
+    text-align: center !important;
+    width: .75rem !important; }
   .slick-prev {
-    left: 3.125rem !important; }
+    left: 3.125rem !important;
+    height: auto !important; }
   .slick-next {
-    right: 3.125rem !important; } }
+    right: 3.125rem !important;
+    height: auto !important; } }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**

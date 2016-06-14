@@ -555,16 +555,29 @@
             left: 50%;
             margin-left: rem-calc(-52px);
         }
+
+        .header-lower {
+            text-align: center !important;
+            margin-bottom: .5rem;
+
+            .header-link {
+                margin: 1rem !important;
+            }
+
+        }
     }
+
 
     .index-lightbox {
         h4 {
             margin-left: rem-calc(-178.3) !important;
+            top: 48% !important;
         }
 
         h3 {
             font-size: 2rem;
             margin-left: rem-calc(-218) !important;
+            top: 30% !important;
         }
     }
 
@@ -576,11 +589,18 @@
         font-size: .75rem !important;
     }
 
+    .tabs-panel > img {
+        text-align: center !important;
+        width: .75rem !important;
+    }
+
     .slick-prev {
         left: rem-calc(50px) !important;
+        height: auto !important;
     }
 
     .slick-next {
         right: rem-calc(50px) !important;
+        height: auto !important;
     }
 }
