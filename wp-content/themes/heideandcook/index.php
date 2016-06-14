@@ -11,8 +11,4 @@ $foot = ob_get_clean();
 
 $twig = $container->get("twig.environment");
 
-// if (is_home()) {
-//     $twig->render('index.html.twig')
-// }
-
 echo $twig->render('index.html.twig', array('title' => get_the_title(), 'head' => $head, 'foot' => $foot));
