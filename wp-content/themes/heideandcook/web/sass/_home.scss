@@ -94,6 +94,10 @@
     text-align: center;
     padding-bottom: 1.5rem;
 
+    .row.column > p {
+        margin-bottom: 3rem;
+    }
+
     p {
         max-width: 50rem;
         margin: .8rem auto;
@@ -127,7 +131,7 @@
     max-height: 32rem;
     background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
     background-repeat: no-repeat;
-    background-position: right 5% bottom;
+    background-position: right 7% bottom;
     background-size: 20%;
 
     .left-col {
@@ -562,6 +566,21 @@
             font-size: 2rem;
             margin-left: rem-calc(-218) !important;
         }
+    }
 
+    .why-choose-us {
+        background-image: none;
+    }
+
+    .tabs-title > a {
+        font-size: .75rem !important;
+    }
+
+    .slick-prev {
+        left: rem-calc(50px) !important;
+    }
+
+    .slick-next {
+        right: rem-calc(50px) !important;
     }
 }

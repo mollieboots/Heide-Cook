@@ -2268,6 +2268,8 @@
 .content-services {
   text-align: center;
   padding-bottom: 1.5rem; }
+  .content-services .row.column > p, .content-services .row.columns > p {
+    margin-bottom: 3rem; }
   .content-services p {
     max-width: 50rem;
     margin: .8rem auto; }
@@ -2296,7 +2298,7 @@
   max-height: 32rem;
   background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
   background-repeat: no-repeat;
-  background-position: right 5% bottom;
+  background-position: right 7% bottom;
   background-size: 20%; }
   .why-choose-us .left-col {
     float: left; }
@@ -2554,7 +2556,15 @@
     margin-left: -11.14375rem !important; }
   .index-lightbox h3 {
     font-size: 2rem;
-    margin-left: -13.625rem !important; } }
+    margin-left: -13.625rem !important; }
+  .why-choose-us {
+    background-image: none; }
+  .tabs-title > a {
+    font-size: .75rem !important; }
+  .slick-prev {
+    left: 3.125rem !important; }
+  .slick-next {
+    right: 3.125rem !important; } }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
