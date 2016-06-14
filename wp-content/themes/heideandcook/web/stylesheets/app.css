@@ -2219,10 +2219,10 @@
       margin: 1.5rem; }
 
 .index-lightbox {
-  height: 500px;
+  height: 31.25rem;
   margin-top: 0px;
-  margin-bottom: 65px;
-  border-bottom: 12px solid #db8835;
+  margin-bottom: 4.0625rem;
+  border-bottom: 0.75rem solid #db8835;
   position: relative;
   text-align: center;
   position: relative;
@@ -2262,8 +2262,8 @@
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #db8835;
-  border-width: 50px;
-  margin-left: -50px; }
+  border-width: 3.125rem;
+  margin-left: -3.125rem; }
 
 .content-services {
   text-align: center;
@@ -2284,7 +2284,7 @@
   .content-services .column-right p {
     margin-right: -1.3rem; }
   .content-services .service-icon {
-    height: 100px;
+    height: 6.25rem;
     margin-bottom: 1.5rem; }
   .content-services div:nth-child(1) > p {
     margin-bottom: 4rem; }
@@ -2299,13 +2299,13 @@
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #fff;
-  border-width: 60px;
-  margin-left: -60px; }
+  border-width: 3.75rem;
+  margin-left: -3.75rem; }
 
 .why-choose-us {
   background: #f3f4f4;
   padding: 2rem;
-  padding-top: 75px;
+  padding-top: 4.6875rem;
   min-height: 25rem;
   max-height: 32rem; }
   .why-choose-us .left-col {
@@ -2345,7 +2345,7 @@
     .recent-work .recent-work-slider img {
       height: 100%; }
   .recent-work .slick-prev {
-    left: 250px;
+    left: 15.625rem;
     top: -2rem;
     background-image: url("/wp-content/themes/heideandcook/web/images/left-slider-arrow.png");
     background-repeat: no-repeat;
@@ -2354,7 +2354,7 @@
   .recent-work .slick-prev:before, .recent-work .slick-next:before {
     content: ""; }
   .recent-work .slick-next {
-    right: 250px;
+    right: 15.625rem;
     top: -2rem;
     background-image: url("/wp-content/themes/heideandcook/web/images/right-slider-arrow.png");
     background-repeat: no-repeat;
@@ -2424,18 +2424,18 @@
       margin-top: .5rem; }
 
 .footer {
-  height: 312px;
+  height: 19.5rem;
   background-image: url("/wp-content/themes/heideandcook/web/images/footer-background.png");
   background-size: cover;
-  padding: 70px 0px 30px 0px; }
+  padding: 4.375rem 0px 1.875rem 0px; }
   .footer .footer-input {
-    width: 390px;
-    height: 50px;
+    width: 24.375rem;
+    height: 3.125rem;
     margin: 0px auto;
     color: #006940 !important;
     position: relative; }
     .footer .footer-input input {
-      width: 348px; }
+      width: 21.75rem; }
     .footer .footer-input .button {
       width: 2.6rem;
       height: 100%;
@@ -2450,7 +2450,7 @@
       width: 100%;
       position: absolute;
       bottom: 0px;
-      height: 10px;
+      height: 0.625rem;
       background-color: #62a745; }
   .footer .social-media {
     margin-top: 1rem; }
@@ -2464,9 +2464,9 @@
       height: 2.5rem;
       border-radius: 50%;
       text-align: center;
-      line-height: 28px;
+      line-height: 1.75rem;
       vertical-align: middle;
-      padding: 5px; }
+      padding: 0.3125rem; }
   .footer .copyright {
     color: #006940;
     font-size: .75rem;
@@ -2510,6 +2510,12 @@
 @media only screen and (max-width: 75rem) {
   .row {
     max-width: 60rem !important; }
+  .recent-work-slider {
+    height: auto !important; }
+    .recent-work-slider .slick-slide {
+      height: auto !important; }
+    .recent-work-slider .hc-work > img {
+      height: auto !important; }
   .slick-prev {
     left: 9.375rem !important; }
   .slick-next {

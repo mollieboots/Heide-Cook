@@ -35,10 +35,10 @@
 
 //sliders
 .index-lightbox {
-    height: 500px;
+    height: rem-calc(500px);
     margin-top: 0px;
-    margin-bottom: 65px;
-    border-bottom: 12px solid $orange;
+    margin-bottom: rem-calc(65px);
+    border-bottom: rem-calc(12px) solid $orange;
     position: relative;
     text-align: center;
     position: relative;
@@ -60,7 +60,7 @@
         top: 40%;
         left:50%;
         margin: 0px auto;
-        margin-left: -(rem-calc(311));
+        margin-left: -(rem-calc(311px));
         font-size: 2.5rem;
         color: $white;
     }
@@ -69,7 +69,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-left: -(rem-calc(283));
+        margin-left: -(rem-calc(283px));
         color: #a7a7a7;
     }
 }
@@ -85,8 +85,8 @@
 	pointer-events: none;
 	border-color: rgba(136, 183, 213, 0);
 	border-top-color: $orange;
-	border-width: 50px;
-	margin-left: -50px;
+	border-width: rem-calc(50px);
+	margin-left: -(rem-calc(50px));
 }
 
 //Homepage Sections in decsending order
@@ -126,7 +126,7 @@
     }
 
     .service-icon {
-        height: 100px;
+        height: rem-calc(100px);
         margin-bottom: 1.5rem;;
     }
 
@@ -145,14 +145,14 @@
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
     border-top-color: $white;
-    border-width: 60px;
-    margin-left: -60px;
+    border-width: rem-calc(60px);
+    margin-left: rem-calc(-60px);
 }
 
 .why-choose-us {
     background: $light-gray;
     padding: 2rem;
-    padding-top: 75px;
+    padding-top: rem-calc(75px);
     min-height:25rem;
     max-height: 32rem;
 
@@ -235,7 +235,7 @@
     }
 
     .slick-prev {
-        left: 250px;
+        left: rem-calc(250px);
         top: -2rem;
         background-image: url("/wp-content/themes/heideandcook/web/images/left-slider-arrow.png");
         background-repeat: no-repeat;
@@ -248,7 +248,7 @@
     }
 
     .slick-next {
-        right: 250px;
+        right: rem-calc(250px);
         top: -2rem;
         background-image: url("/wp-content/themes/heideandcook/web/images/right-slider-arrow.png");
         background-repeat: no-repeat;
@@ -265,13 +265,13 @@
 //locations tabs
 .locations {
     text-align: center;
-    min-height: rem-calc(220);
+    min-height: rem-calc(220px);
     background-color: $light-gray;
-    margin-top: rem-calc(5);
+    margin-top: rem-calc(5px);
     color: $medium-gray;
 
     .tabs-row {
-        border-bottom: rem-calc(3) solid $medium-gray;
+        border-bottom: rem-calc(3px) solid $medium-gray;
         margin: 0px auto;
         width: 100%;
     }
@@ -313,7 +313,7 @@
         float: left;
         text-align: left;
         width: 30%;
-        padding: rem-calc(50) 0px;
+        padding: rem-calc(50px) 0px;
 
         img {
             float: left;
@@ -356,20 +356,20 @@
 
 //footer
 .footer {
-    height: 312px;
+    height: rem-calc(312px);
     background-image: url("/wp-content/themes/heideandcook/web/images/footer-background.png");
     background-size: cover;
-    padding: 70px 0px 30px 0px;
+    padding: rem-calc(70px) 0px rem-calc(30px) 0px;
 
     .footer-input {
-        width: 390px;
-        height: 50px;
+        width: rem-calc(390px);
+        height: rem-calc(50px);
         margin: 0px auto;
         color: $dark-green !important;
         position: relative;
 
         input {
-            width: 348px;
+            width: rem-calc(348px);
         }
 
         .button {
@@ -388,7 +388,7 @@
             width: 100%;
             position: absolute;
             bottom: 0px;
-            height: 10px;
+            height: rem-calc(10px);
             background-color: $light-green;
         }
     }
@@ -408,9 +408,9 @@
             height: 2.5rem;;
             border-radius: 50%;
             text-align: center;
-            line-height: 28px;
+            line-height: rem-calc(28px);
             vertical-align: middle;
-            padding: 5px;
+            padding: rem-calc(5px);
         }
     }
 
@@ -467,21 +467,33 @@
 }
 
 //breakpoints
-@media only screen and (max-width: rem-calc(1200)) {
+@media only screen and (max-width: rem-calc(1200px)) {
     .row {
         max-width: 60rem !important;
     }
 
+    .recent-work-slider {
+        height: auto !important;
+
+        .slick-slide {
+            height: auto !important;
+        }
+
+        .hc-work > img {
+            height: auto !important;
+        }
+    }
+
     .slick-prev {
-        left: rem-calc(150) !important;
+        left: rem-calc(150px) !important;
     }
 
     .slick-next {
-        right: rem-calc(150) !important;
+        right: rem-calc(150px) !important;
     }
 }
 
-@media only screen and (max-width: rem-calc(1024)) {
+@media only screen and (max-width: rem-calc(1024px)) {
     .row {
         max-width: 50rem !important;
     }
