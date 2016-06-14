@@ -99,39 +99,9 @@
         margin: .8rem auto;
     }
 
-    .column-left, .column-middle, .column-right {
-        float: left;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
-    }
-
-    .column-left, .column-right {
-        width: 25%;
-    }
-
-    .column-middle {
-        width: 35%;
-    }
-
-    .column-left {
-        p {
-            margin-left: -1rem;
-        }
-    }
-
-    .column-right {
-        p {
-            margin-right: -1.3rem;
-        }
-    }
-
     .service-icon {
         height: rem-calc(100px);
         margin-bottom: 1.5rem;;
-    }
-
-    div:nth-child(1) > p {
-        margin-bottom: 4rem;
     }
 }
 
@@ -155,10 +125,13 @@
     padding-top: rem-calc(75px);
     min-height:25rem;
     max-height: 32rem;
+    background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
+    background-repeat: no-repeat;
+    background-position: right 5% bottom;
+    background-size: 20%;
 
     .left-col {
         float: left;
-        width: 50%;
 
         .bold-orange {
             font-size: 1.2rem;
@@ -193,7 +166,6 @@
 
     .right-col {
         float: right;
-        width: 50%;
 
         .quote-container {
             width: 65%;
@@ -290,7 +262,18 @@
 
     .tabs-title.is-active > a {
         color: $dark-green !important;
+        background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
+        background-repeat: no-repeat;
+        background-position: center bottom -3px;
     }
+
+    // .tabs-title.is-active > a::after {
+    //     content: "";
+    //     position:absolute;
+    //     right: 0px;
+    //     bottom:0px;
+    //     background: transparent url("/wp-content/themes/heideandcook/web/images/active-arrow.png") no-repeat center bottom;
+    // }
 
     .tabs-title.is-active > a:after {
     }
@@ -310,22 +293,18 @@
     }
 
     .left {
-        float: left;
         text-align: left;
-        width: 30%;
         padding: rem-calc(50px) 0px;
 
         img {
             float: left;
-            margin-left: 3.5rem;
+            margin-left: 10rem;
             margin-right: rem-calc(10px);
         }
     }
 
     .middle {
-        float: left;
         text-align: left;
-        width: 40%;
         padding: rem-calc(50) 0px;
 
         img {
@@ -336,8 +315,6 @@
     }
 
     .right {
-        float: right;
-        width: 30%;
         text-align: left;
         padding: rem-calc(35) 0px;
 
@@ -491,6 +468,16 @@
     .slick-next {
         right: rem-calc(150px) !important;
     }
+
+    .locations > .tabs-content > .location-info {
+        .left > img {
+            margin-left: 5rem !important;
+        }
+
+        .middle > img {
+            margin-left: 2.3rem !important;
+        }
+    }
 }
 
 @media only screen and (max-width: rem-calc(1024px)) {
@@ -507,6 +494,16 @@
         top: 1.4rem !important;
     }
 
+    .locations > .tabs-content > .location-info {
+        .left > img {
+            margin-left: 1rem !important;
+        }
+
+        .middle > img {
+            margin-left: .5rem !important;
+        }
+    }
+
     .recent-work-slider {
         height: auto !important;
 
@@ -517,5 +514,54 @@
         .hc-work > img {
             height: auto !important;
         }
+    }
+}
+
+@media only screen and (max-width: rem-calc(870px)) {
+    .tabs-title > a {
+        padding: 1.25rem 1.5rem !important;
+    }
+
+    html {
+        font-size: rem-calc(14px) !important;
+    }
+
+    .locations > .column.middle > img {
+        margin-left: 3rem !important;
+    }
+
+    .quote-container {
+        width: auto !important;
+    }
+}
+
+.why-choose-us {
+    max-height: none;
+}
+
+@media only screen and (max-width: rem-calc(700px)) {
+    .header {
+        height: auto !important;
+
+        .row {
+            margin-top: 1rem;
+        }
+
+        img.logo {
+            left: 50%;
+            margin-left: rem-calc(-52px);
+        }
+    }
+
+    .index-lightbox {
+        h4 {
+            margin-left: rem-calc(-178.3) !important;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-left: rem-calc(-218) !important;
+        }
+
     }
 }

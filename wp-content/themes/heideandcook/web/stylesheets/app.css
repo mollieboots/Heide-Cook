@@ -2271,23 +2271,9 @@
   .content-services p {
     max-width: 50rem;
     margin: .8rem auto; }
-  .content-services .column-left, .content-services .column-middle, .content-services .column-right {
-    float: left;
-    margin-left: 2.5%;
-    margin-right: 2.5%; }
-  .content-services .column-left, .content-services .column-right {
-    width: 25%; }
-  .content-services .column-middle {
-    width: 35%; }
-  .content-services .column-left p {
-    margin-left: -1rem; }
-  .content-services .column-right p {
-    margin-right: -1.3rem; }
   .content-services .service-icon {
     height: 6.25rem;
     margin-bottom: 1.5rem; }
-  .content-services div:nth-child(1) > p {
-    margin-bottom: 4rem; }
 
 .content-services::after {
   left: 50%;
@@ -2307,10 +2293,13 @@
   padding: 2rem;
   padding-top: 4.6875rem;
   min-height: 25rem;
-  max-height: 32rem; }
+  max-height: 32rem;
+  background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
+  background-repeat: no-repeat;
+  background-position: right 5% bottom;
+  background-size: 20%; }
   .why-choose-us .left-col {
-    float: left;
-    width: 50%; }
+    float: left; }
     .why-choose-us .left-col .bold-orange {
       font-size: 1.2rem; }
     .why-choose-us .left-col .row {
@@ -2328,8 +2317,7 @@
     display: inline;
     margin-right: .2rem; }
   .why-choose-us .right-col {
-    float: right;
-    width: 50%; }
+    float: right; }
     .why-choose-us .right-col .quote-container {
       width: 65%; }
   .why-choose-us img.photo {
@@ -2383,7 +2371,10 @@
     padding: 2.25rem 4.5rem;
     color: #a7a7a7; }
   .locations .tabs-title.is-active > a {
-    color: #006940 !important; }
+    color: #006940 !important;
+    background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
+    background-repeat: no-repeat;
+    background-position: center bottom -3px; }
   .locations .tabs-title:hover > a {
     background-color: #f3f4f4;
     color: #4a4a4a; }
@@ -2393,26 +2384,20 @@
   .locations .tabs-panel {
     padding: 0px; }
   .locations .left {
-    float: left;
     text-align: left;
-    width: 30%;
     padding: 3.125rem 0px; }
     .locations .left img {
       float: left;
-      margin-left: 3.5rem;
+      margin-left: 10rem;
       margin-right: 0.625rem; }
   .locations .middle {
-    float: left;
     text-align: left;
-    width: 40%;
     padding: 3.125rem 0px; }
     .locations .middle img {
       float: left;
       margin-left: 5rem;
       margin-right: 0.625rem; }
   .locations .right {
-    float: right;
-    width: 30%;
     text-align: left;
     padding: 2.1875rem 0px; }
     .locations .right p {
@@ -2519,7 +2504,11 @@
   .slick-prev {
     left: 9.375rem !important; }
   .slick-next {
-    right: 9.375rem !important; } }
+    right: 9.375rem !important; }
+  .locations > .tabs-content > .location-info .left > img {
+    margin-left: 5rem !important; }
+  .locations > .tabs-content > .location-info .middle > img {
+    margin-left: 2.3rem !important; } }
 
 @media only screen and (max-width: 64rem) {
   .row {
@@ -2529,12 +2518,43 @@
   img.logo {
     height: 3.75rem !important;
     top: 1.4rem !important; }
+  .locations > .tabs-content > .location-info .left > img {
+    margin-left: 1rem !important; }
+  .locations > .tabs-content > .location-info .middle > img {
+    margin-left: .5rem !important; }
   .recent-work-slider {
     height: auto !important; }
     .recent-work-slider .slick-slide {
       height: auto !important; }
     .recent-work-slider .hc-work > img {
       height: auto !important; } }
+
+@media only screen and (max-width: 54.375rem) {
+  .tabs-title > a {
+    padding: 1.25rem 1.5rem !important; }
+  html {
+    font-size: 0.875rem !important; }
+  .locations > .column.middle > img, .locations > .middle.columns > img {
+    margin-left: 3rem !important; }
+  .quote-container {
+    width: auto !important; } }
+
+.why-choose-us {
+  max-height: none; }
+
+@media only screen and (max-width: 43.75rem) {
+  .header {
+    height: auto !important; }
+    .header .row {
+      margin-top: 1rem; }
+    .header img.logo {
+      left: 50%;
+      margin-left: -3.25rem; }
+  .index-lightbox h4 {
+    margin-left: -11.14375rem !important; }
+  .index-lightbox h3 {
+    font-size: 2rem;
+    margin-left: -13.625rem !important; } }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
