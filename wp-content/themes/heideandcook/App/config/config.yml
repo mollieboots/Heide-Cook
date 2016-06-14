@@ -1,14 +1,15 @@
 parameters:
   twig.paths:
     - "%template_dir%/views"
+    - "%template_dir%/src/views"
     - "%template_dir%/vendor/symfony/twig-bridge/Resources/views/Form"
   twig.options:
     debug:            "%WP_DEBUG%"
     charset:          "utf-8"
-    cache:            null #"%tempalte_dir%/var/twig/views"
-    auto_reload:      "%WP_DEBUG%"
-    strict_variables: true
-    autoescape:       true
+    cache:            ~ #"%template_dir%/var/twig"
+    auto_reload:      true #"%WP_DEBUG%"
+    strict_variables: "%WP_DEBUG%"
+    autoescape:       false
     optimizations:    -1
 
 services:
@@ -69,6 +70,13 @@ services:
   twig.form_extension:
     class: "Symfony\\Bridge\\Twig\\Extension\\FormExtension"
     arguments: ["@twig.form_renderer"]
+  twig.acf:
+    class: "Supertheme\\WordPress\\Twig\\ACF"
+  twig.wordpress:
+    class: "Supertheme\\WordPress\\Twig\\WordPRess"
+  twig.supertheme:
+    class: "Supertheme\\WordPress\\Twig\\SuperTheme"
+    arguments: ["@twig.acf", "@twig.wordpress"]
   twig.environment:
     class: "Twig_Environment"
     arguments: ["@twig.loader", "%twig.options%"]
@@ -76,3 +84,4 @@ services:
       - ["addExtension", ["@twig.debug"]]
       - ["addExtension", ["@twig.form_translation"]]
       - ["addExtension", ["@twig.form_extension"]]
+      - ["addGlobal", ["SP", "@twig.supertheme"]]
