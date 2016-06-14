@@ -2,7 +2,7 @@
 require_once __DIR__.'/App/bootstrap.php';
 
 $twig = $container->get("twig.environment");
-$template = 'index.html.twig';
+$template = 'pages/generic.html.twig';
 $data = [];
 
 echo $twig->render($template, $data);
