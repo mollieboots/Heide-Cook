@@ -8,7 +8,7 @@ parameters:
     charset:          "utf-8"
     cache:            ~ #"%template_dir%/var/twig"
     auto_reload:      true #"%WP_DEBUG%"
-    strict_variables: "%WP_DEBUG%"
+    strict_variables: true #"%WP_DEBUG%"
     autoescape:       false
     optimizations:    -1
 
