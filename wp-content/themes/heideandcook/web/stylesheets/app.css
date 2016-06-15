@@ -2374,9 +2374,13 @@
     color: #a7a7a7; }
   .locations .tabs-title.is-active > a {
     color: #006940 !important;
-    background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
-    background-repeat: no-repeat;
-    background-position: center bottom -3px; }
+    position: relative; }
+  .locations .tabs-title.is-active > a::after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 0px;
+    background: transparent url("/wp-content/themes/heideandcook/web/images/active-arrow.png") no-repeat center bottom; }
   .locations .tabs-title:hover > a {
     background-color: #f3f4f4;
     color: #4a4a4a; }
@@ -2577,6 +2581,21 @@
   .slick-next {
     right: 3.125rem !important;
     height: auto !important; } }
+
+.generic-content {
+  margin: 2.5rem 0px; }
+  .generic-content .button {
+    background-color: #62a745;
+    margin-bottom: 0px;
+    padding: .8rem 2rem; }
+    .generic-content .button a {
+      color: #fff; }
+      .generic-content .button a p {
+        margin-bottom: 0px; }
+  .generic-content .button:hover {
+    opacity: .8;
+    background: #62a745;
+    transition: .3s; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**

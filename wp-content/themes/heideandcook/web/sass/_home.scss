@@ -266,20 +266,18 @@
 
     .tabs-title.is-active > a {
         color: $dark-green !important;
-        background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
-        background-repeat: no-repeat;
-        background-position: center bottom -3px;
+        position: relative;
+        // background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
+        // background-repeat: no-repeat;
+        // background-position: center bottom -3px;
     }
 
-    // .tabs-title.is-active > a::after {
-    //     content: "";
-    //     position:absolute;
-    //     right: 0px;
-    //     bottom:0px;
-    //     background: transparent url("/wp-content/themes/heideandcook/web/images/active-arrow.png") no-repeat center bottom;
-    // }
-
-    .tabs-title.is-active > a:after {
+    .tabs-title.is-active > a::after {
+        content: "";
+        position:absolute;
+        right: 50%;
+        bottom:0px;
+        background: transparent url("/wp-content/themes/heideandcook/web/images/active-arrow.png") no-repeat center bottom;
     }
 
     .tabs-title:hover > a {
