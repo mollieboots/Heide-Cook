@@ -2633,6 +2633,11 @@
   border-width: 2.5rem;
   margin-left: -2.5rem; }
 
+.our-partners {
+  margin-bottom: 3rem; }
+  .our-partners img {
+    width: 100%; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
    * 1. Set default font family to sans-serif.
