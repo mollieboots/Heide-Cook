@@ -2597,6 +2597,42 @@
     background: #62a745;
     transition: .3s; }
 
+.capabilities-grid {
+  margin-right: 0px;
+  margin-bottom: 5rem;
+  background-color: #f3f4f4; }
+  .capabilities-grid h3.green-header {
+    margin-top: 5rem; }
+  .capabilities-grid .row > .row {
+    margin: 0px !important;
+    margin-bottom: 3rem !important; }
+
+.capabilities-grid::before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #fff;
+  border-width: 2.5rem;
+  margin-left: -2.5rem; }
+
+.capabilities-grid::after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #f3f4f4;
+  border-width: 2.5rem;
+  margin-left: -2.5rem; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
    * 1. Set default font family to sans-serif.
