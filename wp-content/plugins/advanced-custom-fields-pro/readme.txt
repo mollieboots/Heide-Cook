@@ -106,6 +106,10 @@ http://support.advancedcustomfields.com/
 
 == Changelog ==
 
+= 5.3.9.1 =
+* Time Picker field: Fixed bug causing value to appear as current time
+* API: Fixed bug causing `have_rows()` to fail when using an object as $post_id parameter
+
 = 5.3.9 =
 * Date Time Picker field: Added new field
 * Time Picker field: Added new field

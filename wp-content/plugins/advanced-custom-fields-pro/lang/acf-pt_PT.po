@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Custom Fields PRO 5.3.7\n"
 "Report-Msgid-Bugs-To: http://support.advancedcustomfields.com\n"
-"POT-Creation-Date: 2016-06-07 14:20+0100\n"
-"PO-Revision-Date: 2016-06-07 14:20+0100\n"
+"POT-Creation-Date: 2016-06-14 09:28+0100\n"
+"PO-Revision-Date: 2016-06-14 09:29+0100\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language: pt_PT\n"
@@ -28,91 +28,91 @@ msgstr ""
 msgid "Advanced Custom Fields"
 msgstr "Advanced Custom Fields"
 
-#: acf.php:265 admin/admin.php:61
+#: acf.php:267 admin/admin.php:61
 msgid "Field Groups"
 msgstr "Grupos de campos"
 
-#: acf.php:266
+#: acf.php:268
 msgid "Field Group"
 msgstr "Grupo de campos"
 
-#: acf.php:267 acf.php:299 admin/admin.php:62
+#: acf.php:269 acf.php:301 admin/admin.php:62
 #: pro/fields/flexible-content.php:496
 msgid "Add New"
 msgstr "Adicionar novo"
 
-#: acf.php:268
+#: acf.php:270
 msgid "Add New Field Group"
 msgstr "Adicionar novo grupo de campos"
 
-#: acf.php:269
+#: acf.php:271
 msgid "Edit Field Group"
 msgstr "Editar grupo de campos"
 
-#: acf.php:270
+#: acf.php:272
 msgid "New Field Group"
 msgstr "Novo grupo de campos"
 
-#: acf.php:271
+#: acf.php:273
 msgid "View Field Group"
 msgstr "Ver grupo de campos"
 
-#: acf.php:272
+#: acf.php:274
 msgid "Search Field Groups"
 msgstr "Pesquisar grupos de campos"
 
-#: acf.php:273
+#: acf.php:275
 msgid "No Field Groups found"
 msgstr "Nenhum grupo de campos encontrado"
 
-#: acf.php:274
+#: acf.php:276
 msgid "No Field Groups found in Trash"
 msgstr "Nenhum grupo de campos encontrado no lixo"
 
-#: acf.php:297 admin/field-group.php:182 admin/field-group.php:280
+#: acf.php:299 admin/field-group.php:182 admin/field-group.php:280
 #: admin/field-groups.php:528
 msgid "Fields"
 msgstr "Campos"
 
-#: acf.php:298
+#: acf.php:300
 msgid "Field"
 msgstr "Campo"
 
-#: acf.php:300
+#: acf.php:302
 msgid "Add New Field"
 msgstr "Adicionar novo campo"
 
-#: acf.php:301
+#: acf.php:303
 msgid "Edit Field"
 msgstr "Editar campo"
 
-#: acf.php:302 admin/views/field-group-fields.php:18
+#: acf.php:304 admin/views/field-group-fields.php:18
 #: admin/views/settings-info.php:111
 msgid "New Field"
 msgstr "Novo campo"
 
-#: acf.php:303
+#: acf.php:305
 msgid "View Field"
 msgstr "Ver campo"
 
-#: acf.php:304
+#: acf.php:306
 msgid "Search Fields"
 msgstr "Pesquisar campos"
 
-#: acf.php:305
+#: acf.php:307
 msgid "No Fields found"
 msgstr "Nenhum campo encontrado"
 
-#: acf.php:306
+#: acf.php:308
 msgid "No Fields found in Trash"
 msgstr "Nenhum campo encontrado no Lixo"
 
-#: acf.php:345 admin/field-group.php:395 admin/field-groups.php:586
+#: acf.php:347 admin/field-group.php:395 admin/field-groups.php:586
 #: admin/views/field-group-options.php:13
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: acf.php:350
+#: acf.php:352
 #, php-format
 msgid "Disabled <span class=\"count\">(%s)</span>"
 msgid_plural "Disabled <span class=\"count\">(%s)</span>"
@@ -343,7 +343,7 @@ msgid "Title"
 msgstr "Título"
 
 #: admin/field-groups.php:526 admin/views/field-group-options.php:93
-#: admin/views/update-network.php:20 admin/views/update-network.php:28
+#: admin/views/update-network.php:25 admin/views/update-network.php:33
 #: pro/fields/gallery.php:398
 msgid "Description"
 msgstr "Descrição"
@@ -370,7 +370,7 @@ msgstr "Recursos"
 msgid "Getting Started"
 msgstr "Primeiros passos"
 
-#: admin/field-groups.php:630 pro/admin/settings-updates.php:73
+#: admin/field-groups.php:630 pro/admin/settings-updates.php:61
 #: pro/admin/views/settings-updates.php:17
 msgid "Updates"
 msgstr "Actualizações"
@@ -450,7 +450,7 @@ msgstr "O que há de novo"
 msgid "Tools"
 msgstr "Ferramentas"
 
-#: admin/settings-tools.php:147 admin/settings-tools.php:370
+#: admin/settings-tools.php:147 admin/settings-tools.php:380
 msgid "No field groups selected"
 msgstr "Nenhum grupo de campos seleccionado"
 
@@ -470,38 +470,30 @@ msgstr "Tipo de ficheiro incorrecto"
 msgid "Import file empty"
 msgstr "Ficheiro de importação vazio"
 
-#: admin/settings-tools.php:329
+#: admin/settings-tools.php:331
 #, php-format
 msgid "Imported 1 field group"
 msgid_plural "Imported %s field groups"
 msgstr[0] "Importado 1 grupo de campos"
 msgstr[1] "Importados %s grupos de campos"
 
-#: admin/update.php:113
-msgid "Upgrade ACF"
-msgstr "Actualizar o ACF"
-
-#: admin/update.php:166
-msgid "Review sites & upgrade"
-msgstr "Rever sites e actualizar"
-
-#: admin/update.php:317
-msgid "Upgrade"
-msgstr "Actualizar"
-
-#: admin/update.php:368
+#: admin/update-network.php:96 admin/update.php:104 admin/update.php:155
 msgid "Upgrade Database"
 msgstr "Actualizar base de dados"
 
-#: admin/update.php:433
+#: admin/update-network.php:148
+msgid "Review sites & upgrade"
+msgstr "Rever sites e actualizar"
+
+#: admin/update.php:220
 msgid "Error validating request"
 msgstr "Erro ao validar pedido."
 
-#: admin/update.php:456 admin/views/update.php:110
+#: admin/update.php:243 admin/views/update.php:110
 msgid "No updates available"
 msgstr "Nenhuma actualização disponível."
 
-#: admin/update.php:473
+#: admin/update.php:260
 msgid "Error loading update"
 msgstr "Erro ao carregar actualização."
 
@@ -1268,40 +1260,45 @@ msgstr "Seleccionar ficheiro"
 msgid "Import"
 msgstr "Importar"
 
-#: admin/views/update-network.php:8 admin/views/update.php:8
+#: admin/views/update-network.php:4
+msgid "Upgrade Sites"
+msgstr "Actualizar sites"
+
+#: admin/views/update-network.php:13 admin/views/update.php:8
 msgid "Advanced Custom Fields Database Upgrade"
 msgstr "Actualização da base de dados do Advanced Custom Fields"
 
-#: admin/views/update-network.php:10
+#: admin/views/update-network.php:15
+#, php-format
 msgid ""
 "The following sites require a DB upgrade. Check the ones you want to update "
-"and then click “Upgrade Database”."
+"and then click %s."
 msgstr ""
 "Os sites seguintes necessitam de actualização da BD. Seleccione os que quer "
-"actualizar e clique em \"Actualizar base de dados\"."
+"actualizar e clique em %s."
 
-#: admin/views/update-network.php:19 admin/views/update-network.php:27
+#: admin/views/update-network.php:24 admin/views/update-network.php:32
 msgid "Site"
 msgstr "Site"
 
-#: admin/views/update-network.php:47
+#: admin/views/update-network.php:52
 #, php-format
 msgid "Site requires database upgrade from %s to %s"
 msgstr "O site necessita de actualizar a base de dados de %s para %s"
 
-#: admin/views/update-network.php:49
+#: admin/views/update-network.php:54
 msgid "Site is up to date"
 msgstr "O site está actualizado"
 
-#: admin/views/update-network.php:62 admin/views/update.php:16
+#: admin/views/update-network.php:67 admin/views/update.php:16
 msgid "Database Upgrade complete"
 msgstr "Actualização da base de dados concluída"
 
-#: admin/views/update-network.php:62
+#: admin/views/update-network.php:67
 msgid "Return to network dashboard"
 msgstr "Voltar ao painel da rede"
 
-#: admin/views/update-network.php:101 admin/views/update-notice.php:35
+#: admin/views/update-network.php:106 admin/views/update-notice.php:35
 msgid ""
 "It is strongly recommended that you backup your database before proceeding. "
 "Are you sure you wish to run the updater now?"
@@ -1309,11 +1306,11 @@ msgstr ""
 "É fortemente recomendado que faça uma cópia de segurança da sua base de "
 "dados antes de continuar. Tem a certeza que quer actualizar agora?"
 
-#: admin/views/update-network.php:157
+#: admin/views/update-network.php:162
 msgid "Upgrade complete"
 msgstr "Actualização concluída"
 
-#: admin/views/update-network.php:161 admin/views/update.php:14
+#: admin/views/update-network.php:166 admin/views/update.php:14
 #, php-format
 msgid "Upgrading data to version %s"
 msgstr "A actualizar dados para a versão %s"
@@ -2462,11 +2459,11 @@ msgstr "Nenhum grupo de campos personalizado encontrado na página de opções."
 msgid "Create a Custom Field Group"
 msgstr "Criar um grupo de campos personalizado"
 
-#: pro/admin/settings-updates.php:137
+#: pro/admin/settings-updates.php:125
 msgid "<b>Error</b>. Could not connect to update server"
 msgstr "<b>Erro</b>. Não foi possível ligar ao servidor de actualização."
 
-#: pro/admin/settings-updates.php:267 pro/admin/settings-updates.php:338
+#: pro/admin/settings-updates.php:203 pro/admin/settings-updates.php:274
 msgid "<b>Connection Error</b>. Sorry, please try again"
 msgstr "<b>Erro de comunicação</b>. Por favor tente de novo."
 
@@ -2535,7 +2532,7 @@ msgstr "Aviso de actualização"
 msgid "Options"
 msgstr "Opções"
 
-#: pro/core/updates.php:194
+#: pro/core/updates.php:206
 #, php-format
 msgid ""
 "To enable updates, please enter your license key on the <a href=\"%s"
@@ -2791,6 +2788,19 @@ msgstr "Elliot Condon"
 #. Author URI of the plugin/theme
 msgid "http://www.elliotcondon.com/"
 msgstr "http://www.elliotcondon.com/"
+
+#~ msgid "Upgrade ACF"
+#~ msgstr "Actualizar o ACF"
+
+#~ msgid "Upgrade"
+#~ msgstr "Actualizar"
+
+#~ msgid ""
+#~ "The following sites require a DB upgrade. Check the ones you want to "
+#~ "update and then click “Upgrade Database”."
+#~ msgstr ""
+#~ "Os sites seguintes necessitam de actualização da BD. Seleccione os que "
+#~ "quer actualizar e clique em \"Actualizar base de dados\"."
 
 #~ msgid "<b>Success</b>. Import tool added %s field groups: %s"
 #~ msgstr ""
