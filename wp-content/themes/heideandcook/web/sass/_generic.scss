@@ -6,29 +6,12 @@
     .button {
         background-color: $light-green;
         margin-bottom: 0px;
-        // position: absolute;
-        // bottom: 0px;
-        // left: .8rem;
         padding: .8rem 2rem;
 
         a {
             color: $white;
-
-            p {
-                margin-bottom: 0px;
-            }
         }
     }
-
-    .button:hover {
-        opacity: .8;
-        background: $light-green;
-        transition: .3s;
-    }
-
-    // .column.large-8 > img {
-    //     border-left: rem-calc(12px) solid $light-green;
-    // }
 }
 
 .capabilities-grid {
@@ -43,6 +26,10 @@
     .row > .row {
         margin: 0px !important;
         margin-bottom: 3rem !important;
+
+        h4.green-header {
+            margin-top:.5rem;
+        }
     }
 }
 

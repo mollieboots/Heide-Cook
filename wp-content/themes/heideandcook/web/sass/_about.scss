@@ -1,0 +1,17 @@
+@import "settings";
+
+.about-content {
+
+
+    .button {
+        padding: .8rem 2rem;
+
+        a {
+            color: $white;
+        }
+    }
+
+    .column.large-8 > img {
+        border-left: rem-calc(12px) solid $light-green;
+    }
+}

@@ -2590,12 +2590,6 @@
     padding: .8rem 2rem; }
     .generic-content .button a {
       color: #fff; }
-      .generic-content .button a p {
-        margin-bottom: 0px; }
-  .generic-content .button:hover {
-    opacity: .8;
-    background: #62a745;
-    transition: .3s; }
 
 .capabilities-grid {
   margin-right: 0px;
@@ -2606,6 +2600,8 @@
   .capabilities-grid .row > .row {
     margin: 0px !important;
     margin-bottom: 3rem !important; }
+    .capabilities-grid .row > .row h4.green-header {
+      margin-top: .5rem; }
 
 .capabilities-grid::before {
   left: 50%;
@@ -2637,6 +2633,14 @@
   margin-bottom: 3rem; }
   .our-partners img {
     width: 100%; }
+
+.about-content .button {
+  padding: .8rem 2rem; }
+  .about-content .button a {
+    color: #fff; }
+
+.about-content .column.large-8 > img, .about-content .large-8.columns > img {
+  border-left: 0.75rem solid #62a745; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -4315,12 +4319,12 @@ select {
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  background-color: #2199e8;
+  background-color: #62a745;
   color: #fff; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #1583cc;
+    background-color: #538e3b;
     color: #fff; }
   .button.tiny {
     font-size: 0.6rem; }
@@ -4405,7 +4409,7 @@ select {
     opacity: 0.25;
     cursor: not-allowed; }
     .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #2199e8;
+      background-color: #62a745;
       color: #fff; }
   .button.dropdown::after {
     content: '';
