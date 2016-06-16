@@ -10,7 +10,9 @@ $themeSettingsPage = new \Supertheme\WordPress\ThemeSettingsPage(
     $container->get('form'),
     $container->get('twig.environment')
 );
-$themeSettingsPage->register();
+//$themeSettingsPage->register();
+
+add_theme_support('post-thumbnails');
 
 // always start a session
 add_action('init', function () {
