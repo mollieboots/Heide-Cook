@@ -11,13 +11,27 @@ namespace Supertheme\WordPress\Twig;
 
 class WordPress
 {
-    public function title($before = '', $after = '')
+    public function title($post = 0, $before = '', $after = '')
     {
-        return the_title($before, $after);
+        $title = get_the_title($post);
+
+        if (strlen($title) == 0) {
+            return '';
+        }
+
+        $title = $before . $title . $after;
+
+        return $title;
     }
+
     public function content($more_link_text = null, $strip_teaser = false)
     {
         return the_content($more_link_text, $strip_teaser);
+    }
+
+    public function featuredImage($post = null, $size = 'post-thumbnail', $attr = '')
+    {
+        return get_the_post_thumbnail($post, $size, $attr);
     }
 
     public function body_class($class = '')
@@ -42,5 +56,9 @@ class WordPress
     public function templateURI()
     {
         return get_template_directory_uri();
+    }
+
+    public function URL($post = 0, $leavename = false) {
+        return get_permalink();
     }
 }
