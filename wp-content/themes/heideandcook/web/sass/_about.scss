@@ -1,7 +1,6 @@
 @import "settings";
 
-.about-content {
-
+.about-mission {
 
     .button {
         padding: .8rem 2rem;
@@ -14,4 +13,51 @@
     .column.large-8 > img {
         border-left: rem-calc(12px) solid $light-green;
     }
+}
+
+.offices {
+
+    .green-header {
+        text-transform: none;
+    }
+
+    .tabs-content {
+        border: 0px;
+    }
+
+    .tabs {
+        display: inline-block;
+        border: 0px;
+    }
+
+    .tabs-title.is-active > a {
+        background-color: $light-green;
+        color: $white;
+        border: 2px $light-green solid;
+    }
+
+    .tabs-title.is-active > a:hover {
+        background: scale-color($light-green, $lightness: -15%);
+        border: scale-color($light-green, $lightness: -15%) 2px solid;
+    }
+
+    .tabs-title > a {
+        border: 2px $medium-gray solid;
+        color: $dark-green;
+        border-radius: 2px;
+        margin: 0px rem-calc(2px);
+    }
+
+    .tabs-title > a:hover {
+        background: scale-color($white, $lightness: -15%);
+    }
+}
+
+//misc classes
+.orange {
+    color: $orange;
+}
+
+.green {
+    color: $dark-green;
 }
