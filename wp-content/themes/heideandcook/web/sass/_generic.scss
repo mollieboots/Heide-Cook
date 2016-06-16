@@ -1,0 +1,83 @@
+@import "settings";
+
+.generic-content {
+    margin: 2.5rem 0px;
+
+    .button {
+        background-color: $light-green;
+        margin-bottom: 0px;
+        // position: absolute;
+        // bottom: 0px;
+        // left: .8rem;
+        padding: .8rem 2rem;
+
+        a {
+            color: $white;
+
+            p {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .button:hover {
+        opacity: .8;
+        background: $light-green;
+        transition: .3s;
+    }
+
+    // .column.large-8 > img {
+    //     border-left: rem-calc(12px) solid $light-green;
+    // }
+}
+
+.capabilities-grid {
+    margin-right: 0px;
+    margin-bottom: 5rem;
+    background-color: $light-gray;
+
+    h3.green-header {
+        margin-top: 5rem;
+    }
+
+    .row > .row {
+        margin: 0px !important;
+        margin-bottom: 3rem !important;
+    }
+}
+
+.capabilities-grid::before {
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: $white;
+    border-width: rem-calc(40px);
+    margin-left: rem-calc(-40px);
+}
+
+.capabilities-grid::after {
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: $light-gray;
+    border-width: rem-calc(40px);
+    margin-left: rem-calc(-40px);
+}
+
+.our-partners {
+    margin-bottom: 3rem;
+
+    img {
+        width: 100%;
+    }
+}

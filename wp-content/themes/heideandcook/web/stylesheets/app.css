@@ -2219,10 +2219,10 @@
       margin: 1.5rem; }
 
 .index-lightbox {
-  height: 500px;
+  height: 31.25rem;
   margin-top: 0px;
-  margin-bottom: 65px;
-  border-bottom: 12px solid #db8835;
+  margin-bottom: 4.0625rem;
+  border-bottom: 0.75rem solid #db8835;
   position: relative;
   text-align: center;
   position: relative;
@@ -2262,32 +2262,20 @@
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #db8835;
-  border-width: 50px;
-  margin-left: -50px; }
+  border-width: 3.125rem;
+  margin-left: -3.125rem; }
 
 .content-services {
   text-align: center;
   padding-bottom: 1.5rem; }
+  .content-services .row.column > p, .content-services .row.columns > p {
+    margin-bottom: 3rem; }
   .content-services p {
     max-width: 50rem;
     margin: .8rem auto; }
-  .content-services .column-left, .content-services .column-middle, .content-services .column-right {
-    float: left;
-    margin-left: 2.5%;
-    margin-right: 2.5%; }
-  .content-services .column-left, .content-services .column-right {
-    width: 25%; }
-  .content-services .column-middle {
-    width: 35%; }
-  .content-services .column-left p {
-    margin-left: -1rem; }
-  .content-services .column-right p {
-    margin-right: -1.3rem; }
   .content-services .service-icon {
-    height: 100px;
+    height: 6.25rem;
     margin-bottom: 1.5rem; }
-  .content-services div:nth-child(1) > p {
-    margin-bottom: 4rem; }
 
 .content-services::after {
   left: 50%;
@@ -2299,18 +2287,21 @@
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #fff;
-  border-width: 60px;
-  margin-left: -60px; }
+  border-width: 3.75rem;
+  margin-left: -3.75rem; }
 
 .why-choose-us {
   background: #f3f4f4;
   padding: 2rem;
-  padding-top: 75px;
+  padding-top: 4.6875rem;
   min-height: 25rem;
-  max-height: 32rem; }
+  max-height: 32rem;
+  background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
+  background-repeat: no-repeat;
+  background-position: right 7% bottom;
+  background-size: 20%; }
   .why-choose-us .left-col {
-    float: left;
-    width: 50%; }
+    float: left; }
     .why-choose-us .left-col .bold-orange {
       font-size: 1.2rem; }
     .why-choose-us .left-col .row {
@@ -2328,8 +2319,7 @@
     display: inline;
     margin-right: .2rem; }
   .why-choose-us .right-col {
-    float: right;
-    width: 50%; }
+    float: right; }
     .why-choose-us .right-col .quote-container {
       width: 65%; }
   .why-choose-us img.photo {
@@ -2345,7 +2335,7 @@
     .recent-work .recent-work-slider img {
       height: 100%; }
   .recent-work .slick-prev {
-    left: 250px;
+    left: 15.625rem;
     top: -2rem;
     background-image: url("/wp-content/themes/heideandcook/web/images/left-slider-arrow.png");
     background-repeat: no-repeat;
@@ -2354,7 +2344,7 @@
   .recent-work .slick-prev:before, .recent-work .slick-next:before {
     content: ""; }
   .recent-work .slick-next {
-    right: 250px;
+    right: 15.625rem;
     top: -2rem;
     background-image: url("/wp-content/themes/heideandcook/web/images/right-slider-arrow.png");
     background-repeat: no-repeat;
@@ -2383,7 +2373,14 @@
     padding: 2.25rem 4.5rem;
     color: #a7a7a7; }
   .locations .tabs-title.is-active > a {
-    color: #006940 !important; }
+    color: #006940 !important;
+    position: relative; }
+  .locations .tabs-title.is-active > a::after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 0px;
+    background: transparent url("/wp-content/themes/heideandcook/web/images/active-arrow.png") no-repeat center bottom; }
   .locations .tabs-title:hover > a {
     background-color: #f3f4f4;
     color: #4a4a4a; }
@@ -2393,26 +2390,20 @@
   .locations .tabs-panel {
     padding: 0px; }
   .locations .left {
-    float: left;
     text-align: left;
-    width: 30%;
     padding: 3.125rem 0px; }
     .locations .left img {
       float: left;
-      margin-left: 3.5rem;
+      margin-left: 10rem;
       margin-right: 0.625rem; }
   .locations .middle {
-    float: left;
     text-align: left;
-    width: 40%;
     padding: 3.125rem 0px; }
     .locations .middle img {
       float: left;
       margin-left: 5rem;
       margin-right: 0.625rem; }
   .locations .right {
-    float: right;
-    width: 30%;
     text-align: left;
     padding: 2.1875rem 0px; }
     .locations .right p {
@@ -2424,18 +2415,18 @@
       margin-top: .5rem; }
 
 .footer {
-  height: 312px;
+  height: 19.5rem;
   background-image: url("/wp-content/themes/heideandcook/web/images/footer-background.png");
   background-size: cover;
-  padding: 70px 0px 30px 0px; }
+  padding: 4.375rem 0px 1.875rem 0px; }
   .footer .footer-input {
-    width: 390px;
-    height: 50px;
+    width: 24.375rem;
+    height: 3.125rem;
     margin: 0px auto;
     color: #006940 !important;
     position: relative; }
     .footer .footer-input input {
-      width: 348px; }
+      width: 21.75rem; }
     .footer .footer-input .button {
       width: 2.6rem;
       height: 100%;
@@ -2450,7 +2441,7 @@
       width: 100%;
       position: absolute;
       bottom: 0px;
-      height: 10px;
+      height: 0.625rem;
       background-color: #62a745; }
   .footer .social-media {
     margin-top: 1rem; }
@@ -2464,9 +2455,9 @@
       height: 2.5rem;
       border-radius: 50%;
       text-align: center;
-      line-height: 28px;
+      line-height: 1.75rem;
       vertical-align: middle;
-      padding: 5px; }
+      padding: 0.3125rem; }
   .footer .copyright {
     color: #006940;
     font-size: .75rem;
@@ -2510,10 +2501,20 @@
 @media only screen and (max-width: 75rem) {
   .row {
     max-width: 60rem !important; }
+  .recent-work-slider {
+    height: auto !important; }
+    .recent-work-slider .slick-slide {
+      height: auto !important; }
+    .recent-work-slider .hc-work > img {
+      height: auto !important; }
   .slick-prev {
     left: 9.375rem !important; }
   .slick-next {
-    right: 9.375rem !important; } }
+    right: 9.375rem !important; }
+  .locations > .tabs-content > .location-info .left > img {
+    margin-left: 5rem !important; }
+  .locations > .tabs-content > .location-info .middle > img {
+    margin-left: 2.3rem !important; } }
 
 @media only screen and (max-width: 64rem) {
   .row {
@@ -2523,12 +2524,119 @@
   img.logo {
     height: 3.75rem !important;
     top: 1.4rem !important; }
+  .locations > .tabs-content > .location-info .left > img {
+    margin-left: 1rem !important; }
+  .locations > .tabs-content > .location-info .middle > img {
+    margin-left: .5rem !important; }
   .recent-work-slider {
     height: auto !important; }
     .recent-work-slider .slick-slide {
       height: auto !important; }
     .recent-work-slider .hc-work > img {
       height: auto !important; } }
+
+@media only screen and (max-width: 54.375rem) {
+  .tabs-title > a {
+    padding: 1.25rem 1.5rem !important; }
+  html {
+    font-size: 0.875rem !important; }
+  .locations > .column.middle > img, .locations > .middle.columns > img {
+    margin-left: 3rem !important; }
+  .quote-container {
+    width: auto !important; } }
+
+.why-choose-us {
+  max-height: none; }
+
+@media only screen and (max-width: 43.75rem) {
+  .header {
+    height: auto !important; }
+    .header .row {
+      margin-top: 1rem; }
+    .header img.logo {
+      left: 50%;
+      margin-left: -3.25rem; }
+    .header .header-lower {
+      text-align: center !important;
+      margin-bottom: .5rem; }
+      .header .header-lower .header-link {
+        margin: 1rem !important; }
+  .index-lightbox h4 {
+    margin-left: -11.14375rem !important;
+    top: 48% !important; }
+  .index-lightbox h3 {
+    font-size: 2rem;
+    margin-left: -13.625rem !important;
+    top: 30% !important; }
+  .why-choose-us {
+    background-image: none; }
+  .tabs-title > a {
+    font-size: .75rem !important; }
+  .tabs-panel > img {
+    text-align: center !important;
+    width: .75rem !important; }
+  .slick-prev {
+    left: 3.125rem !important;
+    height: auto !important; }
+  .slick-next {
+    right: 3.125rem !important;
+    height: auto !important; } }
+
+.generic-content {
+  margin: 2.5rem 0px; }
+  .generic-content .button {
+    background-color: #62a745;
+    margin-bottom: 0px;
+    padding: .8rem 2rem; }
+    .generic-content .button a {
+      color: #fff; }
+      .generic-content .button a p {
+        margin-bottom: 0px; }
+  .generic-content .button:hover {
+    opacity: .8;
+    background: #62a745;
+    transition: .3s; }
+
+.capabilities-grid {
+  margin-right: 0px;
+  margin-bottom: 5rem;
+  background-color: #f3f4f4; }
+  .capabilities-grid h3.green-header {
+    margin-top: 5rem; }
+  .capabilities-grid .row > .row {
+    margin: 0px !important;
+    margin-bottom: 3rem !important; }
+
+.capabilities-grid::before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #fff;
+  border-width: 2.5rem;
+  margin-left: -2.5rem; }
+
+.capabilities-grid::after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #f3f4f4;
+  border-width: 2.5rem;
+  margin-left: -2.5rem; }
+
+.our-partners {
+  margin-bottom: 3rem; }
+  .our-partners img {
+    width: 100%; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
