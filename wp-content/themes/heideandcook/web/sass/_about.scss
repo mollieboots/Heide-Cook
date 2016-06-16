@@ -1,7 +1,7 @@
 @import "settings";
 
 .about-mission {
-    margin: 5rem 0px;
+    margin: 3rem 0px;
 
     .button {
         padding: .8rem 2rem;
@@ -37,6 +37,7 @@
         border-radius: 2px;
         margin: 0px rem-calc(2px);
         padding: 1rem 1.5rem;
+        font-size: .9rem;
     }
 
     .tabs-title > a:hover {

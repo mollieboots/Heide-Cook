@@ -2630,12 +2630,12 @@
   margin-left: -2.5rem; }
 
 .our-partners {
-  margin-bottom: 3rem; }
+  margin: 3rem 0px; }
   .our-partners img {
     width: 100%; }
 
 .about-mission {
-  margin: 5rem 0px; }
+  margin: 3rem 0px; }
   .about-mission .button {
     padding: .8rem 2rem; }
     .about-mission .button a {
@@ -2658,7 +2658,8 @@
   color: #006940;
   border-radius: 2px;
   margin: 0px 0.125rem;
-  padding: 1rem 1.5rem; }
+  padding: 1rem 1.5rem;
+  font-size: .9rem; }
 
 .offices .tabs-title > a:hover {
   background: #d9d9d9; }
