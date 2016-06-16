@@ -1,1 +1,26 @@
 {# single case studies page #}
+{% extends 'base.html.twig' %}
+{% block content %}
+    {% include 'panels/hero-header.html.twig' %}
+    <div class="row">
+        <div class="medium-6 large-8 columns">
+            <img src="{{ SP.ACF.get_field('image').url }}" alt="">
+        </div>
+        <div class="medium-6 large-4 columns">
+            <div class="details">
+                {% for detail in SP.ACF.get_field('details') %}
+                    <h4>{{ detail.title }}</h4>
+                    <div>
+                        {{ detail.content }}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="testimonial text-center">
+                <img src="{{ SP.ACF.get_field('testimony_image').url }}" alt="">
+                <blockquote>{{ SP.ACF.get_field('testimony') }}</blockquote>
+                <cite>{{ SP.ACF.get_field('testimony_author') }}</cite>
+            </div>
+        </div>
+    </div>
+    {# @TODO slider #}
+{% endblock %}

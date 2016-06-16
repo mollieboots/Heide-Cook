@@ -7,7 +7,21 @@ $data = [];
 
 if(is_404()) {
     $template = 'pages/404.html.twig';
-} else {
+}
+elseif(is_post_type_archive('case_studies')) {
+    $template = 'pages/archive-case-studies.html.twig';
+    $teasers = [];
+    while(have_posts()) {
+        the_post();
+        $teasers[] = $twig->render('panels/case-studies-teaser.html.twig');
+    }
+    $data['teasers'] = $teasers;
+    wp_reset_postdata();
+}
+elseif(get_post_type() == 'case_studies') {
+    $template = 'pages/single-case-studies.html.twig';
+}
+else {
     $template = 'index.html.twig';
     $flexibleContent = [];
     while(have_rows('content')) {
