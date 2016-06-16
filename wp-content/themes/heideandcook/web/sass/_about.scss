@@ -1,6 +1,7 @@
 @import "settings";
 
 .about-mission {
+    margin: 5rem 0px;
 
     .button {
         padding: .8rem 2rem;
@@ -30,6 +31,18 @@
         border: 0px;
     }
 
+    .tabs-title > a {
+        border: 2px $medium-gray solid;
+        color: $dark-green;
+        border-radius: 2px;
+        margin: 0px rem-calc(2px);
+        padding: 1rem 1.5rem;
+    }
+
+    .tabs-title > a:hover {
+        background: scale-color($white, $lightness: -15%);
+    }
+
     .tabs-title.is-active > a {
         background-color: $light-green;
         color: $white;
@@ -39,17 +52,6 @@
     .tabs-title.is-active > a:hover {
         background: scale-color($light-green, $lightness: -15%);
         border: scale-color($light-green, $lightness: -15%) 2px solid;
-    }
-
-    .tabs-title > a {
-        border: 2px $medium-gray solid;
-        color: $dark-green;
-        border-radius: 2px;
-        margin: 0px rem-calc(2px);
-    }
-
-    .tabs-title > a:hover {
-        background: scale-color($white, $lightness: -15%);
     }
 }
 

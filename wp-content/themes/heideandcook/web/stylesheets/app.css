@@ -2634,13 +2634,14 @@
   .our-partners img {
     width: 100%; }
 
-.about-mission .button {
-  padding: .8rem 2rem; }
-  .about-mission .button a {
-    color: #fff; }
-
-.about-mission .column.large-8 > img, .about-mission .large-8.columns > img {
-  border-left: 0.75rem solid #62a745; }
+.about-mission {
+  margin: 5rem 0px; }
+  .about-mission .button {
+    padding: .8rem 2rem; }
+    .about-mission .button a {
+      color: #fff; }
+  .about-mission .column.large-8 > img, .about-mission .large-8.columns > img {
+    border-left: 0.75rem solid #62a745; }
 
 .offices .green-header {
   text-transform: none; }
@@ -2652,6 +2653,16 @@
   display: inline-block;
   border: 0px; }
 
+.offices .tabs-title > a {
+  border: 2px #a7a7a7 solid;
+  color: #006940;
+  border-radius: 2px;
+  margin: 0px 0.125rem;
+  padding: 1rem 1.5rem; }
+
+.offices .tabs-title > a:hover {
+  background: #d9d9d9; }
+
 .offices .tabs-title.is-active > a {
   background-color: #62a745;
   color: #fff;
@@ -2660,15 +2671,6 @@
 .offices .tabs-title.is-active > a:hover {
   background: #538e3b;
   border: #538e3b 2px solid; }
-
-.offices .tabs-title > a {
-  border: 2px #a7a7a7 solid;
-  color: #006940;
-  border-radius: 2px;
-  margin: 0px 0.125rem; }
-
-.offices .tabs-title > a:hover {
-  background: #d9d9d9; }
 
 .orange {
   color: #db8835; }
