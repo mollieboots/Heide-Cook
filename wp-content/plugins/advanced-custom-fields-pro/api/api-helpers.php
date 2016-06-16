@@ -4045,6 +4045,53 @@ function acf_is_ajax() {
 }
 
 
+
+
+/*
+*  acf_format_date
+*
+*  This function will accept a date value and return it in a formatted string
+*
+*  @type	function
+*  @date	16/06/2016
+*  @since	5.3.8
+*
+*  @param	$value (string)
+*  @return	$format (string)
+*/
+
+function acf_format_date( $value, $format ) {
+
+	// bail early if no value
+	if( empty($value) ) return $value;
+	
+	
+	// attempt strtotime for standard date value
+	$unixtimestamp = strtotime($value);
+	
+	
+	// allow for timestamp value
+	if( !$unixtimestamp && is_numeric($value) ) {
+		
+		$unixtimestamp = $value;
+			
+	}
+	
+	
+	// bail early if timestamp error
+	if( !$unixtimestamp ) return $value;
+	
+	
+	// translate
+	$value = date_i18n($format, $unixtimestamp);
+	
+	
+	// return
+	return $value;
+	
+}
+
+
 add_filter("acf/settings/slug", '_acf_settings_slug');
 
 function _acf_settings_slug( $v ) {
