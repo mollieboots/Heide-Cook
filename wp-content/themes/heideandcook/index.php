@@ -18,6 +18,16 @@ elseif(is_post_type_archive('case_studies')) {
     $data['teasers'] = $teasers;
     wp_reset_postdata();
 }
+elseif(is_home()) {
+    $template = 'pages/post.html.twig';
+    $teasers = [];
+    while(have_posts()) {
+        the_post();
+        $teasers[] = $twig->render('panels/blog-teaser.html.twig');
+    }
+    $data['teasers'] = $teasers;
+    wp_reset_postdata();
+}
 elseif(get_post_type() == 'case_studies') {
     $template = 'pages/single-case-studies.html.twig';
 }
@@ -27,6 +37,15 @@ else {
     while(have_rows('content')) {
         the_row();
         switch($layout = get_row_layout()) {
+            case 'content_two_columns':
+                $flexibleContent[] = $twig->render('panels/content-two-col.html.twig', $data);
+                break;
+            case 'content_grid':
+                $flexibleContent[] = $twig->render('panels/content-grid.html.twig', $data);
+                break;
+            case 'our_partners':
+                $flexibleContent[] = $twig->render('panels/partners.html.twig', $data);
+                break;
             case 'services':
                 $flexibleContent[] = $twig->render('panels/services.html.twig', $data);
                 break;
