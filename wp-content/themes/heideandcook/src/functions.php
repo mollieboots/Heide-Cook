@@ -13,6 +13,8 @@ $themeSettingsPage = new \Supertheme\WordPress\ThemeSettingsPage(
 //$themeSettingsPage->register();
 
 add_theme_support('post-thumbnails');
+add_theme_support('menus');
+add_theme_support('html5');
 
 // always start a session
 add_action('init', function () {

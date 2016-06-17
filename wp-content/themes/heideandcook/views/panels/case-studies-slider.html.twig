@@ -1,1 +1,14 @@
 {# recent work or related case studies row such as on the homne page #}
+<section class="recent-work">
+    <div class="row">
+        <h1 class="green-header">{{ SP.ACF.get_sub_field('title') }}</h1>
+    </div>
+    <div class="recent-work-slider">
+        {% for case in SP.ACF.get_sub_field('case_studies') %}
+            <div class="hc-work">
+                <h3>{{ case['case_study'].post_title }}</h3>
+                {{ SP.WordPress.featuredImage(case['case_study']) }}
+            </div>
+        {% endfor %}
+    </div>
+</section>

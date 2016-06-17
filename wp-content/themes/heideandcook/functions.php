@@ -45,5 +45,6 @@ add_action('init', function() {
             'thumbnail',
             'page-attributes',
         ],
+        'has_archive' => true,
     ]);
 });
