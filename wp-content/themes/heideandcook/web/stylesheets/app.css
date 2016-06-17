@@ -2659,7 +2659,8 @@
   border-radius: 2px;
   margin: 0px 0.125rem;
   padding: 1rem 1.5rem;
-  font-size: .9rem; }
+  font-size: .9rem;
+  font-weight: bold; }
 
 .offices .tabs-title > a:hover {
   background: #d9d9d9; }
@@ -2667,7 +2668,8 @@
 .offices .tabs-title.is-active > a {
   background-color: #62a745;
   color: #fff;
-  border: 2px #62a745 solid; }
+  border: 2px #62a745 solid;
+  font-weight: normal; }
 
 .offices .tabs-title.is-active > a:hover {
   background: #538e3b;
