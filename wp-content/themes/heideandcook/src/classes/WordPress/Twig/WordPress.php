@@ -26,7 +26,15 @@ class WordPress
 
     public function content($more_link_text = null, $strip_teaser = false)
     {
-        return the_content($more_link_text, $strip_teaser);
+        $content = get_the_content($more_link_text, $strip_teaser);
+        $content = apply_filters( 'the_content', $content );
+        $content = str_replace( ']]>', ']]&gt;', $content );
+        return $content;
+    }
+
+    public function excerpt($post = null)
+    {
+        return get_the_excerpt($post);
     }
 
     public function featuredImage($post = null, $size = 'post-thumbnail', $attr = '')
