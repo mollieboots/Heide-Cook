@@ -93,9 +93,14 @@
 .content-services {
     text-align: center;
     padding-bottom: 1.5rem;
+    margin-top: 3rem;
 
     .row.column > p {
         margin-bottom: 3rem;
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 
     p {
@@ -176,6 +181,7 @@
         .accordion-content {
             background: none;
             color: $dark-gray;
+            padding: .25rem;
         }
 
     }

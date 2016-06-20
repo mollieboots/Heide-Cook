@@ -2267,9 +2267,12 @@
 
 .content-services {
   text-align: center;
-  padding-bottom: 1.5rem; }
+  padding-bottom: 1.5rem;
+  margin-top: 3rem; }
   .content-services .row.column > p, .content-services .row.columns > p {
     margin-bottom: 3rem; }
+  .content-services a:hover {
+    text-decoration: underline; }
   .content-services p {
     max-width: 50rem;
     margin: .8rem auto; }
@@ -2326,7 +2329,8 @@
       top: 20px; }
     .why-choose-us .accordion .accordion-content {
       background: none;
-      color: #4a4a4a; }
+      color: #4a4a4a;
+      padding: .25rem; }
 
 .why-choose-us::before {
   left: 50%;
@@ -2631,7 +2635,8 @@
   .generic-content .button {
     background-color: #62a745;
     margin-bottom: 0px;
-    padding: .8rem 2rem; }
+    padding: .8rem 2rem;
+    text-transform: uppercase; }
     .generic-content .button a {
       color: #fff; }
 
@@ -2639,13 +2644,12 @@
   margin-right: 0px;
   margin-bottom: 5rem;
   background-color: #f3f4f4; }
-  .capabilities-grid h3.green-header {
+  .capabilities-grid h2.green-header {
     margin-top: 5rem; }
-  .capabilities-grid .row > .row {
-    margin: 0px !important;
-    margin-bottom: 3rem !important; }
-    .capabilities-grid .row > .row h4.green-header {
-      margin-top: .5rem; }
+  .capabilities-grid div.row.small-up-1.medium-up-2 {
+    padding-bottom: 3rem; }
+  .capabilities-grid h4.green-header {
+    margin-top: .5rem; }
 
 .capabilities-grid::before {
   left: 50%;
@@ -2677,6 +2681,16 @@
   margin: 3rem 0px; }
   .our-partners img {
     width: 100%; }
+
+.offices .tabs-title {
+  text-transform: uppercase; }
+
+.offices .employee > h5.orange {
+  text-transform: uppercase; }
+
+.offices .tabs-panel > div.content {
+  margin-bottom: 2.5rem;
+  margin-top: 1rem; }
 
 .about-mission {
   margin: 3rem 0px; }

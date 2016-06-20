@@ -7,6 +7,7 @@
         background-color: $light-green;
         margin-bottom: 0px;
         padding: .8rem 2rem;
+        text-transform: uppercase;
 
         a {
             color: $white;
@@ -19,18 +20,18 @@
     margin-bottom: 5rem;
     background-color: $light-gray;
 
-    h3.green-header {
+    h2.green-header {
         margin-top: 5rem;
     }
 
-    .row > .row {
-        margin: 0px !important;
-        margin-bottom: 3rem !important;
-
-        h4.green-header {
-            margin-top:.5rem;
-        }
+    div.row.small-up-1.medium-up-2 {
+        padding-bottom: 3rem;
     }
+
+    h4.green-header {
+        margin-top:.5rem;
+    }
+
 }
 
 .capabilities-grid::before {
@@ -66,5 +67,20 @@
 
     img {
         width: 100%;
+    }
+}
+
+.offices {
+    .tabs-title {
+        text-transform: uppercase;
+    }
+
+    .employee > h5.orange {
+        text-transform: uppercase;
+    }
+
+    .tabs-panel > div.content {
+        margin-bottom: 2.5rem;
+        margin-top: 1rem;
     }
 }
