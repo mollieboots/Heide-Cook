@@ -1,1 +1,7 @@
 {# blog teasers like on the blogs page #}
+<article class="blog teaser">
+    {% include 'layout/header.html.twig' with {teaser: true} %}
+    <div class="content">
+        {{ SP.WordPress.excerpt() }} <a href="{{ SP.WordPress.URL() }}">... Continued</a>
+    </div>
+</article>
