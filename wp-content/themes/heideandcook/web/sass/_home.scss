@@ -216,6 +216,13 @@
 
     .recent-work-slider {
         height: 14rem;
+        text-align: center;
+
+        .hc-work > h3 {
+            position: absolute;
+            color: $white;
+
+        }
 
         img {
             height: 100%;
@@ -446,6 +453,22 @@
     font-weight: bold;
     color: $yellow;
     text-transform: uppercase;
+}
+
+.orange {
+    color: $orange;
+}
+
+.dark-green {
+    color: $dark-green;
+}
+
+.light-green {
+    color: $light-green;
+}
+
+.yellow {
+    color: $yellow;
 }
 
 .italic {

@@ -2359,7 +2359,11 @@
   position: relative;
   margin-top: 4rem; }
   .recent-work .recent-work-slider {
-    height: 14rem; }
+    height: 14rem;
+    text-align: center; }
+    .recent-work .recent-work-slider .hc-work > h3 {
+      position: absolute;
+      color: #fff; }
     .recent-work .recent-work-slider img {
       height: 100%; }
   .recent-work .slick-prev {
@@ -2518,6 +2522,18 @@
   font-weight: bold;
   color: #e0b636;
   text-transform: uppercase; }
+
+.orange {
+  color: #db8835; }
+
+.dark-green {
+  color: #006940; }
+
+.light-green {
+  color: #62a745; }
+
+.yellow {
+  color: #e0b636; }
 
 .italic {
   font-style: italic;
