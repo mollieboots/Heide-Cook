@@ -1,35 +1,39 @@
 <div class="hero-header" style="background-image: url({{ SP.ACF.get_field('header_image').url }});">
-    {% if SP.ACF.get_field('header_style') == "video" %}
-        <div class="lightbox">
-            <a class="fancybox fancybox.iframe" rel="group" href="{{ SP.ACF.get_field('video') }}" allowfullscreen></a>
+    <div class="row column">
+        {% if SP.ACF.get_field('header_style') == "video" %}
+            <div class="lightbox">
+                <h1>{{ SP.WordPress.title() }}</h1>
+                <h3>{{ SP.ACF.get_field('secondary_title') }}</h3>
+                <a class="fancybox fancybox.iframe" rel="group" href="{{ SP.ACF.get_field('video') }}" allowfullscreen></a>
+            </div>
+        {% elseif SP.ACF.get_field('header_style') == "standard" %}
+            {% if SP.WordPress.getType() == 'post' or SP.WordPress.isHome() %}
+                <div class="categories">
+                    {% for category in  SP.WordPress.getCategory() %}
+                        <a href="{{ SP.WordPress.getCategoryURL(category.term_id) }}" class="hollow button">{{ category.name }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
             <h1>{{ SP.WordPress.title() }}</h1>
-            <h3>{{ SP.ACF.get_field('secondary_title') }}</h3>
-        </div>
-    {% elseif SP.ACF.get_field('header_style') == "standard" %}
-        {% if SP.WordPress.getType() == 'post' or SP.WordPress.isHome() %}
-            <div class="categories">
-                {% for category in  SP.WordPress.getCategory() %}
-                    <a href="{{ SP.WordPress.getCategoryURL(category.term_id) }}" class="hollow button">{{ category.name }}</a>
-                {% endfor %}
-            </div>
+            <h4>{{ SP.ACF.get_field('secondary_title') }}</h4>
+            {% if SP.WordPress.getType() == 'post' %}
+                <p class="date">April 17, 2016</p>
+            {% endif %}
+            {% if SP.WordPress.getType() == 'post' and not teaser|default(false) %}
+                <div class="prev-next">
+                    {{ SP.WordPress.getPreviousLink('%link', '&lt;') }}
+                    {{ SP.WordPress.getNextLink('%link', '&gt;') }}
+                </div>
+            {% endif %}
+        {% else %}
         {% endif %}
-        <h1>{{ SP.WordPress.title() }}</h1>
-        <h4>{{ SP.ACF.get_field('secondary_title') }}</h4>
-        {% if SP.WordPress.getType() == 'post' %}
-            <p class="date">April 17, 2016</p>
-        {% endif %}
-        {% if SP.WordPress.getType() == 'post' and not teaser|default(false) %}
-            <div class="prev-next">
-                {{ SP.WordPress.getPreviousLink('%link', '&lt;') }}
-                {{ SP.WordPress.getNextLink('%link', '&gt;') }}
-            </div>
-        {% endif %}
-    {% else %}
-    {% endif %}
+    </div>
 </div>
 {% if SP.WordPress.getType() == 'post' and not teaser|default(false) %}
     <div class="hero-author">
-        {{ SP.WordPress.getAvatar(126) }}
-        <p class="author">{{ SP.WordPress.getAuthor() }}</p>
+        <div class="row column">
+            {{ SP.WordPress.getAvatar(126) }}
+            <p class="author">{{ SP.WordPress.getAuthor() }}</p>
+        </div>
     </div>
 {% endif %}
