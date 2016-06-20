@@ -1,109 +1,30 @@
 <div class="row offices">
     <div class="row centered">
         <dl class="tabs" data-tabs id="about-team-tabs">
-            <dd class="tabs-title is-active"><a href="#oahu-office-panel" aria-selected="true">OAHU OFFICE</a></dd>
-            <dd class="tabs-title"><a href="#hilo-office-panel">HILO OFFICE</a></dd>
-            <dd class="tabs-title"><a href="#maui-office-panel">MAUI OFFICE</a></dd>
+            {% for office in SP.ACF.get_sub_field('office') %}
+                <dd class="tabs-title {% if loop.first %}is-active{% endif %}">
+                    <a href="#office-panel-{{ loop.index }}" {% if loop.first %}aria-selected="true"{% endif %}>{{ office.title }}</a>
+                </dd>
+            {% endfor %}
         </dl>
     </div>
 
     <div class="tabs-content" data-tabs-content="about-team-tabs">
-        <div class="tabs-panel is-active" id="oahu-office-panel">
-            <p>Force dog to sleep on floor scream at teh bath need to chase tail you call this cat food? but if it fits, i sits or need to chase tail toy mouse squeak roll over. Sit in box. Hunt anything that moves climb a tree, wait for a fireman jump to fireman then scratch his face if it smells like fish eat as much as you wish or stare at ceiling, or jump off balcony, onto stranger's head lick yarn hanging out of own butt give attitude.</p>
-
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
+        {% for office in SP.ACF.get_sub_field('office') %}
+            <div class="tabs-panel {% if loop.first %}is-active{% endif %}" id="office-panel-{{ loop.index }}">
+                <div class="content">{{ office.content }}</div>
+                <div class="row small-up-1 medium-up-2 large-up-3">
+                    {% for member in office.team_memebrs %}
+                        <div class="employee column">
+                            <img src="{{ member.profile.url }}" alt="" />
+                            <h2 class="green-header">{{ member.name }}</h2>
+                            <h5 class="orange">{{ member.position }}</h5>
+                            <p class="green">{{ member.email }}</p>
+                            <p>{{ member.number }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-        </div>
-        <div class="tabs-panel" id="hilo-office-panel">
-            <p>Sleep on dog bed, force dog to sleep on floor scream at teh bath need to chase tail you call this cat food? but if it fits, i sits or need to chase tail toy mouse squeak roll over. Sit in box. Hunt anything that moves climb a tree, wait for a fireman jump to fireman then scratch his face if it smells like fish eat as much as you wish or stare at ceiling, or jump off balcony, onto stranger's head lick yarn hanging out of own butt give attitude.</p>
-
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-        </div>
-        <div class="tabs-panel" id="maui-office-panel">
-            <p>Sleep on floor scream at teh bath need to chase tail you call this cat food? but if it fits, i sits or need to chase tail toy mouse squeak roll over. Sit in box. Hunt anything that moves climb a tree, wait for a fireman jump to fireman then scratch his face if it smells like fish eat as much as you wish or stare at ceiling, or jump off balcony, onto stranger's head lick yarn hanging out of own butt give attitude.</p>
-
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-            <div class="employee column small-12 medium-4 large-3">
-                <img src="/wp-content/themes/heideandcook/web/images/employee-photo.png" alt="" />
-                <h2 class="green-header">Earle Matsuda</h2>
-                <h5 class="orange">PRESIDENT</h5>
-                <p class="green">Earle@heidecook.com</p>
-                <p>(808) 841-6161 ext:243</p>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-
 </div>
