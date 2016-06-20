@@ -47,11 +47,6 @@ class WordPress
         return get_the_excerpt($post);
     }
 
-    public function excerpt()
-    {
-        return get_the_excerpt();
-    }
-
     public function featuredImage($post = null, $size = 'post-thumbnail', $attr = '')
     {
         return get_the_post_thumbnail($post, $size, $attr);
