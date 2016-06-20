@@ -93,9 +93,14 @@
 .content-services {
     text-align: center;
     padding-bottom: 1.5rem;
+    margin-top: 3rem;
 
     .row.column > p {
         margin-bottom: 3rem;
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 
     p {
@@ -125,8 +130,7 @@
 
 .why-choose-us {
     background: $light-gray;
-    padding: 2rem;
-    padding-top: rem-calc(75px);
+    padding: 0px 2rem;
     min-height:25rem;
     max-height: 32rem;
     background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
@@ -134,33 +138,13 @@
     background-position: right 7% bottom;
     background-size: 20%;
 
-    .left-col {
-        float: left;
-
-        .bold-orange {
-            font-size: 1.2rem;
-        }
-
-        .row {
-            margin: 0px 0px 1rem 3px;
-        }
-
-        img {
-            float: left;
-            margin-right: .8rem;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        .expanded-info {
-            margin: 1rem 4rem;
-            display: none;
-        }
+    .green-header {
+        margin-top: rem-calc(75px);
     }
 
     .quote-container {
+        width: 70%;
+
         img {
             float: left;
             display: inline;
@@ -168,42 +152,83 @@
         }
     }
 
-    .right-col {
-        float: right;
-
-        .quote-container {
-            width: 65%;
-        }
-    }
-
     img.photo {
         position: absolute;
         right: 10%;
     }
+
+    .row.why-choose-us-content {
+        padding-bottom: 3rem !important;
+    }
+
+    .accordion {
+        background: none;
+        color: $orange;
+
+        a.accordion-title {
+            color: $orange;
+            font-size: rem-calc(18px);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .accordion-title::before {
+            content: url("/wp-content/themes/heideandcook/web/images/expand.png");
+            left: -35px;
+            top: 20px;
+        }
+
+        .accordion-content {
+            background: none;
+            color: $dark-gray;
+            padding: .25rem;
+        }
+
+    }
 }
 
-// .why-choose-us::after {
-//     top: 100%;
-//     left: 50%;
-//     border: solid transparent;
-//     content: " ";
-//     height: 0;
-//     width: 0;
-//     position: absolute;
-//     pointer-events: none;
-//     border-color: rgba(136, 183, 213, 0);
-//     border-top-color: $light-gray;
-//     border-width: 60px;
-//     margin-left: -60px;
-// }
+.why-choose-us::before {
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: $white;
+    border-width: rem-calc(40px);
+    margin-left: rem-calc(-40px);
+}
+
+.why-choose-us::after {
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: $light-gray;
+    border-width: rem-calc(40px);
+    margin-left: rem-calc(-40px);
+}
 
 .recent-work {
     text-align: center;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 4rem;
 
     .recent-work-slider {
         height: 14rem;
+        text-align: center;
+
+        .hc-work > h3 {
+            position: absolute;
+            color: $white;
+
+        }
 
         img {
             height: 100%;
@@ -434,6 +459,22 @@
     font-weight: bold;
     color: $yellow;
     text-transform: uppercase;
+}
+
+.orange {
+    color: $orange;
+}
+
+.dark-green {
+    color: $dark-green;
+}
+
+.light-green {
+    color: $light-green;
+}
+
+.yellow {
+    color: $yellow;
 }
 
 .italic {

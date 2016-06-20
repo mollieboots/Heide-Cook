@@ -46,3 +46,8 @@ jQuery(document).ready(function(){
 
   jQuery(document).foundation();
 });
+
+// var accordionExpand = jQuery(".accordion-title").attr("aria-expanded");
+// if (accordionExpand == true) {
+//     console.log("made it");
+// }

@@ -1,1 +1,30 @@
 {# services such as on the home page #}
+<section class="content-services">
+    <div class="row column">
+        <h1 class="green-header">{{ SP.ACF.get_sub_field('title') }}</h1>
+        {{ SP.ACF.get_sub_field('content') }}
+    </div>
+    <div class="row">
+        {% for service in SP.ACF.get_sub_field('services') %}
+            <div class="medium-6 large-3 columns
+                {% if loop.index == 1 %}
+                    dark-green
+                {% elseif loop.index == 2 %}
+                    orange
+                {% elseif loop.index == 3 %}
+                    light-green
+                {% elseif loop.index == 4 %}
+                    yellow
+                {% endif %}
+            ">
+                <img class="service-icon" src="{{ service.icon.url }}"/>
+                <ul class="no-bullet">
+                    <li><h6>{{ service.title }}</h6></li>
+                    {% for link in service.links %}
+                        <li><a href="{{ SP.WordPress.URL(link.page) }}">{{ SP.WordPress.title(link.page) }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</section>

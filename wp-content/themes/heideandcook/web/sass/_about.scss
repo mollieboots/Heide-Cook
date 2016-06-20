@@ -1,0 +1,68 @@
+@import "settings";
+
+.about-mission {
+    margin: 3rem 0px;
+
+    .button {
+        padding: .8rem 2rem;
+
+        a {
+            color: $white;
+        }
+    }
+
+    .column.large-8 > img {
+        border-left: rem-calc(12px) solid $light-green;
+    }
+}
+
+.offices {
+
+    .green-header {
+        text-transform: none;
+    }
+
+    .tabs-content {
+        border: 0px;
+    }
+
+    .tabs {
+        display: inline-block;
+        border: 0px;
+    }
+
+    .tabs-title > a {
+        border: 2px $medium-gray solid;
+        color: $dark-green;
+        border-radius: 2px;
+        margin: 0px rem-calc(2px);
+        padding: 1rem 1.5rem;
+        font-size: .9rem;
+        font-weight: bold;
+    }
+
+    .tabs-title > a:hover {
+        background: scale-color($white, $lightness: -15%);
+    }
+
+    .tabs-title.is-active > a {
+        background-color: $light-green;
+        color: $white;
+        border: 2px $light-green solid;
+        font-weight: normal;
+    }
+
+    .tabs-title.is-active > a:hover {
+        background: scale-color($light-green, $lightness: -15%);
+        border: scale-color($light-green, $lightness: -15%) 2px solid;
+    }
+}
+
+//misc classes
+.orange {
+    color: $orange;
+}
+
+.green {
+    color: $dark-green;
+}

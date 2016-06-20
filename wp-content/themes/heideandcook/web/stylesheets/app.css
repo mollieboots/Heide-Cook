@@ -2267,9 +2267,12 @@
 
 .content-services {
   text-align: center;
-  padding-bottom: 1.5rem; }
+  padding-bottom: 1.5rem;
+  margin-top: 3rem; }
   .content-services .row.column > p, .content-services .row.columns > p {
     margin-bottom: 3rem; }
+  .content-services a:hover {
+    text-decoration: underline; }
   .content-services p {
     max-width: 50rem;
     margin: .8rem auto; }
@@ -2292,46 +2295,79 @@
 
 .why-choose-us {
   background: #f3f4f4;
-  padding: 2rem;
-  padding-top: 4.6875rem;
+  padding: 0px 2rem;
   min-height: 25rem;
   max-height: 32rem;
   background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
   background-repeat: no-repeat;
   background-position: right 7% bottom;
   background-size: 20%; }
-  .why-choose-us .left-col {
-    float: left; }
-    .why-choose-us .left-col .bold-orange {
-      font-size: 1.2rem; }
-    .why-choose-us .left-col .row {
-      margin: 0px 0px 1rem 3px; }
-    .why-choose-us .left-col img {
+  .why-choose-us .green-header {
+    margin-top: 4.6875rem; }
+  .why-choose-us .quote-container {
+    width: 70%; }
+    .why-choose-us .quote-container img {
       float: left;
-      margin-right: .8rem; }
-    .why-choose-us .left-col li {
-      list-style: none; }
-    .why-choose-us .left-col .expanded-info {
-      margin: 1rem 4rem;
-      display: none; }
-  .why-choose-us .quote-container img {
-    float: left;
-    display: inline;
-    margin-right: .2rem; }
-  .why-choose-us .right-col {
-    float: right; }
-    .why-choose-us .right-col .quote-container {
-      width: 65%; }
+      display: inline;
+      margin-right: .2rem; }
   .why-choose-us img.photo {
     position: absolute;
     right: 10%; }
+  .why-choose-us .row.why-choose-us-content {
+    padding-bottom: 3rem !important; }
+  .why-choose-us .accordion {
+    background: none;
+    color: #db8835; }
+    .why-choose-us .accordion a.accordion-title {
+      color: #db8835;
+      font-size: 1.125rem;
+      font-weight: bold;
+      text-transform: uppercase; }
+    .why-choose-us .accordion .accordion-title::before {
+      content: url("/wp-content/themes/heideandcook/web/images/expand.png");
+      left: -35px;
+      top: 20px; }
+    .why-choose-us .accordion .accordion-content {
+      background: none;
+      color: #4a4a4a;
+      padding: .25rem; }
+
+.why-choose-us::before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #fff;
+  border-width: 2.5rem;
+  margin-left: -2.5rem; }
+
+.why-choose-us::after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #f3f4f4;
+  border-width: 2.5rem;
+  margin-left: -2.5rem; }
 
 .recent-work {
   text-align: center;
   position: relative;
-  margin-top: 2rem; }
+  margin-top: 4rem; }
   .recent-work .recent-work-slider {
-    height: 14rem; }
+    height: 14rem;
+    text-align: center; }
+    .recent-work .recent-work-slider .hc-work > h3 {
+      position: absolute;
+      color: #fff; }
     .recent-work .recent-work-slider img {
       height: 100%; }
   .recent-work .slick-prev {
@@ -2491,6 +2527,18 @@
   color: #e0b636;
   text-transform: uppercase; }
 
+.orange {
+  color: #db8835; }
+
+.dark-green {
+  color: #006940; }
+
+.light-green {
+  color: #62a745; }
+
+.yellow {
+  color: #e0b636; }
+
 .italic {
   font-style: italic;
   font-size: 1.1rem; }
@@ -2587,25 +2635,21 @@
   .generic-content .button {
     background-color: #62a745;
     margin-bottom: 0px;
-    padding: .8rem 2rem; }
+    padding: .8rem 2rem;
+    text-transform: uppercase; }
     .generic-content .button a {
       color: #fff; }
-      .generic-content .button a p {
-        margin-bottom: 0px; }
-  .generic-content .button:hover {
-    opacity: .8;
-    background: #62a745;
-    transition: .3s; }
 
 .capabilities-grid {
   margin-right: 0px;
   margin-bottom: 5rem;
   background-color: #f3f4f4; }
-  .capabilities-grid h3.green-header {
+  .capabilities-grid h2.green-header {
     margin-top: 5rem; }
-  .capabilities-grid .row > .row {
-    margin: 0px !important;
-    margin-bottom: 3rem !important; }
+  .capabilities-grid div.row.small-up-1.medium-up-2 {
+    padding-bottom: 3rem; }
+  .capabilities-grid h4.green-header {
+    margin-top: .5rem; }
 
 .capabilities-grid::before {
   left: 50%;
@@ -2634,9 +2678,66 @@
   margin-left: -2.5rem; }
 
 .our-partners {
-  margin-bottom: 3rem; }
+  margin: 3rem 0px; }
   .our-partners img {
     width: 100%; }
+
+.offices .tabs-title {
+  text-transform: uppercase; }
+
+.offices .employee > h5.orange {
+  text-transform: uppercase; }
+
+.offices .tabs-panel > div.content {
+  margin-bottom: 2.5rem;
+  margin-top: 1rem; }
+
+.about-mission {
+  margin: 3rem 0px; }
+  .about-mission .button {
+    padding: .8rem 2rem; }
+    .about-mission .button a {
+      color: #fff; }
+  .about-mission .column.large-8 > img, .about-mission .large-8.columns > img {
+    border-left: 0.75rem solid #62a745; }
+
+.offices .green-header {
+  text-transform: none; }
+
+.offices .tabs-content {
+  border: 0px; }
+
+.offices .tabs {
+  display: inline-block;
+  border: 0px; }
+
+.offices .tabs-title > a {
+  border: 2px #a7a7a7 solid;
+  color: #006940;
+  border-radius: 2px;
+  margin: 0px 0.125rem;
+  padding: 1rem 1.5rem;
+  font-size: .9rem;
+  font-weight: bold; }
+
+.offices .tabs-title > a:hover {
+  background: #d9d9d9; }
+
+.offices .tabs-title.is-active > a {
+  background-color: #62a745;
+  color: #fff;
+  border: 2px #62a745 solid;
+  font-weight: normal; }
+
+.offices .tabs-title.is-active > a:hover {
+  background: #538e3b;
+  border: #538e3b 2px solid; }
+
+.orange {
+  color: #db8835; }
+
+.green {
+  color: #006940; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -4315,12 +4416,12 @@ select {
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  background-color: #2199e8;
+  background-color: #62a745;
   color: #fff; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #1583cc;
+    background-color: #538e3b;
     color: #fff; }
   .button.tiny {
     font-size: 0.6rem; }
@@ -4405,7 +4506,7 @@ select {
     opacity: 0.25;
     cursor: not-allowed; }
     .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #2199e8;
+      background-color: #62a745;
       color: #fff; }
   .button.dropdown::after {
     content: '';

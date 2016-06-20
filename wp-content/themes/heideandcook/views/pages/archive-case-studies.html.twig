@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    {# for small and medium screens only #}
+    <div class="small-teasers row">
+            {% for teaser in teasers %}
+                {{ teaser }}
+            {% endfor %}
+    </div>
+    {# for large screen only #}
+    <div class="large-teasers row">
+        <div class="large-4 columns">
+            {% for key,teaser in teasers if key % 3 == 0 %}
+                {{ teaser }}
+            {% endfor %}
+        </div>
+        <div class="large-4 columns">
+            {% for key,teaser in teasers if key % 3 == 1 %}
+                {{ teaser }}
+            {% endfor %}
+        </div>
+        <div class="large-4 columns">
+            {% for key,teaser in teasers if key % 3 == 2 %}
+                {{ teaser }}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

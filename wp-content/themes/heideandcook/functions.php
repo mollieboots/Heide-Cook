@@ -29,3 +29,22 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script( 'fancybox' );
     wp_enqueue_script( 'app_script' );
 });
+
+add_action('init', function() {
+    register_post_type('case_studies', [
+        'labels' => [
+            'name' => 'Case Studies',
+            'singular_name' => 'Case Study',
+        ],
+        'public' => true,
+        'menu_icon' => 'dashicons-portfolio',
+        'menu_position' => 5,
+        'supports' => [
+            'title',
+            'author',
+            'thumbnail',
+            'page-attributes',
+        ],
+        'has_archive' => true,
+    ]);
+});

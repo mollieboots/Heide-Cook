@@ -6,29 +6,13 @@
     .button {
         background-color: $light-green;
         margin-bottom: 0px;
-        // position: absolute;
-        // bottom: 0px;
-        // left: .8rem;
         padding: .8rem 2rem;
+        text-transform: uppercase;
 
         a {
             color: $white;
-
-            p {
-                margin-bottom: 0px;
-            }
         }
     }
-
-    .button:hover {
-        opacity: .8;
-        background: $light-green;
-        transition: .3s;
-    }
-
-    // .column.large-8 > img {
-    //     border-left: rem-calc(12px) solid $light-green;
-    // }
 }
 
 .capabilities-grid {
@@ -36,14 +20,18 @@
     margin-bottom: 5rem;
     background-color: $light-gray;
 
-    h3.green-header {
+    h2.green-header {
         margin-top: 5rem;
     }
 
-    .row > .row {
-        margin: 0px !important;
-        margin-bottom: 3rem !important;
+    div.row.small-up-1.medium-up-2 {
+        padding-bottom: 3rem;
     }
+
+    h4.green-header {
+        margin-top:.5rem;
+    }
+
 }
 
 .capabilities-grid::before {
@@ -75,9 +63,24 @@
 }
 
 .our-partners {
-    margin-bottom: 3rem;
+    margin: 3rem 0px;
 
     img {
         width: 100%;
+    }
+}
+
+.offices {
+    .tabs-title {
+        text-transform: uppercase;
+    }
+
+    .employee > h5.orange {
+        text-transform: uppercase;
+    }
+
+    .tabs-panel > div.content {
+        margin-bottom: 2.5rem;
+        margin-top: 1rem;
     }
 }

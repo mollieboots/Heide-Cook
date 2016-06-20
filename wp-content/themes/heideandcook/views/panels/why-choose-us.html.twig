@@ -1,0 +1,30 @@
++{# why choose us section such as on the home page #}
+<section class="why-choose-us">
+    <div class="row column">
+        <h1 class="green-header">{{ SP.ACF.get_sub_field('title') }}</h1>
+    </div>
+    <div class="row why-choose-us-content">
+        <div class="large-6 columns">
+            <ul class="accordion" data-accordion>
+                {% for item in SP.ACF.get_sub_field('accordion') %}
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">{{ item.title }}</a>
+                        <div class="accordion-content" data-tab-content>
+                            {{ item.content }}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="large-6 columns">
+            <div class="quote-container">
+                <img src="{{ SP.ACF.get_sub_field('image').url }}" alt="">
+                <p class="italic">
+                    Franzen irony distillery,  keytar dreamcatcher literally gochujang tote bag ramps hammock shabby
+                    chic chillwave bespoke deep v. Slow-carb vinyl tilde mixtape freegan intelligentsia hammock hella hashtag."
+               </p>
+                <p class="montserrat green-paragraph">- {{ SP.ACF.get_sub_field('testimony_author') }}</p>
+            </div>
+       </div>
+    </div>
+</section>

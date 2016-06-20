@@ -1,1 +1,30 @@
-{# office tabs like on the about page #}
+<div class="row offices">
+    <div class="row centered">
+        <dl class="tabs" data-tabs id="about-team-tabs">
+            {% for office in SP.ACF.get_sub_field('office') %}
+                <dd class="tabs-title {% if loop.first %}is-active{% endif %}">
+                    <a href="#office-panel-{{ loop.index }}" {% if loop.first %}aria-selected="true"{% endif %}>{{ office.title }}</a>
+                </dd>
+            {% endfor %}
+        </dl>
+    </div>
+
+    <div class="tabs-content" data-tabs-content="about-team-tabs">
+        {% for office in SP.ACF.get_sub_field('office') %}
+            <div class="tabs-panel {% if loop.first %}is-active{% endif %}" id="office-panel-{{ loop.index }}">
+                <div class="content">{{ office.content }}</div>
+                <div class="row small-up-1 medium-up-3 large-up-4">
+                    {% for member in office.team_memebrs %}
+                        <div class="employee column">
+                            <img src="{{ member.profile.url }}" alt="" />
+                            <h2 class="green-header">{{ member.name }}</h2>
+                            <h5 class="orange">{{ member.position }}</h5>
+                            <p class="green">{{ member.email }}</p>
+                            <p>{{ member.number }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

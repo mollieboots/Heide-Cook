@@ -11,22 +11,23 @@
         {{ SP.WordPress.header() }}
     {% endblock %}
 </head>
-<body {{ SP.WordPress.body_class() }}>
+<body {{ SP.WordPress.classes() }}>
 {% block body %}
     {% block header %}
         {% include "layout/header.html.twig" %}
     {% endblock %}
 
     {% block content %}
-        <section class="content">
-            <div class="row column">
-                <h1>Test</h1>
-                <h1>{{ SP.WordPress.title() }}</h1>
-                {{ SP.WordPress.content() }}
-            </div>
-        </section>
+        {% if content is defined and content|length %}
+            {% for row in content %}
+                {{ row }}
+            {% endfor %}
+        {% endif %}
     {% endblock %}
 
+    {% block locations %}
+        {% include "layout/locations.html.twig" %}
+    {% endblock %}
     {% block footer %}
         {% include "layout/footer.html.twig" %}
     {% endblock %}
