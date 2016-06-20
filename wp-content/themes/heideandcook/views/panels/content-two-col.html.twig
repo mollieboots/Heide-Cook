@@ -1,0 +1,12 @@
+<div class="row generic-content">
+    <div class="column large-4">
+        <h3 class="green-header">{{ SP.ACF.get_sub_field('title') }}</h3>
+        <div class="content">
+            {{ SP.ACF.get_sub_field('content') }}
+        </div>
+        <a href="{{ SP.ACF.get_sub_field('button_url') }}" class="light-green button">{{ SP.ACF.get_sub_field('button_text') }}</a>
+    </div>
+    <div class="column large-8">
+        <img src="{{ SP.ACF.get_sub_field('image').url }}" alt="{{ SP.ACF.get_sub_field('title') }}">
+    </div>
+</div>

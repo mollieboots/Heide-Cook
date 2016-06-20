@@ -1,17 +1,35 @@
-<div class="header">
-    <div class="header-upper">
-
-    </div>
-    <div class="row">
-        <a><img class="logo" src="/wp-content/themes/heideandcook/web/images/heide-cook-logo.png" alt="" /></a>
-
-        <div class="row header-lower">
-            <a class="header-link">HOME</a>
-            <a class="header-link">SERVICES</a>
-            <a class="header-link">ABOUT</a>
-            <a class="header-link">CASE STUDIES</a>
-            <a class="header-link">BLOG</a>
-            <a class="header-link">CONTACT</a>
+<div class="hero-header" style="background-image: url({{ SP.ACF.get_field('header_image').url }});">
+    {% if SP.ACF.get_field('header_style') == "video" %}
+        <div class="lightbox">
+            <a class="fancybox fancybox.iframe" rel="group" href="{{ SP.ACF.get_field('video') }}" allowfullscreen></a>
+            <h1>{{ SP.WordPress.title() }}</h1>
+            <h3>{{ SP.ACF.get_field('secondary_title') }}</h3>
         </div>
-    </div>
+    {% elseif SP.ACF.get_field('header_style') == "standard" %}
+        {% if SP.WordPress.getType() == 'post' or SP.WordPress.isHome() %}
+            <div class="categories">
+                {% for category in  SP.WordPress.getCategory() %}
+                    <a href="{{ SP.WordPress.getCategoryURL(category.term_id) }}" class="hollow button">{{ category.name }}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <h1>{{ SP.WordPress.title() }}</h1>
+        <h4>{{ SP.ACF.get_field('secondary_title') }}</h4>
+        {% if SP.WordPress.getType() == 'post' %}
+            <p class="date">April 17, 2016</p>
+        {% endif %}
+        {% if SP.WordPress.getType() == 'post' and not teaser|default(false) %}
+            <div class="prev-next">
+                {{ SP.WordPress.getPreviousLink('%link', '&lt;') }}
+                {{ SP.WordPress.getNextLink('%link', '&gt;') }}
+            </div>
+        {% endif %}
+    {% else %}
+    {% endif %}
 </div>
+{% if SP.WordPress.getType() == 'post' and not teaser|default(false) %}
+    <div class="hero-author">
+        {{ SP.WordPress.getAvatar(126) }}
+        <p class="author">{{ SP.WordPress.getAuthor() }}</p>
+    </div>
+{% endif %}
