@@ -51,4 +51,10 @@ add_action('init', function() {
     register_nav_menus([
         'primary_menu' => 'Primary Menu'
     ]);
+
+    acf_add_options_page([
+        'page_title' => 'Theme Options',
+        'capability' => 'edit_theme_options',
+        'icon_url' => 'dashicons-sayenko',
+    ]);
 });
