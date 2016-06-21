@@ -47,4 +47,8 @@ add_action('init', function() {
         ],
         'has_archive' => true,
     ]);
+
+    register_nav_menus([
+        'primary_menu' => 'Primary Menu'
+    ]);
 });

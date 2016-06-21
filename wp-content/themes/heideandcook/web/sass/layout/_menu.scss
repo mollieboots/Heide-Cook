@@ -1,0 +1,16 @@
+.admin-bar #main-menu .is-stuck {
+  margin-top: 32px !important;
+}
+#main-menu {
+  .sticky {
+    background-color: #FFF;
+    margin-top: 0 !important;
+    width: 100%;
+  }
+  #mega-menu {
+    display: none;
+    .row {
+      background-color: rgba(255,255,255,0.9);
+    }
+  }
+}
