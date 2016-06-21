@@ -77,7 +77,7 @@ class WordPress
     }
 
     public function URL($post = 0, $leavename = false) {
-        return get_permalink();
+        return get_permalink($post, $leavename);
     }
 
     public function isHome()

@@ -1,11 +1,16 @@
 <div id="main-menu" data-sticky-container>
     <div class="sticky" data-sticky>
+        <div class="large-logo">
+            <div class="row column">
+                <img src="{{ SP.ACF.get_field('menu_logo', 'option').url }}" alt="">
+            </div>
+        </div>
         <div class="top">
             <div class="row column">
                 <ul class="horizontal menu">
-                    <li><a href="" class="login">Cusatomer Login</a></li>
-                    <li><a href="" class="login">(808) 841 - 6161</a></li>
-                    <li><a href="" class="light-green button">Get A Quote</a></li>
+                    <li><a href="{{ SP.ACF.get_field('customer_login_url', 'option') }}" class="login">Customer Login</a></li>
+                    <li><a href="tel:{{ SP.ACF.get_field('primary_number', 'option') }}" class="login">{{ SP.ACF.get_field('primary_number', 'option') }}</a></li>
+                    <li><a href="#quote-lightbox" class="light-green button fancybox">Get A Quote</a></li>
                 </ul>
             </div>
         </div>
@@ -16,46 +21,19 @@
         </div>
         <div id="mega-menu">
             <div class="row">
-                <div class="large-3 columns">
-                    <img src="http://placehold.it/64x64" alt="">
-                    <ul class="vertical menu">
-                        <li><h5>Facilities Maintenance</h5></li>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                        <li><a href="#">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="large-3 columns">
-                    <img src="http://placehold.it/64x64" alt="">
-                    <ul class="vertical menu">
-                        <li><h5>Facilities Maintenance</h5></li>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                        <li><a href="#">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="large-3 columns">
-                    <img src="http://placehold.it/64x64" alt="">
-                    <ul class="vertical menu">
-                        <li><h5>Facilities Maintenance</h5></li>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                        <li><a href="#">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="large-3 columns">
-                    <img src="http://placehold.it/64x64" alt="">
-                    <ul class="vertical menu">
-                        <li><h5>Facilities Maintenance</h5></li>
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                        <li><a href="#">Link 4</a></li>
-                    </ul>
-                </div>
+                {% for menu in SP.ACF.get_field('mega_menu', 'option') %}
+                    <div class="large-3 columns">
+                        <div class="icon">
+                            <img src="{{ menu.icon.url }}" />
+                        </div>
+                        <ul class="vertical menu">
+                            <li><h5>{{ menu.title }}</h5></li>
+                            {% for link in menu.links %}
+                                <li><a href="{{ SP.WordPress.URL(link.page.ID) }}">{{ link.page.post_title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
