@@ -17,6 +17,7 @@
 }
 
 .offices {
+    margin: 3rem 0px;
 
     .green-header {
         text-transform: none;
@@ -39,6 +40,7 @@
         padding: 1rem 1.5rem;
         font-size: .9rem;
         font-weight: bold;
+        text-transform: uppercase;
     }
 
     .tabs-title > a:hover {
@@ -55,6 +57,21 @@
     .tabs-title.is-active > a:hover {
         background: scale-color($light-green, $lightness: -15%);
         border: scale-color($light-green, $lightness: -15%) 2px solid;
+    }
+
+    .employee {
+        h5.orange {
+            text-transform: uppercase;
+        }
+
+        .green {
+            margin-bottom: .1rem;
+        }
+    }
+
+    .tabs-panel > div.content {
+        margin-bottom: 2.5rem;
+        margin-top: 1rem;
     }
 }
 

@@ -224,14 +224,19 @@
         height: 14rem;
         text-align: center;
 
-        .hc-work > h3 {
-            position: absolute;
-            color: $white;
+        .hc-work {
+            position: relative;
 
-        }
+            h3 {
+                position: absolute;
+                color: $white;
+                top: 30%;
+                width: 100%;
+            }
 
-        img {
-            height: 100%;
+            img {
+                height: 100%;
+            }
         }
     }
 
@@ -292,9 +297,9 @@
     .tabs-title.is-active > a {
         color: $dark-green !important;
         position: relative;
-        // background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
-        // background-repeat: no-repeat;
-        // background-position: center bottom -3px;
+        background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
+        background-repeat: no-repeat;
+        background-position: center bottom -3px;
     }
 
     .tabs-title.is-active > a::after {

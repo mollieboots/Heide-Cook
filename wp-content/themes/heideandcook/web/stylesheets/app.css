@@ -2365,11 +2365,15 @@
   .recent-work .recent-work-slider {
     height: 14rem;
     text-align: center; }
-    .recent-work .recent-work-slider .hc-work > h3 {
-      position: absolute;
-      color: #fff; }
-    .recent-work .recent-work-slider img {
-      height: 100%; }
+    .recent-work .recent-work-slider .hc-work {
+      position: relative; }
+      .recent-work .recent-work-slider .hc-work h3 {
+        position: absolute;
+        color: #fff;
+        top: 30%;
+        width: 100%; }
+      .recent-work .recent-work-slider .hc-work img {
+        height: 100%; }
   .recent-work .slick-prev {
     left: 15.625rem;
     top: -2rem;
@@ -2410,7 +2414,10 @@
     color: #a7a7a7; }
   .locations .tabs-title.is-active > a {
     color: #006940 !important;
-    position: relative; }
+    position: relative;
+    background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
+    background-repeat: no-repeat;
+    background-position: center bottom -3px; }
   .locations .tabs-title.is-active > a::after {
     content: "";
     position: absolute;
@@ -2678,19 +2685,9 @@
   margin-left: -2.5rem; }
 
 .our-partners {
-  margin: 3rem 0px; }
+  margin: 1.5rem 0px; }
   .our-partners img {
     width: 100%; }
-
-.offices .tabs-title {
-  text-transform: uppercase; }
-
-.offices .employee > h5.orange {
-  text-transform: uppercase; }
-
-.offices .tabs-panel > div.content {
-  margin-bottom: 2.5rem;
-  margin-top: 1rem; }
 
 .about-mission {
   margin: 3rem 0px; }
@@ -2701,37 +2698,41 @@
   .about-mission .column.large-8 > img, .about-mission .large-8.columns > img {
     border-left: 0.75rem solid #62a745; }
 
-.offices .green-header {
-  text-transform: none; }
-
-.offices .tabs-content {
-  border: 0px; }
-
-.offices .tabs {
-  display: inline-block;
-  border: 0px; }
-
-.offices .tabs-title > a {
-  border: 2px #a7a7a7 solid;
-  color: #006940;
-  border-radius: 2px;
-  margin: 0px 0.125rem;
-  padding: 1rem 1.5rem;
-  font-size: .9rem;
-  font-weight: bold; }
-
-.offices .tabs-title > a:hover {
-  background: #d9d9d9; }
-
-.offices .tabs-title.is-active > a {
-  background-color: #62a745;
-  color: #fff;
-  border: 2px #62a745 solid;
-  font-weight: normal; }
-
-.offices .tabs-title.is-active > a:hover {
-  background: #538e3b;
-  border: #538e3b 2px solid; }
+.offices {
+  margin: 3rem 0px; }
+  .offices .green-header {
+    text-transform: none; }
+  .offices .tabs-content {
+    border: 0px; }
+  .offices .tabs {
+    display: inline-block;
+    border: 0px; }
+  .offices .tabs-title > a {
+    border: 2px #a7a7a7 solid;
+    color: #006940;
+    border-radius: 2px;
+    margin: 0px 0.125rem;
+    padding: 1rem 1.5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .offices .tabs-title > a:hover {
+    background: #d9d9d9; }
+  .offices .tabs-title.is-active > a {
+    background-color: #62a745;
+    color: #fff;
+    border: 2px #62a745 solid;
+    font-weight: normal; }
+  .offices .tabs-title.is-active > a:hover {
+    background: #538e3b;
+    border: #538e3b 2px solid; }
+  .offices .employee h5.orange {
+    text-transform: uppercase; }
+  .offices .employee .green {
+    margin-bottom: .1rem; }
+  .offices .tabs-panel > div.content {
+    margin-bottom: 2.5rem;
+    margin-top: 1rem; }
 
 .orange {
   color: #db8835; }
