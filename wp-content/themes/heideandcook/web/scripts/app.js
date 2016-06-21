@@ -1,6 +1,11 @@
-jQuery(document).foundation();
-
 jQuery(document).ready(function(){
+  jQuery(document).foundation();
+  
+  jQuery('.services.menu-item a').on('click', function(){
+    console.log('click');
+    jQuery('#mega-menu').slideToggle();
+  });
+
   jQuery('.recent-work-slider').slick({
     infinite: true,
     slidesToShow: 4,
@@ -43,11 +48,4 @@ jQuery(document).ready(function(){
     jQuery(this).parent().siblings().children().next().slideUp("slow");
     jQuery(this).siblings(".expanded-info").slideToggle("slow");
   });
-
-  jQuery(document).foundation();
 });
-
-// var accordionExpand = jQuery(".accordion-title").attr("aria-expanded");
-// if (accordionExpand == true) {
-//     console.log("made it");
-// }

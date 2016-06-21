@@ -124,4 +124,10 @@ class WordPress
     {
         return get_avatar($id ?: get_the_author_meta('ID'), $size);
     }
+
+    public function menu($args = [])
+    {
+        $args['echo'] = false;
+        return wp_nav_menu($args);
+    }
 }
