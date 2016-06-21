@@ -2206,17 +2206,30 @@
     height: 5rem;
     top: .9rem;
     position: absolute; }
-  .header .header-upper {
-    height: 2.8rem;
-    background-color: #dddddd;
-    width: 100% !important; }
-  .header .header-lower {
-    text-align: right;
-    height: 4rem;
-    background: white;
-    padding: 1.1rem; }
-    .header .header-lower .header-link {
-      margin: 1.5rem; }
+
+#main-menu {
+  background: #fff;
+  height: 150px !important; }
+  #main-menu #menu-main-menu {
+    float: right; }
+  #main-menu .horizontal.menu {
+    float: right; }
+  #main-menu .sticky {
+    background: #fff;
+    width: 100%;
+    left: 0 !important;
+    margin: 0px auto; }
+  #main-menu .top {
+    background: #f3f4f4 !important;
+    width: 100%; }
+  #main-menu .bottom li {
+    text-transform: uppercase;
+    padding: .5rem;
+    font-size: 1rem; }
+
+#mega-menu {
+  padding: 1rem;
+  border-bottom: 0.75rem solid #62a745; }
 
 .index-lightbox {
   height: 31.25rem;
@@ -2545,6 +2558,9 @@
 
 .yellow {
   color: #e0b636; }
+
+.brown {
+  color: #906328; }
 
 .italic {
   font-style: italic;

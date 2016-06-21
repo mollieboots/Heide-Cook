@@ -14,23 +14,47 @@
         top: .9rem;
         position: absolute;
     }
+}
 
-    .header-upper {
-        height: 2.8rem;
-        background-color: $medium-light-gray;
-        width: 100% !important;
+//mega-menu
+#main-menu {
+    background: $white;
+    height: 150px !important;
+
+    #menu-main-menu {
+        float: right;
     }
 
-    .header-lower {
-        text-align: right;
-        height:4rem;
-        background: white;
-        padding: 1.1rem;
+    .horizontal.menu {
+        float: right;
+    }
 
-        .header-link {
-            margin: 1.5rem;
+    .sticky {
+        background: $white;
+        width: 100%;
+        left: 0 !important;
+        margin: 0px auto;
+    }
+
+    .top {
+        background: $light-gray !important;
+        width: 100%;
+    }
+
+    .bottom {
+
+        li {
+            text-transform: uppercase;
+            padding: .5rem;
+            font-size: 1rem;
         }
     }
+}
+
+#mega-menu {
+    padding: 1rem;
+    border-bottom: rem-calc(12px) solid $light-green;
+
 }
 
 //sliders
@@ -480,6 +504,10 @@
 
 .yellow {
     color: $yellow;
+}
+
+.brown {
+    color: $brown;
 }
 
 .italic {
