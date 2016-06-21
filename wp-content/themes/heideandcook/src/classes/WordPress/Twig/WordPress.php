@@ -130,4 +130,16 @@ class WordPress
         $args['echo'] = false;
         return wp_nav_menu($args);
     }
+
+    public function processShortcode($content, $ignore = false)
+    {
+        ob_start();
+        do_shortcode($content, $ignore);
+        return ob_get_clean();
+    }
+
+    public function getForm($id_or_title, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex = 1)
+    {
+        return gravity_form($id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, false);
+    }
 }
