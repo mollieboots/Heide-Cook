@@ -8,4 +8,5 @@ $fa-font-path: "../libs/font-awesome/fonts";
 @include foundation-everything();
 
 @import "classes";
+@import "panels/hero-header";
 @import "panels/locations";
