@@ -43,11 +43,6 @@
 
     .bottom {
 
-        li {
-            text-transform: uppercase;
-            padding: .5rem;
-            font-size: 1rem;
-        }
     }
 }
 
@@ -55,6 +50,11 @@
     padding: 1rem;
     border-bottom: rem-calc(12px) solid $light-green;
 
+    li > p {
+        text-transform: uppercase;
+        padding: .5rem;
+        font-size: 1rem;
+    }
 }
 
 //sliders

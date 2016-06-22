@@ -2222,14 +2222,14 @@
   #main-menu .top {
     background: #f3f4f4 !important;
     width: 100%; }
-  #main-menu .bottom li {
-    text-transform: uppercase;
-    padding: .5rem;
-    font-size: 1rem; }
 
 #mega-menu {
   padding: 1rem;
   border-bottom: 0.75rem solid #62a745; }
+  #mega-menu li > p {
+    text-transform: uppercase;
+    padding: .5rem;
+    font-size: 1rem; }
 
 .index-lightbox {
   height: 31.25rem;
