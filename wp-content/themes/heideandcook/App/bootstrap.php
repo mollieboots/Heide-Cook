@@ -11,3 +11,9 @@ $container->setParameter('WP_DEBUG', WP_DEBUG);
 
 $loader = new YamlFileLoader($container, new FileLocator(get_template_directory()));
 $loader->load('app/config/config.yml');
+
+/** @var Twig_Environment $twig */
+$twig = $container->get('twig.environment');
+$twig->addGlobal('walkers', [
+    'drilldown' => new \Supertheme\WordPress\DrillDownMenuWalker(),
+]);
