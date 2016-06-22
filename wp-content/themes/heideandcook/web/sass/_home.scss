@@ -16,47 +16,6 @@
     }
 }
 
-//mega-menu
-#main-menu {
-    background: $white;
-    height: 150px !important;
-
-    #menu-main-menu {
-        float: right;
-    }
-
-    .horizontal.menu {
-        float: right;
-    }
-
-    .sticky {
-        background: $white;
-        width: 100%;
-        left: 0 !important;
-        margin: 0px auto;
-    }
-
-    .top {
-        background: $light-gray !important;
-        width: 100%;
-    }
-
-    .bottom {
-
-        li {
-            text-transform: uppercase;
-            padding: .5rem;
-            font-size: 1rem;
-        }
-    }
-}
-
-#mega-menu {
-    padding: 1rem;
-    border-bottom: rem-calc(12px) solid $light-green;
-
-}
-
 //sliders
 .index-lightbox {
     height: rem-calc(500px);

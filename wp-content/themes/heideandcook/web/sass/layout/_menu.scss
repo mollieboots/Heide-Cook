@@ -3,14 +3,47 @@
 }
 #main-menu {
   .sticky {
-    background-color: #FFF;
     margin-top: 0 !important;
     width: 100%;
   }
-  #mega-menu {
+  .menu-wrapper {
+    background-color: #FFF;
+  }
+
+  .top, .bottom {
     display: none;
-    .row {
-      background-color: rgba(255,255,255,0.9);
+    @include breakpoint(large) {
+      display: block;
     }
+  }
+  .top .menu, .bottom .menu {
+    float: right;
+  }
+  .top {
+    background-color: $light-gray;
+  }
+  .bottom {
+    .row {
+      position: relative;
+    }
+    .large-logo {
+      position: absolute;
+      left: 0;
+      top: rem-calc(-48px);
+    }
+    li {
+      text-transform: uppercase;
+      padding: .5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+#mega-menu {
+  display: none;
+  .row {
+    background-color: rgba(255,255,255,0.9);
+    padding: 1rem;
+    border-bottom: rem-calc(12px) solid $light-green;
   }
 }
