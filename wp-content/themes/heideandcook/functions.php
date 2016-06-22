@@ -49,7 +49,8 @@ add_action('init', function() {
     ]);
 
     register_nav_menus([
-        'primary_menu' => 'Primary Menu'
+        'primary_menu' => 'Primary Menu',
+        'mobile_menu' => 'Mobile Menu',
     ]);
 
     acf_add_options_page([

@@ -41,8 +41,6 @@ jQuery(document).ready(function(){
   });
 
   jQuery(".fancybox").fancybox();
-    openEffect  : 'fade';
-    closeEffect : 'fade';
 
   jQuery(".expandable").click(function(){
     jQuery(this).parent().siblings().children().next().slideUp("slow");

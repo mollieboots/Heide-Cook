@@ -16,47 +16,6 @@
     }
 }
 
-//mega-menu
-#main-menu {
-    background: $white;
-    height: 150px !important;
-
-    #menu-main-menu {
-        float: right;
-    }
-
-    .horizontal.menu {
-        float: right;
-    }
-
-    .sticky {
-        background: $white;
-        width: 100%;
-        left: 0 !important;
-        margin: 0px auto;
-    }
-
-    .top {
-        background: $light-gray !important;
-        width: 100%;
-    }
-
-    .bottom {
-
-        li {
-            text-transform: uppercase;
-            padding: .5rem;
-            font-size: 1rem;
-        }
-    }
-}
-
-#mega-menu {
-    padding: 1rem;
-    border-bottom: rem-calc(12px) solid $light-green;
-
-}
-
 //sliders
 .index-lightbox {
     height: rem-calc(500px);
@@ -292,101 +251,6 @@
     }
 }
 
-//locations tabs
-.locations {
-    text-align: center;
-    min-height: rem-calc(220px);
-    background-color: $light-gray;
-    margin-top: rem-calc(5px);
-    color: $medium-gray;
-
-    .tabs-row {
-        border-bottom: rem-calc(3px) solid $medium-gray;
-        margin: 0px auto;
-        width: 100%;
-    }
-
-    .tabs {
-        border: none;
-        background-color: $light-gray;
-        display: inline-block;
-    }
-
-    .tabs-title > a {
-        font-size: 1.2rem;
-        padding: 2.25rem 4.5rem;
-        color: $medium-gray;
-    }
-
-    .tabs-title.is-active > a {
-        color: $dark-green !important;
-        position: relative;
-        background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
-        background-repeat: no-repeat;
-        background-position: center bottom -3px;
-    }
-
-    .tabs-title.is-active > a::after {
-        content: "";
-        position:absolute;
-        right: 50%;
-        bottom:0px;
-        background: transparent url("/wp-content/themes/heideandcook/web/images/active-arrow.png") no-repeat center bottom;
-    }
-
-    .tabs-title:hover > a {
-        background-color: $light-gray;
-        color: $dark-gray;
-    }
-
-    .tabs-content {
-        background-color: $light-gray;
-        border: none;
-    }
-
-    .tabs-panel {
-        padding: 0px;
-    }
-
-    .left {
-        text-align: left;
-        padding: rem-calc(50px) 0px;
-
-        img {
-            float: left;
-            margin-left: 10rem;
-            margin-right: rem-calc(10px);
-        }
-    }
-
-    .middle {
-        text-align: left;
-        padding: rem-calc(50) 0px;
-
-        img {
-            float: left;
-            margin-left: 5rem;
-            margin-right: rem-calc(10px);
-        }
-    }
-
-    .right {
-        text-align: left;
-        padding: rem-calc(35) 0px;
-
-        p {
-            margin: rem-calc(5);
-            line-height: 1.2rem;
-        }
-
-        img {
-            float: left;
-            margin-right: rem-calc(10px);
-            margin-top: .5rem;
-        }
-    }
-}
-
 //footer
 .footer {
     height: rem-calc(312px);
@@ -544,16 +408,6 @@
     .slick-next {
         right: rem-calc(150px) !important;
     }
-
-    .locations > .tabs-content > .location-info {
-        .left > img {
-            margin-left: 5rem !important;
-        }
-
-        .middle > img {
-            margin-left: 2.3rem !important;
-        }
-    }
 }
 
 @media only screen and (max-width: rem-calc(1024px)) {
@@ -570,16 +424,6 @@
         top: 1.4rem !important;
     }
 
-    .locations > .tabs-content > .location-info {
-        .left > img {
-            margin-left: 1rem !important;
-        }
-
-        .middle > img {
-            margin-left: .5rem !important;
-        }
-    }
-
     .recent-work-slider {
         height: auto !important;
 
@@ -594,16 +438,8 @@
 }
 
 @media only screen and (max-width: rem-calc(870px)) {
-    .tabs-title > a {
-        padding: 1.25rem 1.5rem !important;
-    }
-
     html {
         font-size: rem-calc(14px) !important;
-    }
-
-    .locations > .column.middle > img {
-        margin-left: 3rem !important;
     }
 
     .quote-container {
@@ -655,15 +491,6 @@
 
     .why-choose-us {
         background-image: none;
-    }
-
-    .tabs-title > a {
-        font-size: .75rem !important;
-    }
-
-    .tabs-panel > img {
-        text-align: center !important;
-        width: .75rem !important;
     }
 
     .slick-prev {
