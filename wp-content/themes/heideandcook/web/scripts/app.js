@@ -39,10 +39,5 @@ jQuery(document).ready(function(){
   }]
   });
 
-  jQuery(".fancybox").fancybox();
-
-  jQuery(".expandable").click(function(){
-    jQuery(this).parent().siblings().children().next().slideUp("slow");
-    jQuery(this).siblings(".expanded-info").slideToggle("slow");
-  });
+  jQuery(".fancybox").fancybox()
 });
