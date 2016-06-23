@@ -1,3 +1,19 @@
+.title-bar {
+  background-color: $white;
+  padding: 0;
+  .light-green.button {
+    display: block;
+    text-transform: uppercase;
+  }
+  .fa {
+    font-size: 3rem;
+  }
+  img {
+    max-height: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .admin-bar #main-menu .is-stuck {
   margin-top: 32px !important;
 }
@@ -7,7 +23,7 @@
     width: 100%;
   }
   .menu-wrapper {
-    background-color: #FFF;
+    background-color:$white;
   }
 
   .top, .bottom {
@@ -29,12 +45,20 @@
     .large-logo {
       position: absolute;
       left: 0;
-      top: rem-calc(-48px);
+      top: rem-calc(-28px);
     }
     li {
       text-transform: uppercase;
-      padding: .5rem;
       font-size: 1rem;
+      &:last-of-type a {
+        padding-right: 0;
+      }
+      &:first-of-type a {
+        padding-left: 0;
+      }
+      a {
+        padding: 1.4rem 1rem;
+      }
     }
   }
 }
@@ -45,5 +69,23 @@
     background-color: rgba(255,255,255,0.9);
     padding: 1rem;
     border-bottom: rem-calc(12px) solid $light-green;
+  }
+  .icon {
+    height: 80px;
+    margin-bottom: 1rem;
+    img {
+      height: 100%;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .menu a {
+    padding: .5rem 0;
   }
 }
