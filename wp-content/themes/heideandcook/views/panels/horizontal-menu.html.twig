@@ -1,0 +1,9 @@
+<div class="horizontal-menu">
+    <div class="menu-centered">
+        <ul class="vertical large-horizontal menu">
+            {% for page in SP.ACF.get_sub_field('pages') %}
+                <li><a href="{{ SP.WordPress.URL(page.page.ID) }}">{{ page.page.post_title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

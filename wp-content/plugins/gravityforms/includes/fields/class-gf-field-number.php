@@ -175,10 +175,12 @@ class GF_Field_Number extends GF_Field {
 		$value                 = GFCommon::format_number( $value, $this->numberFormat, rgar( $entry, 'currency' ), $include_thousands_sep );
 
 		$placeholder_attribute = $this->get_field_placeholder_attribute();
+		$required_attribute    = $this->isRequired ? 'aria-required="true"' : '';
+		$invalid_attribute     = $this->failed_validation ? 'aria-invalid="true"' : 'aria-invalid="false"';
 
 		$tabindex = $this->get_tabindex();
 
-		$input = sprintf( "<div class='ginput_container ginput_container_number'><input name='input_%d' id='%s' type='{$html_input_type}' {$step_attr} {$min_attr} {$max_attr} value='%s' class='%s' {$tabindex} {$logic_event} {$read_only} %s %s/>%s</div>", $id, $field_id, esc_attr( $value ), esc_attr( $class ), $disabled_text, $placeholder_attribute, $instruction );
+		$input = sprintf( "<div class='ginput_container ginput_container_number'><input name='input_%d' id='%s' type='{$html_input_type}' {$step_attr} {$min_attr} {$max_attr} value='%s' class='%s' {$tabindex} {$logic_event} {$read_only} %s %s %s %s/>%s</div>", $id, $field_id, esc_attr( $value ), esc_attr( $class ), $disabled_text, $placeholder_attribute, $required_attribute, $invalid_attribute, $instruction );
 		return $input;
 	}
 
@@ -197,8 +199,9 @@ class GF_Field_Number extends GF_Field {
 
 	public function get_value_merge_tag( $value, $input_id, $entry, $form, $modifier, $raw_value, $url_encode, $esc_html, $format, $nl2br ) {
 		$include_thousands_sep = apply_filters( 'gform_include_thousands_sep_pre_format_number', $modifier != 'value', $this );
+		$formatted_value       = GFCommon::format_number( $value, $this->numberFormat, rgar( $entry, 'currency' ), $include_thousands_sep );
 
-		return GFCommon::format_number( $value, $this->numberFormat, rgar( $entry, 'currency' ), $include_thousands_sep );
+		return $url_encode ? urlencode( $formatted_value ) : $formatted_value;
 	}
 
 	public function get_value_save_entry( $value, $form, $input_name, $lead_id, $lead ) {
@@ -212,7 +215,9 @@ class GF_Field_Number extends GF_Field {
 			$value = '0';
 		}
 
-		return $value;
+		$value_safe = $this->sanitize_entry_value( $value, $form['id'] );
+
+		return $value_safe;
 	}
 
 	public function sanitize_settings() {

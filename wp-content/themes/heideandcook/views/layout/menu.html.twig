@@ -4,14 +4,16 @@
             {# mobile #}
             <div class="title-bar" data-responsive-toggle="mobile-menu" data-hide-for="large">
                 <a href="#" class="light-green button quote">Get a Quote</a>
-                <div class="top-bar-left">
-                    <a href="tel:{{ SP.ACF.get_field('primary_number', 'option') }}"><i class="fa fa-phone"></i></a>
-                </div>
-                <div class="top-bar-right">
-                    <a data-toggle><i class="fa fa-bars"></i></a>
-                </div>
-                <div class="top-bar-center text-center">
-                    <img src="{{ SP.ACF.get_field('menu_logo', 'option').url }}" />
+                <div class="row column">
+                    <div class="top-bar-left">
+                        <a href="tel:{{ SP.ACF.get_field('primary_number', 'option') }}"><i class="fa fa-phone"></i></a>
+                    </div>
+                    <div class="top-bar-right">
+                        <a data-toggle><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div class="top-bar-center text-center">
+                        <img src="{{ SP.ACF.get_field('mobile_menu_logo', 'option').url }}" />
+                    </div>
                 </div>
             </div>
             <div id="mobile-menu" class="hide-for-large">
