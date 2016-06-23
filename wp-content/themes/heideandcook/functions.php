@@ -53,9 +53,11 @@ add_action('init', function() {
         'mobile_menu' => 'Mobile Menu',
     ]);
 
-    acf_add_options_page([
-        'page_title' => 'Theme Options',
-        'capability' => 'edit_theme_options',
-        'icon_url' => 'dashicons-sayenko',
-    ]);
+    if(function_exists('acf_add_options_page')) {
+        acf_add_options_page([
+            'page_title' => 'Theme Options',
+            'capability' => 'edit_theme_options',
+            'icon_url' => 'dashicons-sayenko',
+        ]);
+    }
 });

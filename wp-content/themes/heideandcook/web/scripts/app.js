@@ -1,6 +1,8 @@
 jQuery(document).ready(function(){
   jQuery(document).foundation();
 
+  // jQuery(".accordion").foundation('toggle');
+
   jQuery('.services.menu-item a').on('click', function(){
     jQuery('#mega-menu').slideToggle();
   });
