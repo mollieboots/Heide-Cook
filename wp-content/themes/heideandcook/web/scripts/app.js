@@ -1,8 +1,7 @@
 jQuery(document).ready(function(){
   jQuery(document).foundation();
-  
+
   jQuery('.services.menu-item a').on('click', function(){
-    console.log('click');
     jQuery('#mega-menu').slideToggle();
   });
 

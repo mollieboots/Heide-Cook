@@ -16,10 +16,10 @@
     }
 }
 
-//mega-menu
+//main menu and mega menu
 #main-menu {
     background: $white;
-    height: 150px !important;
+    height: auto !important;
 
     #menu-main-menu {
         float: right;
@@ -46,6 +46,10 @@
 }
 
 #mega-menu {
+
+    #mega-menu > .row {
+        padding-bottom: 3rem;
+    }
 
     .row > .columns > .icon {
         height: 80px;
@@ -303,6 +307,13 @@
     }
 }
 
+//locations tabs
+.locations {
+    .tabs-title {
+        text-transform: uppercase;
+    }
+}
+
 //footer
 .footer {
     height: rem-calc(312px);
@@ -319,6 +330,14 @@
 
         input {
             width: rem-calc(348px);
+        }
+
+        div.gform_heading > h3.gform_title {
+            display: none;
+        }
+
+        div.gform_body > label.gfield_label {
+            display: none;
         }
 
         .button {
