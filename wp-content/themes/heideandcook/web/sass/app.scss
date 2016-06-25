@@ -2,11 +2,12 @@ $fa-font-path: "../libs/font-awesome/fonts";
 @import "font-awesome";
 @import "settings";
 @import "foundation";
+
+@include foundation-everything();
+
 @import "home";
 @import "generic";
 @import "about";
-@include foundation-everything();
-
 @import "classes";
 @import "layout/menu";
 @import "panels/hero-header";

@@ -79,10 +79,10 @@
       &.is-active a::after {
         content: "";
         position:absolute;
-        right: calc(50% - 39px/2); // 50% - 1/2 of image width
-        bottom: rem-calc(-3px);
-        width: rem-calc(39px);
-        height: rem-calc(19px);
+        right: calc(50% - 30px/2); // 50% - 1/2 of image width
+        bottom: -0.17rem;
+        width: rem-calc(30px);
+        height: rem-calc(16px);
         background: $light-gray url("../images/active-arrow.png") no-repeat center bottom;
       }
     }

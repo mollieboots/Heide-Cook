@@ -136,6 +136,10 @@
     }
 }
 
+.hero-header {
+    margin-top: rem-calc(99px);
+}
+
 //sliders
 .index-lightbox {
     height: rem-calc(500px);
@@ -517,7 +521,7 @@
 }
 
 //breakpoints
-@media only screen and (max-width: rem-calc(1200px)) {
+@include breakpoint (medium only) {
     .row {
         max-width: 60rem !important;
     }
@@ -584,7 +588,7 @@
     max-height: none;
 }
 
-@media only screen and (max-width: rem-calc(700px)) {
+@include breakpoint (small only) {
     .header {
         height: auto !important;
 

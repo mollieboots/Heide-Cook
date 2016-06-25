@@ -5,7 +5,7 @@
     </div>
     <div class="row why-choose-us-content">
         <div class="large-6 columns">
-            <ul class="accordion" data-accordion>
+            <ul class="accordion" data-allow-all-closed="true" data-accordion>
                 {% for item in SP.ACF.get_sub_field('accordion') %}
                     <li class="accordion-item" data-accordion-item>
                         <a href="#" class="accordion-title">{{ item.title }}</a>
