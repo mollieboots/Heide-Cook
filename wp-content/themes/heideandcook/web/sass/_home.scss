@@ -1,25 +1,13 @@
 @import "settings";
 
-//header
-.header {
-    height: 6.8rem;
-    width: 100%;
-
-    .header-row {
-        width: 100%;
-    }
-
-    .logo {
-        height:5rem;
-        top: .9rem;
-        position: absolute;
-    }
-}
-
 //main menu and mega menu
 #main-menu {
     background: $white;
     height: auto !important;
+
+    .large-logo > img {
+        height: rem-calc(75px);
+    }
 
     #menu-main-menu {
         float: right;
@@ -38,6 +26,14 @@
     .top {
         background: $light-gray !important;
         width: 100%;
+
+        a.login {
+            color: $dark-green;
+        }
+
+        a.login:hover {
+            text-decoration: underline;
+        }
     }
 
     .menu-item.services {
@@ -60,13 +56,17 @@
         border-color: $dark-gray transparent transparent;
     }
 
+    .menu-item.services::before:hover {
+        border-color: $dark-green transparent transparent;
+    }
+
     .menu-item.services::after {
         margin-top: -2px;
         border-color: #fff transparent transparent;
     }
 }
 
-#menu-mobile-menu {
+#menu-mobile-menu, #mobile-menu {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -78,6 +78,7 @@
 
     .is-drilldown {
         max-width: none !important;
+        min-height: none !important;
     }
 
     .is-drilldown-submenu-parent > a::after {
@@ -86,6 +87,7 @@
         vertical-align: middle;
         right: auto;
         margin-left: rem-calc(10px);
+        margin-top: -5px;
     }
 
     .is-drilldown-submenu-parent:hover > a::after {
@@ -101,6 +103,7 @@
     }
 
     .js-drilldown-back > a::before {
+        margin-top: rem-calc(-3px);
         border-color: transparent $dark-gray transparent transparent;
         margin-right: rem-calc(10px);
     }
@@ -233,10 +236,6 @@
     padding: 0px 2rem;
     min-height:25rem;
     max-height: 32rem;
-    background-image: url("../images/happy-guy.png");
-    background-repeat: no-repeat;
-    background-position: right 7% bottom;
-    background-size: 20%;
 
     .green-header {
         margin-top: rem-calc(75px);
@@ -282,6 +281,7 @@
             background: none;
             color: $dark-gray;
             padding: .25rem;
+            padding-left: 1rem;
         }
 
     }
@@ -326,6 +326,7 @@
 
         .hc-work {
             position: relative;
+            height: 150px;
 
             h3 {
                 position: absolute;
@@ -638,6 +639,23 @@
     }
 
     .locations {
+        .tabs {
+            display: table;
+            text-align: center;
+            width: 100% !important;
+        }
 
+        .tabs-title {
+            width: 33.33%;
+            float:left !important;
+            font-size: .8rem !important;
+        }
+        .tabs-title > a {
+            font-size: .8rem;
+        }
+
+        .tabs-content {
+            text-align: center;
+        }
     }
 }
