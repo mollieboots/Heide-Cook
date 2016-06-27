@@ -1,0 +1,15 @@
+.horizontal-menu {
+  background-color: $light-gray;
+
+  .menu {
+    text-transform: uppercase;
+
+    a {
+      color: $dark-green;
+      padding: 1rem 1.5rem;
+      &:hover, &:active, &.active {
+        color: $light-green;
+      }
+    }
+  }
+}
