@@ -1,8 +1,10 @@
-<div class="row column our-partners">
-    <h3 class="green-header">{{ SP.ACF.get_sub_field('title') }}</h3>
-    <div class="partners">
-        {% for partner in SP.ACF.get_sub_field('partners') %}
-            <img src="{{ partner.image.url }}" />
-        {% endfor %}
+<div class="our-partners text-center">
+    <div class="row column">
+        <h3 class="green-header">{{ SP.ACF.get_sub_field('title') }}</h3>
+        <div class="partners">
+            {% for partner in SP.ACF.get_sub_field('partners') %}
+                <img src="{{ partner.image.url }}" />
+            {% endfor %}
+        </div>
     </div>
 </div>
