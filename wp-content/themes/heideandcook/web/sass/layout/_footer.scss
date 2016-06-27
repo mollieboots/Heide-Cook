@@ -1,0 +1,37 @@
+.footer {
+  background-image: url("../images/footer-background.png");
+  background-size: cover;
+  padding: rem-calc(70px) 0 rem-calc(30px) 0;
+
+  .footer-input {
+    width: rem-calc(390px);
+    margin: 0 auto;
+  }
+
+  .social-media {
+    margin-top: 1rem;
+
+    i.fa {
+      margin: 0px .25rem;
+      color: white;
+      font-size: 1.25rem;
+    }
+
+    .circle-icon {
+      background: $dark-gray;
+      width: 2.5rem;
+      height: 2.5rem;;
+      border-radius: 50%;
+      text-align: center;
+      line-height: rem-calc(28px);
+      vertical-align: middle;
+      padding: rem-calc(5px);
+    }
+  }
+
+  .copyright {
+    color: $dark-green;
+    font-size: .75rem;
+    margin-top: 1rem;
+  }
+}
