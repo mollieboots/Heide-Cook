@@ -2,7 +2,7 @@
     <h1 class="green-header">{{ SP.ACF.get_field('footer_title', 'option') }}</h1>
 
     <div class="footer-input">
-        {#{{ SP.WordPress.getForm(2) }}#}
+        {{ SP.WordPress.getForm(2) }}
     </div>
     <div class="social-media">
         {% if SP.ACF.get_field('twitter', 'option') %}
@@ -18,5 +18,5 @@
             <a href="{{ SP.ACF.get_field('google_plus', 'option') }}" target="_blank"><i class="fa fa-google-plus circle-icon" aria-hidden="true"></i></a>
         {% endif %}
     </div>
-    <p class="copyright">{{ SP.ACF.get_field('footer_copyright', 'option') }}</p>
+    <div class="copyright">{{ SP.ACF.get_field('footer_copyright', 'option') }}</div>
 </div>
