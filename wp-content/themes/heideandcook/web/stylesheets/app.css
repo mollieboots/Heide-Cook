@@ -6425,8 +6425,7 @@ table.hover tr:nth-of-type(even):hover {
         background-color: #f3f4f4;
         color: #4a4a4a; }
     .locations .tabs-title.is-active a {
-      color: #006940;
-      position: relative; }
+      color: #006940; }
   .locations .tabs-content {
     background-color: #f3f4f4;
     border: none;
@@ -6462,7 +6461,7 @@ table.hover tr:nth-of-type(even):hover {
         .locations .tabs-title a {
           padding: 2.25rem 4.5rem; }
         .locations .tabs-title.is-active:after, .locations .tabs-title.is-active:before {
-          bottom: -3px;
+          bottom: -2px;
           left: 50%;
           border: solid transparent;
           content: " ";
@@ -6474,9 +6473,9 @@ table.hover tr:nth-of-type(even):hover {
           border-width: 20px;
           margin-left: -20px; }
         .locations .tabs-title.is-active:before {
-          border-color: transparent #4a4a4a transparent;
-          border-width: 20px;
-          margin-left: -20px; } }
+          border-width: 0 23px 23px 23px;
+          border-color: transparent transparent #a7a7a7 transparent;
+          margin-left: -23px; } }
 
 #gform_wrapper_4 {
   position: relative;

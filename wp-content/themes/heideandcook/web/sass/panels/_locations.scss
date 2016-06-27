@@ -30,7 +30,6 @@
     }
     &.is-active a {
       color: $dark-green;
-      position: relative;
     }
   }
 
@@ -90,7 +89,7 @@
     //   }
 
       &.is-active:after, &.is-active:before {
-    	bottom: -3px;
+    	bottom: -2px;
     	left: 50%;
     	border: solid transparent;
     	content: " ";
@@ -104,9 +103,9 @@
     	margin-left: -20px;
       }
       &.is-active:before {
-        border-color:  transparent $dark-gray transparent;
-    	border-width: 20px;
-    	margin-left: -20px;
+        border-width: 0 23px 23px 23px;
+        border-color: transparent transparent $medium-gray transparent;
+    	margin-left: -23px;
       }
 
     }
