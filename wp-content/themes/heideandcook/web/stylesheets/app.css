@@ -5771,7 +5771,7 @@ table.hover tr:nth-of-type(even):hover {
     right: 15px; }
   #main-menu .menu-item.services::before {
     border-color: #4a4a4a transparent transparent; }
-  #main-menu .menu-item.services::before:hover {
+  #main-menu .menu-item.services:hover:before {
     border-color: #006940 transparent transparent; }
   #main-menu .menu-item.services::after {
     margin-top: -2px;

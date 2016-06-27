@@ -56,7 +56,7 @@
         border-color: $dark-gray transparent transparent;
     }
 
-    .menu-item.services::before:hover {
+    .menu-item.services:hover:before {
         border-color: $dark-green transparent transparent;
     }
 
