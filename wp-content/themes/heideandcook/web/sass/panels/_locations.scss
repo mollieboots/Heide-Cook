@@ -73,18 +73,42 @@
 
     .tabs-title {
       float: left;
+      position: relative;
       a {
         padding: 2.25rem 4.5rem;
       }
-      &.is-active a::after {
-        content: "";
-        position:absolute;
-        right: calc(50% - 30px/2); // 50% - 1/2 of image width
-        bottom: -0.17rem;
-        width: rem-calc(30px);
-        height: rem-calc(16px);
-        background: $light-gray url("../images/active-arrow.png") no-repeat center bottom;
+    //   &.is-active a::after {
+    //     content: "";
+    //     position:absolute;
+    //     right: calc(50% - 30px/2); // 50% - 1/2 of image width
+    //     bottom: -0.17rem;
+    //     width: rem-calc(30px);
+    //     border-color: $dark-green;
+    // 	border-bottom-color: $dark-green;
+    // 	border-width: 30px;
+    // 	margin-left: -30px;
+    //   }
+
+      &.is-active:after, &.is-active:before {
+    	bottom: -3px;
+    	left: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	position: absolute;
+    	pointer-events: none;
       }
+      &.is-active:after {
+    	border-color: transparent;
+    	border-bottom-color: $light-gray;
+    	border-width: 20px;
+    	margin-left: -20px;
+      }
+      &.is-active:before {
+        border-color:  transparent $dark-gray transparent;
+    	border-width: 20px;
+    	margin-left: -20px;
+      }
+
     }
   }
 }
