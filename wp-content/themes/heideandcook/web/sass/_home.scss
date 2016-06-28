@@ -240,6 +240,7 @@
     padding: 0px 2rem;
     min-height:25rem;
     max-height: 32rem;
+    position: relative;
 
     .green-header {
         margin-top: rem-calc(75px);
@@ -250,6 +251,7 @@
 
         img {
             position: absolute;
+            bottom: 0px;
             right: 2rem;
             display: inline;
             margin-right: .2rem;
@@ -274,6 +276,7 @@
             font-size: rem-calc(18px);
             font-weight: bold;
             text-transform: uppercase;
+            margin-left: rem-calc(30px);
         }
 
         .accordion-title::before {
@@ -287,6 +290,10 @@
             color: $dark-gray;
             padding: .25rem;
             padding-left: 1rem;
+
+            p {
+                margin-left: rem-calc(30px);
+            }
         }
 
     }
@@ -555,6 +562,17 @@
 
     .why-choose-us {
         background-image: none;
+
+        img {
+            position: relative;
+        }
+    }
+
+    @include breakpoint(medium) {
+        .why-choose-us-content > img {
+            position: relative !important;
+            margin-bottom: .5em;
+        }
     }
 
     .slick-prev {

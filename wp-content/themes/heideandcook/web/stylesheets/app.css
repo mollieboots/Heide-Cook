@@ -5907,13 +5907,15 @@ table.hover tr:nth-of-type(even):hover {
   background: #f3f4f4;
   padding: 0px 2rem;
   min-height: 25rem;
-  max-height: 32rem; }
+  max-height: 32rem;
+  position: relative; }
   .why-choose-us .green-header {
     margin-top: 4.6875rem; }
   .why-choose-us .quote-container {
     width: 70%; }
     .why-choose-us .quote-container img {
       position: absolute;
+      bottom: 0px;
       right: 2rem;
       display: inline;
       margin-right: .2rem; }
@@ -5929,7 +5931,8 @@ table.hover tr:nth-of-type(even):hover {
       color: #db8835;
       font-size: 1.125rem;
       font-weight: bold;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-left: 1.875rem; }
     .why-choose-us .accordion .accordion-title::before {
       content: url("../images/expand.png");
       left: -35px;
@@ -5939,6 +5942,8 @@ table.hover tr:nth-of-type(even):hover {
       color: #4a4a4a;
       padding: .25rem;
       padding-left: 1rem; }
+      .why-choose-us .accordion .accordion-content p {
+        margin-left: 1.875rem; }
 
 .why-choose-us::before {
   left: 50%;
@@ -6118,6 +6123,15 @@ table.hover tr:nth-of-type(even):hover {
     top: 30% !important; }
   .why-choose-us {
     background-image: none; }
+    .why-choose-us img {
+      position: relative; } }
+
+@media screen and (max-width: 39.9375em) and (min-width: 40em) {
+  .why-choose-us-content > img {
+    position: relative !important;
+    margin-bottom: .5em; } }
+
+@media screen and (max-width: 39.9375em) {
   .slick-prev {
     left: 3.125rem !important;
     height: auto !important;
