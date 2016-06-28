@@ -44,6 +44,21 @@
     transform: scaleX(-1);
     filter: FlipH;
   }
+  .lightbox {
+    h3 {
+      margin-bottom: rem-calc(24px);
+    }
+    a {
+      display: block;
+      margin: 0 auto;
+      width: rem-calc(64px);
+      height: rem-calc(63px);
+      background-image: url('../images/play.png');
+      &:hover, &:active, &.active {
+        background-image: url('../images/play-hover.png');
+      }
+    }
+  }
 }
 .hero-author {
   position: relative;

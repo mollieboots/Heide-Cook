@@ -1,8 +1,8 @@
 <div class="footer centered">
     <h1 class="green-header">{{ SP.ACF.get_field('footer_title', 'option') }}</h1>
 
-    <div class="footer-input">
-        {{ SP.WordPress.getForm(2) }}
+    <div class="footer-input" id="contact-form">
+        {{ SP.WordPress.getForm(SP.ACF.get_field('contact_form_id', 'option')) }}
     </div>
     <div class="social-media">
         {% if SP.ACF.get_field('twitter', 'option') %}
