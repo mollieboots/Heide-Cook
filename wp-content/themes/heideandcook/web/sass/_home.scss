@@ -200,7 +200,7 @@
 .content-services {
     text-align: center;
     padding-bottom: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
 
     .row.column > p {
         margin-bottom: 3rem;
@@ -223,6 +223,7 @@
 
 .content-services::after {
     left: 50%;
+    bottom: 0px;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -231,8 +232,9 @@
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
     border-top-color: $white;
-    border-width: rem-calc(60px);
-    margin-left: rem-calc(-60px);
+    border-width: rem-calc(45px) rem-calc(40px);
+    margin-left: rem-calc(-40px);
+    margin-bottom: rem-calc(-89px);
 }
 
 .why-choose-us {
@@ -309,12 +311,14 @@
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
     border-top-color: $white;
-    border-width: rem-calc(40px);
+    border-width: rem-calc(45px) rem-calc(40px);
     margin-left: rem-calc(-40px);
+    margin-top: rem-calc(-9px);
 }
 
 .why-choose-us::after {
     left: 50%;
+    bottom: 0px;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -323,8 +327,9 @@
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
     border-top-color: $light-gray;
-    border-width: rem-calc(40px);
+    border-width: rem-calc(45px) rem-calc(40px);
     margin-left: rem-calc(-40px);
+    margin-bottom: rem-calc(-80px);
 }
 
 .recent-work {

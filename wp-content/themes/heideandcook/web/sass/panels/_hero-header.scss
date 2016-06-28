@@ -4,6 +4,8 @@
   background-size: cover;
   padding: rem-calc(90px) 0;
   text-align: center;
+  border-bottom: rem-calc(10px) solid $orange;
+  position: relative;
   h1 {
     color: $white;
     line-height:1;
@@ -59,6 +61,21 @@
       }
     }
   }
+}
+.hero-header:after {
+    left: 50%;
+    bottom: 0px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: $orange;
+    border-width: rem-calc(45px) rem-calc(40px);
+    margin-left: rem-calc(-40px);
+    margin-bottom: rem-calc(-89px);
 }
 .hero-author {
   position: relative;

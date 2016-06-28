@@ -5878,7 +5878,7 @@ table.hover tr:nth-of-type(even):hover {
 .content-services {
   text-align: center;
   padding-bottom: 1.5rem;
-  margin-top: 3rem; }
+  margin-top: 4rem; }
   .content-services .row.column > p, .content-services .row.columns > p {
     margin-bottom: 3rem; }
   .content-services a:hover {
@@ -5892,6 +5892,7 @@ table.hover tr:nth-of-type(even):hover {
 
 .content-services::after {
   left: 50%;
+  bottom: 0px;
   border: solid transparent;
   content: " ";
   height: 0;
@@ -5900,8 +5901,9 @@ table.hover tr:nth-of-type(even):hover {
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #fff;
-  border-width: 3.75rem;
-  margin-left: -3.75rem; }
+  border-width: 2.8125rem 2.5rem;
+  margin-left: -2.5rem;
+  margin-bottom: -5.5625rem; }
 
 .why-choose-us {
   background: #f3f4f4;
@@ -5955,11 +5957,13 @@ table.hover tr:nth-of-type(even):hover {
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #fff;
-  border-width: 2.5rem;
-  margin-left: -2.5rem; }
+  border-width: 2.8125rem 2.5rem;
+  margin-left: -2.5rem;
+  margin-top: -0.5625rem; }
 
 .why-choose-us::after {
   left: 50%;
+  bottom: 0px;
   border: solid transparent;
   content: " ";
   height: 0;
@@ -5968,8 +5972,9 @@ table.hover tr:nth-of-type(even):hover {
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #f3f4f4;
-  border-width: 2.5rem;
-  margin-left: -2.5rem; }
+  border-width: 2.8125rem 2.5rem;
+  margin-left: -2.5rem;
+  margin-bottom: -5rem; }
 
 .recent-work {
   text-align: center;
@@ -6371,7 +6376,9 @@ table.hover tr:nth-of-type(even):hover {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5.625rem 0;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 0.625rem solid #db8835;
+  position: relative; }
   .hero-header h1 {
     color: #fff;
     line-height: 1;
@@ -6417,6 +6424,21 @@ table.hover tr:nth-of-type(even):hover {
     background-image: url("../images/play.png"); }
     .hero-header .lightbox a:hover, .hero-header .lightbox a:active, .hero-header .lightbox a.active {
       background-image: url("../images/play-hover.png"); }
+
+.hero-header:after {
+  left: 50%;
+  bottom: 0px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #db8835;
+  border-width: 2.8125rem 2.5rem;
+  margin-left: -2.5rem;
+  margin-bottom: -5.5625rem; }
 
 .hero-author {
   position: relative;
