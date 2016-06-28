@@ -249,7 +249,8 @@
         width: 70%;
 
         img {
-            float: left;
+            position: absolute;
+            right: 2rem;
             display: inline;
             margin-right: .2rem;
         }
@@ -335,7 +336,8 @@
             h3 {
                 position: absolute;
                 color: $white;
-                top: 30%;
+                // display: inline-block;
+                transform: translateY(50%);
                 width: 100%;
             }
 

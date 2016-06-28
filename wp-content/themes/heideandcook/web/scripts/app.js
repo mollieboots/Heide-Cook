@@ -1,8 +1,6 @@
 jQuery(document).ready(function(){
   jQuery(document).foundation();
 
-  // jQuery(".accordion").foundation('toggle');
-
   jQuery('.services.menu-item a').on('click', function(){
     jQuery('#mega-menu').slideToggle();
   });
@@ -41,5 +39,9 @@ jQuery(document).ready(function(){
   }]
   });
 
-  jQuery(".fancybox").fancybox()
+  jQuery(".fancybox").fancybox();
+
+  if (jQuery('.accordion-title').attr('aria-expanded') === "true") {
+    console.log("open");
+  }
 });
