@@ -1,0 +1,15 @@
+<div class="horizontal-menu">
+    <div class="row column">
+        <div class="menu-centered">
+            <ul class="vertical medium-horizontal menu">
+                {% for page in SP.ACF.get_sub_field('pages') %}
+                    <li>
+                        <a href="{{ SP.WordPress.URL(page.page.ID) }}" class="{% if page.current_page %}active{% endif %}">
+                            {{ page.page.post_title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

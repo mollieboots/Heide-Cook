@@ -77,7 +77,7 @@ class WordPress
     }
 
     public function URL($post = 0, $leavename = false) {
-        return get_permalink();
+        return get_permalink($post, $leavename);
     }
 
     public function isHome()
@@ -123,5 +123,23 @@ class WordPress
     public function getAvatar($size = 64, $id = null)
     {
         return get_avatar($id ?: get_the_author_meta('ID'), $size);
+    }
+
+    public function menu($args = [])
+    {
+        $args['echo'] = false;
+        return wp_nav_menu($args);
+    }
+
+    public function processShortcode($content, $ignore = false)
+    {
+        ob_start();
+        do_shortcode($content, $ignore);
+        return ob_get_clean();
+    }
+
+    public function getForm($id_or_title, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex = 1)
+    {
+        return gravity_form($id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, false);
     }
 }

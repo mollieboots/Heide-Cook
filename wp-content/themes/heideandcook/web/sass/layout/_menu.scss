@@ -1,0 +1,92 @@
+.title-bar {
+  background-color: $white;
+  padding: 0;
+  .light-green.button {
+    display: block;
+    text-transform: uppercase;
+  }
+  .fa {
+    font-size: 3rem;
+  }
+  img {
+    max-height: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.admin-bar #main-menu .is-stuck {
+  margin-top: 32px !important;
+}
+#main-menu {
+  .sticky {
+    margin-top: 0 !important;
+    width: 100%;
+  }
+  .menu-wrapper {
+    background-color:$white;
+  }
+
+  .top, .bottom {
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+  .top .menu, .bottom .menu {
+    float: right;
+  }
+  .top {
+    background-color: $light-gray;
+  }
+  .bottom {
+    .row {
+      position: relative;
+    }
+    .large-logo {
+      position: absolute;
+      left: 0;
+      top: rem-calc(-28px);
+    }
+    li {
+      text-transform: uppercase;
+      font-size: 1rem;
+      &:last-of-type a {
+        padding-right: 0;
+      }
+      &:first-of-type a {
+        padding-left: 0;
+      }
+      a {
+        padding: 1.4rem 1rem;
+      }
+    }
+  }
+}
+
+#mega-menu {
+  display: none;
+  .row {
+    background-color: rgba(255,255,255,0.9);
+    padding: 2rem .75rem 3rem;
+    border-bottom: rem-calc(9px) solid $light-green;
+  }
+  .icon {
+    height: 80px;
+    margin-bottom: .5rem;
+    img {
+      height: 100%;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+
+  .menu a {
+    padding: .5rem 0;
+  }
+}

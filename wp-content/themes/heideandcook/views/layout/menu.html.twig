@@ -1,0 +1,84 @@
+<div id="main-menu" data-sticky-container>
+    <div class="sticky" data-sticky>
+        <div class="menu-wrapper">
+            {# mobile #}
+            <div class="title-bar" data-responsive-toggle="mobile-menu" data-hide-for="large">
+                <a href="#" class="light-green button quote">Get a Quote</a>
+                <div class="row column">
+                    <div class="top-bar-left">
+                        <a href="tel:{{ SP.ACF.get_field('primary_number', 'option') }}"><i class="fa fa-phone"></i></a>
+                    </div>
+                    <div class="top-bar-right">
+                        <a data-toggle><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div class="top-bar-center text-center">
+                        <img src="{{ SP.ACF.get_field('mobile_menu_logo', 'option').url }}" />
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hide-for-large">
+                {{
+                    SP.WordPress.menu({
+                        'theme_location': 'mobile_menu',
+                        'walker': walkers.drilldown,
+                        'items_wrap': '<ul id="%1$s" class="%2$s" data-drilldown>%3$s</ul>',
+                        'container': false,
+                        'menu_id': '',
+                        'menu_class': 'vertical menu'
+                    })
+                }}
+            </div>
+
+            {# large #}
+            <div class="top">
+                <div class="row column">
+                    <ul class="horizontal menu">
+                        <li><a href="{{ SP.ACF.get_field('customer_login_url', 'option') }}" class="login">Customer Login</a></li>
+                        <li><a href="tel:{{ SP.ACF.get_field('primary_number', 'option') }}" class="login">{{ SP.ACF.get_field('primary_number', 'option') }}</a></li>
+                        <li><a href="#quote-lightbox" class="button fancybox">Get A Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="row column">
+                    <div class="large-logo">
+                        <img src="{{ SP.ACF.get_field('menu_logo', 'option').url }}" alt="">
+                    </div>
+                    {{
+                        SP.WordPress.menu({
+                            'theme_location': 'primary_menu'
+                        })
+                    }}
+                </div>
+            </div>
+        </div>
+
+        <div id="mega-menu">
+            <div class="row column">
+                {% for menu in SP.ACF.get_field('mega_menu', 'option') %}
+                    <div class="large-3 medium-3 small-6 columns
+                        {% if loop.index == 1 %}
+                            brown
+                        {% elseif loop.index == 2 %}
+                            orange
+                        {% elseif loop.index == 3 %}
+                            light-green
+                        {% elseif loop.index == 4 %}
+                            yellow
+                        {% endif %}
+                    ">
+                        <div class="icon">
+                            <img src="{{ menu.icon.url }}" />
+                        </div>
+                        <ul class="vertical menu">
+                            <li><p>{{ menu.title }}</p></li>
+                            {% for link in menu.links %}
+                                <li><a href="{{ SP.WordPress.URL(link.page.ID) }}">{{ link.page.post_title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

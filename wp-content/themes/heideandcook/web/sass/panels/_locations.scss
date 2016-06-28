@@ -1,0 +1,92 @@
+//locations tabs
+.locations {
+  background-color: $light-gray;
+  color: $medium-gray;
+
+  .tabs-row {
+    border-bottom: rem-calc(3px) solid $medium-gray;
+    margin: 0 auto;
+  }
+
+  .tabs {
+    border: none;
+    background-color: $light-gray;
+    display: inline-block;
+  }
+
+  .tabs-panel {
+    padding: 0;
+  }
+
+  .tabs-title {
+    float: none;
+    a {
+      font-size: 1.2rem;
+      color: $medium-gray;
+      &:hover {
+        background-color: $light-gray;
+        color: $dark-gray;
+      }
+    }
+    &.is-active a {
+      color: $dark-green;
+    }
+  }
+
+  .tabs-content {
+    background-color: $light-gray;
+    border: none;
+    padding: 2.25rem 0;
+  }
+
+  .phone, .email, .address {
+    text-align: left;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .phone::before, .email::before, .address::before {
+    content: "";
+    font-family: "FontAwesome";
+    color: $dark-green;
+    padding-right: 1rem;
+    font-size: 2rem;
+    display:block;
+    float: left;
+  }
+  .phone::before {
+    content: "\f095";
+    position: relative;
+    top: -0.5rem;
+  }
+  .email::before {
+    content: "\f0e0";
+    position: relative;
+    top: -0.5rem;
+  }
+  .address::before {
+    content: "\f041";
+  }
+
+  @include breakpoint(medium) {
+    text-align: center;
+
+    .tabs-title {
+      float: left;
+      position: relative;
+      a {
+        padding: 2.25rem 4.5rem;
+      }
+      &.is-active:after {
+        content: "";
+        display: block;
+        margin: 0 auto rem-calc(-3px) auto;
+        width: 0;
+        height: 0;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid $medium-gray;
+      }
+
+    }
+  }
+}

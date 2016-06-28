@@ -1,16 +1,22 @@
 <div class="footer centered">
-    <h1 class="green-header">READY TO GET STARTED?</h1>
+    <h1 class="green-header">{{ SP.ACF.get_field('footer_title', 'option') }}</h1>
 
-    <div class="footer-input">
-        <input type="text" name="email" value="" placeholder="YOUR EMAIL">
-        <div class="button"> > </div>
-        <div class="progress-bar"></div>
+    <div class="footer-input" id="contact-form">
+        {{ SP.WordPress.getForm(SP.ACF.get_field('contact_form_id', 'option')) }}
     </div>
     <div class="social-media">
-        <a><i class="fa fa-twitter circle-icon" aria-hidden="true"></i></a>
-        <a><i class="fa fa-linkedin circle-icon" aria-hidden="true"></i></a>
-        <a><i class="fa fa-youtube circle-icon" aria-hidden="true"></i></a>
-        <a><i class="fa fa-google circle-icon" aria-hidden="true"></i></a>
+        {% if SP.ACF.get_field('twitter', 'option') %}
+            <a href="{{ SP.ACF.get_field('twitter', 'option') }}" target="_blank"><i class="fa fa-twitter circle-icon" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if SP.ACF.get_field('linkedin', 'option') %}
+            <a href="{{ SP.ACF.get_field('linkedin', 'option') }}" target="_blank"><i class="fa fa-linkedin circle-icon" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if SP.ACF.get_field('youtube', 'option') %}
+            <a href="{{ SP.ACF.get_field('youtube', 'option') }}" target="_blank"><i class="fa fa-youtube circle-icon" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if SP.ACF.get_field('google_plus', 'option') %}
+            <a href="{{ SP.ACF.get_field('google_plus', 'option') }}" target="_blank"><i class="fa fa-google-plus circle-icon" aria-hidden="true"></i></a>
+        {% endif %}
     </div>
-    <p class="copyright">2016 Heide & Cook, LLC All Rights Reserved.</p>
+    <div class="copyright">{{ SP.ACF.get_field('footer_copyright', 'option') }}</div>
 </div>

@@ -12,6 +12,10 @@
     {% endblock %}
 </head>
 <body {{ SP.WordPress.classes() }}>
+{% block menu %}
+    {% include "layout/menu.html.twig" %}
+    {% include "layout/quote-lightbox.html.twig" %}
+{% endblock %}
 {% block body %}
     {% block header %}
         {% include "layout/header.html.twig" %}

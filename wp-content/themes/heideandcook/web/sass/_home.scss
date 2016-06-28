@@ -1,36 +1,143 @@
 @import "settings";
 
-//header
-.header {
-    height: 6.8rem;
-    width: 100%;
+//main menu and mega menu
+#main-menu {
+    background: $white;
+    height: auto !important;
 
-    .header-row {
+    .large-logo > img {
+        height: rem-calc(75px);
+    }
+
+    #menu-main-menu {
+        float: right;
+    }
+
+    .horizontal.menu {
+        float: right;
+    }
+
+    .sticky {
         width: 100%;
+        left: 0 !important;
+        margin: 0px auto;
     }
 
-    .logo {
-        height:5rem;
-        top: .9rem;
-        position: absolute;
-    }
+    .top {
+        background: $light-gray !important;
+        width: 100%;
 
-    .header-upper {
-        height: 2.8rem;
-        background-color: $medium-light-gray;
-        width: 100% !important;
-    }
+        a.login {
+            color: $dark-green;
+        }
 
-    .header-lower {
-        text-align: right;
-        height:4rem;
-        background: white;
-        padding: 1.1rem;
-
-        .header-link {
-            margin: 1.5rem;
+        a.login:hover {
+            text-decoration: underline;
         }
     }
+
+    .menu-item.services {
+        position: relative;
+        padding-right: rem-calc(20px);
+    }
+
+    .menu-item.services::after, .menu-item.services::before {
+        content:"";
+        border-style:solid;
+        border-width:8px;
+        width:0;
+        height:0;
+        position:absolute;
+        top:45%;
+        right:15px;
+    }
+
+    .menu-item.services::before {
+        border-color: $dark-gray transparent transparent;
+    }
+
+    .menu-item.services:hover:before {
+        border-color: $dark-green transparent transparent;
+    }
+
+    .menu-item.services::after {
+        margin-top: -2px;
+        border-color: #fff transparent transparent;
+    }
+}
+
+#menu-mobile-menu, #mobile-menu {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: $light-gray;
+
+    li > a {
+        padding: .9rem;
+    }
+
+    .is-drilldown {
+        max-width: none !important;
+        min-height: none !important;
+    }
+
+    .is-drilldown-submenu-parent > a::after {
+        border-color: transparent transparent transparent $dark-gray;
+        display: inline-block;
+        vertical-align: middle;
+        right: auto;
+        margin-left: rem-calc(10px);
+        margin-top: -5px;
+    }
+
+    .is-drilldown-submenu-parent:hover > a::after {
+        border-color: transparent transparent transparent $dark-green;
+        display: inline-block;
+        vertical-align: middle;
+        right: auto;
+        margin-left: rem-calc(10px);
+    }
+
+    .submenu.is-drilldown-submenu {
+        background: $light-gray;
+    }
+
+    .js-drilldown-back > a::before {
+        margin-top: rem-calc(-3px);
+        border-color: transparent $dark-gray transparent transparent;
+        margin-right: rem-calc(10px);
+    }
+
+    .js-drilldown-back:hover > a::before {
+        border-color: transparent $dark-green transparent transparent;
+    }
+}
+
+#mega-menu {
+
+    #mega-menu > .row {
+        padding-bottom: 3rem;
+    }
+
+    .row > .columns > .icon {
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+
+    li > p {
+        text-transform: uppercase;
+        padding: 0px;
+        font-size: 1rem;
+        margin-bottom: 0px;
+    }
+
+    .menu > li > a {
+        padding: .5rem 0px;
+    }
+}
+
+.hero-header {
+    margin-top: rem-calc(99px);
 }
 
 //sliders
@@ -42,7 +149,7 @@
     position: relative;
     text-align: center;
     position: relative;
-    background-image: url("/wp-content/themes/heideandcook/web/images/pipes.png");
+    background-image: url("../images/pipes.png");
     background-size: cover;
     background-size: cover;
 
@@ -93,7 +200,7 @@
 .content-services {
     text-align: center;
     padding-bottom: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
 
     .row.column > p {
         margin-bottom: 3rem;
@@ -116,6 +223,7 @@
 
 .content-services::after {
     left: 50%;
+    bottom: 0px;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -124,8 +232,9 @@
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
     border-top-color: $white;
-    border-width: rem-calc(60px);
-    margin-left: rem-calc(-60px);
+    border-width: rem-calc(45px) rem-calc(40px);
+    margin-left: rem-calc(-40px);
+    margin-bottom: rem-calc(-89px);
 }
 
 .why-choose-us {
@@ -133,10 +242,7 @@
     padding: 0px 2rem;
     min-height:25rem;
     max-height: 32rem;
-    background-image: url("/wp-content/themes/heideandcook/web/images/happy-guy.png");
-    background-repeat: no-repeat;
-    background-position: right 7% bottom;
-    background-size: 20%;
+    position: relative;
 
     .green-header {
         margin-top: rem-calc(75px);
@@ -146,7 +252,9 @@
         width: 70%;
 
         img {
-            float: left;
+            position: absolute;
+            bottom: 0px;
+            right: 2rem;
             display: inline;
             margin-right: .2rem;
         }
@@ -170,10 +278,11 @@
             font-size: rem-calc(18px);
             font-weight: bold;
             text-transform: uppercase;
+            margin-left: rem-calc(30px);
         }
 
         .accordion-title::before {
-            content: url("/wp-content/themes/heideandcook/web/images/expand.png");
+            content: url("../images/expand.png");
             left: -35px;
             top: 20px;
         }
@@ -182,6 +291,11 @@
             background: none;
             color: $dark-gray;
             padding: .25rem;
+            padding-left: 1rem;
+
+            p {
+                margin-left: rem-calc(30px);
+            }
         }
 
     }
@@ -197,12 +311,14 @@
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
     border-top-color: $white;
-    border-width: rem-calc(40px);
+    border-width: rem-calc(45px) rem-calc(40px);
     margin-left: rem-calc(-40px);
+    margin-top: rem-calc(-9px);
 }
 
 .why-choose-us::after {
     left: 50%;
+    bottom: 0px;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -211,8 +327,9 @@
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
     border-top-color: $light-gray;
-    border-width: rem-calc(40px);
+    border-width: rem-calc(45px) rem-calc(40px);
     margin-left: rem-calc(-40px);
+    margin-bottom: rem-calc(-80px);
 }
 
 .recent-work {
@@ -224,21 +341,28 @@
         height: 14rem;
         text-align: center;
 
-        .hc-work > h3 {
-            position: absolute;
-            color: $white;
+        .hc-work {
+            position: relative;
+            height: 150px;
 
-        }
+            h3 {
+                position: absolute;
+                color: $white;
+                // display: inline-block;
+                transform: translateY(50%);
+                width: 100%;
+            }
 
-        img {
-            height: 100%;
+            img {
+                height: 100%;
+            }
         }
     }
 
     .slick-prev {
         left: rem-calc(250px);
         top: -2rem;
-        background-image: url("/wp-content/themes/heideandcook/web/images/left-slider-arrow.png");
+        background-image: url("../images/left-slider-arrow.png");
         background-repeat: no-repeat;
         background-size: contain;
         height: 2.375rem;
@@ -251,7 +375,7 @@
     .slick-next {
         right: rem-calc(250px);
         top: -2rem;
-        background-image: url("/wp-content/themes/heideandcook/web/images/right-slider-arrow.png");
+        background-image: url("../images/right-slider-arrow.png");
         background-repeat: no-repeat;
         background-size: contain;
         height: 2.375rem;
@@ -265,163 +389,8 @@
 
 //locations tabs
 .locations {
-    text-align: center;
-    min-height: rem-calc(220px);
-    background-color: $light-gray;
-    margin-top: rem-calc(5px);
-    color: $medium-gray;
-
-    .tabs-row {
-        border-bottom: rem-calc(3px) solid $medium-gray;
-        margin: 0px auto;
-        width: 100%;
-    }
-
-    .tabs {
-        border: none;
-        background-color: $light-gray;
-        display: inline-block;
-    }
-
-    .tabs-title > a {
-        font-size: 1.2rem;
-        padding: 2.25rem 4.5rem;
-        color: $medium-gray;
-    }
-
-    .tabs-title.is-active > a {
-        color: $dark-green !important;
-        position: relative;
-        // background-image: url("/wp-content/themes/heideandcook/web/images/active-arrow.png");
-        // background-repeat: no-repeat;
-        // background-position: center bottom -3px;
-    }
-
-    .tabs-title.is-active > a::after {
-        content: "";
-        position:absolute;
-        right: 50%;
-        bottom:0px;
-        background: transparent url("/wp-content/themes/heideandcook/web/images/active-arrow.png") no-repeat center bottom;
-    }
-
-    .tabs-title:hover > a {
-        background-color: $light-gray;
-        color: $dark-gray;
-    }
-
-    .tabs-content {
-        background-color: $light-gray;
-        border: none;
-    }
-
-    .tabs-panel {
-        padding: 0px;
-    }
-
-    .left {
-        text-align: left;
-        padding: rem-calc(50px) 0px;
-
-        img {
-            float: left;
-            margin-left: 10rem;
-            margin-right: rem-calc(10px);
-        }
-    }
-
-    .middle {
-        text-align: left;
-        padding: rem-calc(50) 0px;
-
-        img {
-            float: left;
-            margin-left: 5rem;
-            margin-right: rem-calc(10px);
-        }
-    }
-
-    .right {
-        text-align: left;
-        padding: rem-calc(35) 0px;
-
-        p {
-            margin: rem-calc(5);
-            line-height: 1.2rem;
-        }
-
-        img {
-            float: left;
-            margin-right: rem-calc(10px);
-            margin-top: .5rem;
-        }
-    }
-}
-
-//footer
-.footer {
-    height: rem-calc(312px);
-    background-image: url("/wp-content/themes/heideandcook/web/images/footer-background.png");
-    background-size: cover;
-    padding: rem-calc(70px) 0px rem-calc(30px) 0px;
-
-    .footer-input {
-        width: rem-calc(390px);
-        height: rem-calc(50px);
-        margin: 0px auto;
-        color: $dark-green !important;
-        position: relative;
-
-        input {
-            width: rem-calc(348px);
-        }
-
-        .button {
-            width: 2.6rem;
-            height: 100%;
-            background-color: $dark-green;
-            display: inline;
-            position: absolute;
-            padding: 0px;
-            font-size: 2em;
-            top: 0px;
-            right:0px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            position: absolute;
-            bottom: 0px;
-            height: rem-calc(10px);
-            background-color: $light-green;
-        }
-    }
-
-    .social-media {
-        margin-top: 1rem;
-
-        i.fa {
-            margin: 0px .25rem;
-            color: white;
-            font-size: 1.25rem;
-        }
-
-        .circle-icon {
-            background: $dark-gray;
-            width: 2.5rem;
-            height: 2.5rem;;
-            border-radius: 50%;
-            text-align: center;
-            line-height: rem-calc(28px);
-            vertical-align: middle;
-            padding: rem-calc(5px);
-        }
-    }
-
-    .copyright {
-        color: $dark-green;
-        font-size: .75rem;
-        margin-top: 1rem;
+    .tabs-title {
+        text-transform: uppercase;
     }
 }
 
@@ -477,6 +446,10 @@
     color: $yellow;
 }
 
+.brown {
+    color: $brown;
+}
+
 .italic {
     font-style: italic;
     font-size: 1.1rem;
@@ -487,7 +460,7 @@
 }
 
 //breakpoints
-@media only screen and (max-width: rem-calc(1200px)) {
+@include breakpoint (medium only) {
     .row {
         max-width: 60rem !important;
     }
@@ -511,19 +484,9 @@
     .slick-next {
         right: rem-calc(150px) !important;
     }
-
-    .locations > .tabs-content > .location-info {
-        .left > img {
-            margin-left: 5rem !important;
-        }
-
-        .middle > img {
-            margin-left: 2.3rem !important;
-        }
-    }
 }
 
-@media only screen and (max-width: rem-calc(1024px)) {
+@include breakpoint(large only) {
     .row {
         max-width: 50rem !important;
     }
@@ -535,16 +498,6 @@
     img.logo {
         height: rem-calc(60) !important;
         top: 1.4rem !important;
-    }
-
-    .locations > .tabs-content > .location-info {
-        .left > img {
-            margin-left: 1rem !important;
-        }
-
-        .middle > img {
-            margin-left: .5rem !important;
-        }
     }
 
     .recent-work-slider {
@@ -561,16 +514,8 @@
 }
 
 @media only screen and (max-width: rem-calc(870px)) {
-    .tabs-title > a {
-        padding: 1.25rem 1.5rem !important;
-    }
-
     html {
         font-size: rem-calc(14px) !important;
-    }
-
-    .locations > .column.middle > img {
-        margin-left: 3rem !important;
     }
 
     .quote-container {
@@ -582,7 +527,7 @@
     max-height: none;
 }
 
-@media only screen and (max-width: rem-calc(700px)) {
+@include breakpoint (small only) {
     .header {
         height: auto !important;
 
@@ -622,24 +567,51 @@
 
     .why-choose-us {
         background-image: none;
+
+        img {
+            position: relative !important;
+            margin: auto;
+            margin-bottom: .5rem;
+        }
     }
 
-    .tabs-title > a {
-        font-size: .75rem !important;
-    }
-
-    .tabs-panel > img {
-        text-align: center !important;
-        width: .75rem !important;
+    @include breakpoint(medium) {
+        .why-choose-us-content > img {
+            position: relative !important;
+            margin-bottom: .5em;
+        }
     }
 
     .slick-prev {
         left: rem-calc(50px) !important;
         height: auto !important;
+        top: -1.5rem !important;
     }
 
     .slick-next {
         right: rem-calc(50px) !important;
         height: auto !important;
+        top: -1.5rem !important;
+    }
+
+    .locations {
+        .tabs {
+            display: table;
+            text-align: center;
+            width: 100% !important;
+        }
+
+        .tabs-title {
+            width: 33.33%;
+            float:left !important;
+            font-size: .8rem !important;
+        }
+        .tabs-title > a {
+            font-size: .8rem;
+        }
+
+        .tabs-content {
+            text-align: center;
+        }
     }
 }

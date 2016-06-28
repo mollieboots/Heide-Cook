@@ -4,12 +4,14 @@
   background-size: cover;
   padding: rem-calc(90px) 0;
   text-align: center;
+  border-bottom: rem-calc(10px) solid $orange;
+  position: relative;
   h1 {
     color: $white;
     line-height:1;
     text-transform: uppercase;
   }
-  h4 {
+  h3, h4 {
     color: $light-green;
     line-height:1;
   }
@@ -44,6 +46,36 @@
     transform: scaleX(-1);
     filter: FlipH;
   }
+  .lightbox {
+    h3 {
+      margin-bottom: rem-calc(24px);
+    }
+    a {
+      display: block;
+      margin: 0 auto;
+      width: rem-calc(64px);
+      height: rem-calc(63px);
+      background-image: url('../images/play.png');
+      &:hover, &:active, &.active {
+        background-image: url('../images/play-hover.png');
+      }
+    }
+  }
+}
+.hero-header:after {
+    left: 50%;
+    bottom: 0px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: $orange;
+    border-width: rem-calc(45px) rem-calc(40px);
+    margin-left: rem-calc(-40px);
+    margin-bottom: rem-calc(-89px);
 }
 .hero-author {
   position: relative;

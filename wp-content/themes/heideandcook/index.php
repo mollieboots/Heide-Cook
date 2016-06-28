@@ -48,6 +48,9 @@ else {
             case 'content_two_columns':
                 $flexibleContent[] = $twig->render('panels/content-two-col.html.twig', $data);
                 break;
+            case 'content_two_columns_reversed':
+                $flexibleContent[] = $twig->render('panels/content-two-col-reversed.html.twig', $data);
+                break;
             case 'content_grid':
                 $flexibleContent[] = $twig->render('panels/content-grid.html.twig', $data);
                 break;
@@ -65,6 +68,9 @@ else {
                 break;
             case 'office_tabs':
                 $flexibleContent[] = $twig->render('panels/office.html.twig', $data);
+                break;
+            case 'horizontal_menu':
+                $flexibleContent[] = $twig->render('panels/horizontal-menu.html.twig', $data);
                 break;
             default:
                 throw new Exception('Could not render layout for '.$layout);
