@@ -6077,7 +6077,7 @@ table.hover tr:nth-of-type(even):hover {
   .slick-next {
     right: 9.375rem !important; } }
 
-@media only screen and (max-width: 64rem) {
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
   .row {
     max-width: 50rem !important; }
   a.header-link {
@@ -6124,7 +6124,9 @@ table.hover tr:nth-of-type(even):hover {
   .why-choose-us {
     background-image: none; }
     .why-choose-us img {
-      position: relative; } }
+      position: relative !important;
+      margin: auto;
+      margin-bottom: .5rem; } }
 
 @media screen and (max-width: 39.9375em) and (min-width: 40em) {
   .why-choose-us-content > img {

@@ -40,8 +40,10 @@ jQuery(document).ready(function(){
   });
 
   jQuery(".fancybox").fancybox();
-
-  if (jQuery('.accordion-title').attr('aria-expanded') === "true") {
-    console.log("open");
-  }
 });
+
+if (jQuery('.accordion-title').attr('aria-expanded') === "true") {
+  console.log("open");
+} else {
+  console.log("no");
+}
