@@ -6323,18 +6323,19 @@ table.hover tr:nth-of-type(even):hover {
   display: none; }
   #mega-menu .row {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 1rem;
-    border-bottom: 0.75rem solid #62a745; }
+    padding: 2rem .75rem 3rem;
+    border-bottom: 0.5625rem solid #62a745; }
   #mega-menu .icon {
     height: 80px;
-    margin-bottom: 1rem; }
+    margin-bottom: .5rem; }
     #mega-menu .icon img {
       height: 100%; }
   #mega-menu p {
     text-transform: uppercase;
     padding: 0;
     font-size: 1rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-weight: bold; }
   #mega-menu .menu a {
     padding: .5rem 0; }
 
