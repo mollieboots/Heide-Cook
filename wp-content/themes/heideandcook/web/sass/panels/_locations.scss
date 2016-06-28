@@ -89,7 +89,7 @@
     //   }
 
       &.is-active:after, &.is-active:before {
-    	bottom: -2px;
+    	bottom: -3px;
     	left: 50%;
     	border: solid transparent;
     	content: " ";
@@ -99,13 +99,13 @@
       &.is-active:after {
     	border-color: transparent;
     	border-bottom-color: $light-gray;
-    	border-width: 20px;
-    	margin-left: -20px;
+    	border-width: 21px;
+    	margin-left: -21px;
       }
       &.is-active:before {
-        border-width: 0 23px 23px 23px;
+        border-width: 0 24px 24px 24px;
         border-color: transparent transparent $medium-gray transparent;
-    	margin-left: -23px;
+    	margin-left: -24px;
       }
 
     }

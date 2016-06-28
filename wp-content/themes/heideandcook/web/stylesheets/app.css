@@ -5913,7 +5913,8 @@ table.hover tr:nth-of-type(even):hover {
   .why-choose-us .quote-container {
     width: 70%; }
     .why-choose-us .quote-container img {
-      float: left;
+      position: absolute;
+      right: 2rem;
       display: inline;
       margin-right: .2rem; }
   .why-choose-us img.photo {
@@ -5978,7 +5979,9 @@ table.hover tr:nth-of-type(even):hover {
       .recent-work .recent-work-slider .hc-work h3 {
         position: absolute;
         color: #fff;
-        top: 30%;
+        -webkit-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+                transform: translateY(50%);
         width: 100%; }
       .recent-work .recent-work-slider .hc-work img {
         height: 100%; }
@@ -6461,7 +6464,7 @@ table.hover tr:nth-of-type(even):hover {
         .locations .tabs-title a {
           padding: 2.25rem 4.5rem; }
         .locations .tabs-title.is-active:after, .locations .tabs-title.is-active:before {
-          bottom: -2px;
+          bottom: -3px;
           left: 50%;
           border: solid transparent;
           content: " ";
@@ -6470,12 +6473,12 @@ table.hover tr:nth-of-type(even):hover {
         .locations .tabs-title.is-active:after {
           border-color: transparent;
           border-bottom-color: #f3f4f4;
-          border-width: 20px;
-          margin-left: -20px; }
+          border-width: 21px;
+          margin-left: -21px; }
         .locations .tabs-title.is-active:before {
-          border-width: 0 23px 23px 23px;
+          border-width: 0 24px 24px 24px;
           border-color: transparent transparent #a7a7a7 transparent;
-          margin-left: -23px; } }
+          margin-left: -24px; } }
 
 #gform_wrapper_4 {
   position: relative;
