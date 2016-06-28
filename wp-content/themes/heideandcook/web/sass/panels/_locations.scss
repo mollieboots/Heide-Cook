@@ -76,36 +76,16 @@
       a {
         padding: 2.25rem 4.5rem;
       }
-    //   &.is-active a::after {
-    //     content: "";
-    //     position:absolute;
-    //     right: calc(50% - 30px/2); // 50% - 1/2 of image width
-    //     bottom: -0.17rem;
-    //     width: rem-calc(30px);
-    //     border-color: $dark-green;
-    // 	border-bottom-color: $dark-green;
-    // 	border-width: 30px;
-    // 	margin-left: -30px;
-    //   }
 
-      &.is-active:after, &.is-active:before {
-    	bottom: -2px;
-    	left: 50%;
-    	border: solid transparent;
-    	content: " ";
-    	position: absolute;
-    	pointer-events: none;
-      }
       &.is-active:after {
-    	border-color: transparent;
-    	border-bottom-color: $light-gray;
-    	border-width: 20px;
-    	margin-left: -20px;
-      }
-      &.is-active:before {
-        border-width: 0 23px 23px 23px;
-        border-color: transparent transparent $medium-gray transparent;
-    	margin-left: -23px;
+        content: "";
+        display: block;
+        margin: 0 auto rem-calc(-3px) auto;
+        width: 0;
+        height: 0;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid $medium-gray;
       }
 
     }
