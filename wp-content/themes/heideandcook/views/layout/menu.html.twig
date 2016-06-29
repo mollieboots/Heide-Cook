@@ -1,5 +1,5 @@
 <div id="main-menu" data-sticky-container>
-    <div class="sticky" data-sticky>
+    <div class="sticky" data-sticky data-sticky-on="small">
         <div class="menu-wrapper">
             {# mobile #}
             <div class="title-bar" data-responsive-toggle="mobile-menu" data-hide-for="large">
@@ -12,7 +12,9 @@
                         <a data-toggle><i class="fa fa-bars"></i></a>
                     </div>
                     <div class="top-bar-center text-center">
-                        <img src="{{ SP.ACF.get_field('mobile_menu_logo', 'option').url }}" />
+                        <a href="{{ SP.WordPress.siteURL() }}">
+                            <img src="{{ SP.ACF.get_field('mobile_menu_logo', 'option').url }}" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -34,7 +36,7 @@
                 <div class="row column">
                     <ul class="horizontal menu">
                         <li><a href="{{ SP.ACF.get_field('customer_login_url', 'option') }}" class="login">Customer Login</a></li>
-                        <li><a href="tel:{{ SP.ACF.get_field('primary_number', 'option') }}" class="login">{{ SP.ACF.get_field('primary_number', 'option') }}</a></li>
+                        <li><a href="tel:{{ SP.ACF.get_field('primary_number', 'option') }}" class="number">{{ SP.ACF.get_field('primary_number', 'option') }}</a></li>
                         <li><a href="#quote-lightbox" class="button fancybox">Get A Quote</a></li>
                     </ul>
                 </div>
@@ -42,7 +44,9 @@
             <div class="bottom">
                 <div class="row column">
                     <div class="large-logo">
-                        <img src="{{ SP.ACF.get_field('menu_logo', 'option').url }}" alt="">
+                        <a href="{{ SP.WordPress.siteURL() }}">
+                            <img src="{{ SP.ACF.get_field('menu_logo', 'option').url }}" alt="">
+                        </a>
                     </div>
                     {{
                         SP.WordPress.menu({

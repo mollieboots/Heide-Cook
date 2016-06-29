@@ -1,8 +1,11 @@
 jQuery(document).ready(function(){
   jQuery(document).foundation();
 
-  jQuery('.services.menu-item a').on('click', function(){
-    jQuery('#mega-menu').slideToggle();
+  var megaMenu = jQuery('#mega-menu');
+  var megaMenuLink = jQuery('.services.menu-item a');
+  megaMenuLink.on('click', function(){
+    megaMenuLink.parent().toggleClass('active');
+    megaMenu.stop(true, true).fadeToggle();
   });
 
   jQuery('.recent-work-slider').slick({
@@ -41,9 +44,3 @@ jQuery(document).ready(function(){
 
   jQuery(".fancybox").fancybox();
 });
-
-if (jQuery('.accordion-title').attr('aria-expanded') === "true") {
-  console.log("open");
-} else {
-  console.log("no");
-}

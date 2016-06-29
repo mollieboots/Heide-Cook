@@ -80,6 +80,10 @@ class WordPress
         return get_permalink($post, $leavename);
     }
 
+    public function siteURL($blog_id = null, $path = '', $scheme = null) {
+        return get_site_url($blog_id, $path, $scheme);
+    }
+
     public function isHome()
     {
         return is_home();
