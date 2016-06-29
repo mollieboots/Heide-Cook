@@ -4,6 +4,7 @@
   .light-green.button {
     display: block;
     text-transform: uppercase;
+    color: $white;
   }
   .fa {
     font-size: 3rem;
@@ -11,6 +12,49 @@
   img {
     max-height: 3rem;
     margin-bottom: 1rem;
+  }
+}
+
+#mobile-menu {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: $light-gray;
+
+  a {
+    padding: rem-calc(20px) 1rem;
+  }
+  .is-drilldown {
+    min-height: 0 !important;
+  }
+  .submenu.is-drilldown-submenu {
+    background: $light-gray;
+  }
+  .is-drilldown-submenu-parent > a::after {
+    border-color: transparent transparent transparent $dark-gray;
+    display: inline-block;
+    vertical-align: middle;
+    right: auto;
+    margin-left: rem-calc(10px);
+    margin-top: -5px;
+  }
+  .is-drilldown-submenu-parent:hover > a::after {
+    border-color: transparent transparent transparent $dark-green;
+    display: inline-block;
+    vertical-align: middle;
+    right: auto;
+    margin-left: rem-calc(10px);
+  }
+  .js-drilldown-back > a::before {
+    margin-top: rem-calc(-3px);
+    border-color: transparent $dark-gray transparent transparent;
+    margin-right: rem-calc(10px);
+  }
+
+  .js-drilldown-back:hover > a::before {
+    border-color: transparent $dark-green transparent transparent;
   }
 }
 
@@ -37,6 +81,22 @@
   }
   .top {
     background-color: $light-gray;
+    .login, .number, .button {
+      padding: rem-calc(12px) rem-calc(30px);
+    }
+    .login, .number {
+      color: $dark-green;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .login, .button {
+      font-size: rem-calc(17px);
+    }
+    .number {
+      font-size: rem-calc(20px);
+      font-weight: bold;
+    }
   }
   .bottom {
     .row {
@@ -47,6 +107,16 @@
       left: 0;
       top: rem-calc(-28px);
     }
+    .services {
+      a::after {
+        content: "\f105";
+        font-family: "FontAwesome";
+        padding-left: 1rem;
+      }
+      &.active a::after {
+        content: "\f107";
+      }
+    }
     li {
       text-transform: uppercase;
       font-size: 1rem;
@@ -56,8 +126,14 @@
       &:first-of-type a {
         padding-left: 0;
       }
-      a {
-        padding: 1.4rem 1rem;
+      &.active a, a {
+        background-color: transparent;
+        padding: 1.4rem rem-calc(30px);
+        font-weight: bold;
+        color: $anchor-gray;
+        &:hover {
+          color: $dark-green;
+        }
       }
     }
   }
@@ -65,14 +141,18 @@
 
 #mega-menu {
   display: none;
+  position: relative;
   .row {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
     background-color: rgba(255,255,255,0.9);
-    padding: 2rem .75rem 3rem;
+    padding: rem-calc(40px) rem-calc(30px) rem-calc(80px);
     border-bottom: rem-calc(9px) solid $light-green;
   }
   .icon {
     height: 80px;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     img {
       height: 100%;
     }
@@ -88,5 +168,12 @@
 
   .menu a {
     padding: .5rem 0;
+  }
+
+  @include breakpoint(small only) {
+    display: none !important;
+  }
+  @include breakpoint(medium only) {
+    display: none !important;
   }
 }

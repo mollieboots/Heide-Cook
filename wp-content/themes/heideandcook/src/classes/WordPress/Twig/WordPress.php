@@ -80,9 +80,18 @@ class WordPress
         return get_permalink($post, $leavename);
     }
 
+    public function siteURL($blog_id = null, $path = '', $scheme = null) {
+        return get_site_url($blog_id, $path, $scheme);
+    }
+
     public function isHome()
     {
         return is_home();
+    }
+
+    public function isPostTypeArchive($post_types = '')
+    {
+        return is_post_type_archive($post_types);
     }
 
     public function getType($post = null)
@@ -103,6 +112,11 @@ class WordPress
     public function getCategories($args = '')
     {
         return get_categories($args);
+    }
+
+    public function getTerms($post, $taxonomy)
+    {
+        return get_the_terms($post, $taxonomy);
     }
 
     public function getPreviousLink($format = '&laquo; %link', $link = '%title', $in_same_term = false, $excluded_terms = '', $taxonomy = 'category')
