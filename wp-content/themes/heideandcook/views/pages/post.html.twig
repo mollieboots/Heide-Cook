@@ -6,14 +6,16 @@
     </div>
 {% endblock %}
 {% block content %}
-    <div class="row">
-        <div class="large-8 columns">
+    <div class="row posts-content">
+        <div class="large-8 columns posts-left">
             {% for teaser in teasers %}
                 {{ teaser }}
             {% endfor %}
-            <a href="" id="load-more" class="dark-green hollow button">Load More</a>
+            <div class="more-posts">
+                <a href="" id="load-more" class="dark-green hollow button">Load More</a>
+            </div>
         </div>
-        <div class="large-4 columns">
+        <div class="large-4 columns posts-right">
             <section>
                 <div id="search">
                     <form role="search" method="get" id="search-post" action="{{ SP.WordPress.URL() }}">

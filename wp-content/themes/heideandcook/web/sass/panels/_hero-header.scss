@@ -1,10 +1,30 @@
+.home {
+    .hero-header {
+      border-bottom: rem-calc(10px) solid $orange;
+    }
+    .hero-header:after {
+        left: 50%;
+        bottom: 0px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: $orange;
+        border-width: rem-calc(45px) rem-calc(40px);
+        margin-left: rem-calc(-40px);
+        margin-bottom: rem-calc(-89px);
+    }
+}
+
 .hero-header {
   background-image: url('../images/pipes.png');
   background-repeat: no-repeat;
   background-size: cover;
   padding: rem-calc(90px) 0;
   text-align: center;
-  border-bottom: rem-calc(10px) solid $orange;
   position: relative;
   h1 {
     color: $white;
@@ -36,15 +56,31 @@
     margin: 0 rem-calc(2px);
     background-position: center;
     background-repeat: no-repeat;
-    padding: rem-calc(6px);
-    background-image: url('../images/next-post-arrow.png');
-    &:hover {
-      background-image: url('../images/next-post-arrow-hover.png');
-    }
+    padding: rem-calc(15px);
   }
   .prev {
     transform: scaleX(-1);
     filter: FlipH;
+  }
+  .prev-next {
+    vertical-align: middle;
+    a {
+      height: 46px;
+      width: 46px;
+      font-size: 2rem;
+      line-height: 2rem;
+      padding: 0px .8rem;
+      border: 2px solid $light-gray;
+      border-radius: 3px;
+      color: $light-gray;
+      margin: 0px .2rem;
+    }
+
+    a:hover {
+      color: $light-green;
+      border-color: $light-green;
+      transition: .25s;
+    }
   }
   .lightbox {
     h3 {
@@ -62,21 +98,7 @@
     }
   }
 }
-.hero-header:after {
-    left: 50%;
-    bottom: 0px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-top-color: $orange;
-    border-width: rem-calc(45px) rem-calc(40px);
-    margin-left: rem-calc(-40px);
-    margin-bottom: rem-calc(-89px);
-}
+
 .hero-author {
   position: relative;
   top: -56px;
