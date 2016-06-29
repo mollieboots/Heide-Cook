@@ -115,6 +115,10 @@
       position: absolute;
       left: 0;
       top: rem-calc(-28px);
+
+      img {
+        margin-top: -10px;
+      }
     }
     .services {
       a::after {
@@ -124,6 +128,9 @@
       }
       &.active a::after {
         content: "\f107";
+      }
+      a {
+        padding-right: 1rem;
       }
     }
     li {
