@@ -162,22 +162,23 @@
             font-weight: bold;
             text-transform: uppercase;
             margin-left: rem-calc(30px);
+            padding: .8rem .5rem;
         }
 
         .accordion-title::before {
             content: url("../images/expand.png");
             left: -35px;
-            top: 20px;
+            top: rem-calc(14px);
         }
 
         .accordion-content {
             background: none;
             color: $dark-gray;
-            padding: .25rem;
+            padding: 0px;
             padding-left: 1rem;
 
             p {
-                margin-left: rem-calc(30px);
+                margin: 0px rem-calc(30px) rem-calc(20px) rem-calc(22px);
             }
         }
 

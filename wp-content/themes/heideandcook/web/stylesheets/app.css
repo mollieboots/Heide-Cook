@@ -5855,18 +5855,19 @@ table.hover tr:nth-of-type(even):hover {
       font-size: 1.125rem;
       font-weight: bold;
       text-transform: uppercase;
-      margin-left: 1.875rem; }
+      margin-left: 1.875rem;
+      padding: .8rem .5rem; }
     .why-choose-us .accordion .accordion-title::before {
       content: url("../images/expand.png");
       left: -35px;
-      top: 20px; }
+      top: 0.875rem; }
     .why-choose-us .accordion .accordion-content {
       background: none;
       color: #4a4a4a;
-      padding: .25rem;
+      padding: 0px;
       padding-left: 1rem; }
       .why-choose-us .accordion .accordion-content p {
-        margin-left: 1.875rem; }
+        margin: 0px 1.875rem 1.25rem 1.375rem; }
 
 .why-choose-us::before {
   left: 50%;
