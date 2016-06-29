@@ -48,6 +48,10 @@ add_action('init', function() {
         'has_archive' => true,
     ]);
 
+    register_taxonomy('case_studies_tags', 'case_studies', [
+        'hierarchical' => true,
+    ]);
+
     register_nav_menus([
         'primary_menu' => 'Primary Menu',
         'mobile_menu' => 'Mobile Menu',
