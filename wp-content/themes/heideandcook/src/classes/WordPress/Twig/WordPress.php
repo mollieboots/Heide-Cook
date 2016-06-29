@@ -89,6 +89,11 @@ class WordPress
         return is_home();
     }
 
+    public function isPostTypeArchive($post_types = '')
+    {
+        return is_post_type_archive($post_types);
+    }
+
     public function getType($post = null)
     {
         return get_post_type($post);
@@ -107,6 +112,11 @@ class WordPress
     public function getCategories($args = '')
     {
         return get_categories($args);
+    }
+
+    public function getTerms($post, $taxonomy)
+    {
+        return get_the_terms($post, $taxonomy);
     }
 
     public function getPreviousLink($format = '&laquo; %link', $link = '%title', $in_same_term = false, $excluded_terms = '', $taxonomy = 'category')
