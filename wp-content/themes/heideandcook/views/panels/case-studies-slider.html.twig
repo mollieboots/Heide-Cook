@@ -5,10 +5,10 @@
     </div>
     <div class="recent-work-slider">
         {% for case in SP.ACF.get_sub_field('case_studies') %}
-            <div class="hc-work">
+            <a href="{{ SP.WordPRess.URL(case['case_study'].ID) }}" class="hc-work">
                 <h3>{{ case['case_study'].post_title }}</h3>
-                {{ SP.WordPress.featuredImage(case['case_study']) }}
-            </div>
+                {{ SP.WordPress.featuredImage(case['case_study'], 'slider') }}
+            </a>
         {% endfor %}
     </div>
 </section>

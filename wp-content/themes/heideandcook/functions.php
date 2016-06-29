@@ -48,10 +48,16 @@ add_action('init', function() {
         'has_archive' => true,
     ]);
 
+    register_taxonomy('case_studies_tags', 'case_studies', [
+        'hierarchical' => true,
+    ]);
+
     register_nav_menus([
         'primary_menu' => 'Primary Menu',
         'mobile_menu' => 'Mobile Menu',
     ]);
+
+    add_image_size('slider', 500, 332, true);
 
     if(function_exists('acf_add_options_page')) {
         acf_add_options_page([

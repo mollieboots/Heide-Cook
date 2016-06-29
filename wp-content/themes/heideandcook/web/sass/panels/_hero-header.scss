@@ -4,7 +4,6 @@
   background-size: cover;
   padding: rem-calc(90px) 0;
   text-align: center;
-  border-bottom: rem-calc(10px) solid $orange;
   position: relative;
   h1 {
     color: $white;
@@ -36,47 +35,67 @@
     margin: 0 rem-calc(2px);
     background-position: center;
     background-repeat: no-repeat;
-    padding: rem-calc(6px);
-    background-image: url('../images/next-post-arrow.png');
-    &:hover {
-      background-image: url('../images/next-post-arrow-hover.png');
-    }
+    padding: rem-calc(15px);
   }
   .prev {
     transform: scaleX(-1);
     filter: FlipH;
   }
-  .lightbox {
-    h3 {
-      margin-bottom: rem-calc(24px);
-    }
+  .prev-next {
+    vertical-align: middle;
     a {
-      display: block;
-      margin: 0 auto;
-      width: rem-calc(64px);
-      height: rem-calc(63px);
-      background-image: url('../images/play.png');
-      &:hover, &:active, &.active {
-        background-image: url('../images/play-hover.png');
+      height: 46px;
+      width: 46px;
+      font-size: 2rem;
+      line-height: 2rem;
+      padding: 0px .8rem;
+      border: 2px solid $light-gray;
+      border-radius: 3px;
+      color: $light-gray;
+      margin: 0px .2rem;
+    }
+
+    a:hover {
+      color: $light-green;
+      border-color: $light-green;
+      transition: .25s;
+    }
+  }
+  &.video {
+    padding: rem-calc(120px) 0;
+    border-bottom: rem-calc(10px) solid $orange;
+    position: relative;
+    overflow: visible;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: rem-calc(-40px) - rem-calc(10px);
+      left: calc(50% - 40px);
+      z-index: 1;
+      width: 0;
+      height: 0;
+      border-left: rem-calc(40px) solid transparent;
+      border-right: rem-calc(40px) solid transparent;
+      border-top: rem-calc(40px) solid $orange;
+    }
+    .lightbox {
+      h3 {
+        margin-bottom: rem-calc(24px);
+      }
+      a {
+        display: block;
+        margin: 0 auto;
+        width: rem-calc(64px);
+        height: rem-calc(63px);
+        background-image: url('../images/play.png');
+        &:hover, &:active, &.active {
+          background-image: url('../images/play-hover.png');
+        }
       }
     }
   }
 }
-.hero-header:after {
-    left: 50%;
-    bottom: 0px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-top-color: $orange;
-    border-width: rem-calc(45px) rem-calc(40px);
-    margin-left: rem-calc(-40px);
-    margin-bottom: rem-calc(-89px);
-}
+
 .hero-author {
   position: relative;
   top: -56px;

@@ -1,0 +1,45 @@
+.case-study {
+  padding: rem-calc(60px) 0;
+  .details {
+    margin-bottom: rem-calc(80px);
+    h4 {
+      margin-bottom: 0;
+      line-height: 1;
+    }
+    div {
+      margin-bottom: rem-calc(30px);
+    }
+  }
+  .testimonial {
+    blockquote {
+      padding: rem-calc(50px) rem-calc(30px) rem-calc(30px) rem-calc(30px);
+      border: 1px solid #d8d8d9;
+      position: relative;
+      text-align: center;
+      margin-top: rem-calc(50px);
+      font-size: rem-calc(20px);
+      font-style: italic;
+      text-indent: rem-calc(40px);
+      &::before {
+        content: "";
+        display: block;
+        width: rem-calc(28px);
+        height: rem-calc(20px);
+        background-image: url('../images/quote.png');
+        position: relative;
+        top: rem-calc(24px);
+      }
+      img {
+        position: absolute;
+        top: rem-calc(-50px);
+        left: calc(50% - 50px);
+        height: rem-calc(100px);
+      }
+      cite {
+        text-indent: 0;
+        font-size: rem-calc(20px);
+        color: $dark-green;
+      }
+    }
+  }
+}
