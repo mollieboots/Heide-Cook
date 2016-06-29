@@ -192,60 +192,6 @@
     margin-bottom: rem-calc(-80px);
 }
 
-.recent-work {
-    text-align: center;
-    position: relative;
-    margin-top: 4rem;
-
-    .recent-work-slider {
-        height: 14rem;
-        text-align: center;
-
-        .hc-work {
-            position: relative;
-            height: 150px;
-
-            h3 {
-                position: absolute;
-                color: $white;
-                top: 30%;
-                width: 100%;
-            }
-
-            img {
-                height: 100%;
-            }
-        }
-    }
-
-    .slick-prev {
-        left: rem-calc(250px);
-        top: -2rem;
-        background-image: url("../images/left-slider-arrow.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 2.375rem;
-    }
-
-    .slick-prev:before, .slick-next:before {
-        content: "";
-    }
-
-    .slick-next {
-        right: rem-calc(250px);
-        top: -2rem;
-        background-image: url("../images/right-slider-arrow.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 2.375rem;
-    }
-
-    .slick-next:hover, .slick-prev:hover {
-        opacity: 0.6;
-        filter: alpha(opacity=60);
-    }
-}
-
 //locations tabs
 .locations {
     .tabs-title {
@@ -319,64 +265,7 @@
 }
 
 //breakpoints
-@include breakpoint (medium only) {
-    .row {
-        max-width: 60rem !important;
-    }
-
-    .recent-work-slider {
-        height: auto !important;
-
-        .slick-slide {
-            height: auto !important;
-        }
-
-        .hc-work > img {
-            height: auto !important;
-        }
-    }
-
-    .slick-prev {
-        left: rem-calc(150px) !important;
-    }
-
-    .slick-next {
-        right: rem-calc(150px) !important;
-    }
-}
-
-@include breakpoint(large only) {
-    .row {
-        max-width: 50rem !important;
-    }
-
-    a.header-link {
-        font-size: .8rem;
-    }
-
-    img.logo {
-        height: rem-calc(60) !important;
-        top: 1.4rem !important;
-    }
-
-    .recent-work-slider {
-        height: auto !important;
-
-        .slick-slide {
-            height: auto !important;
-        }
-
-        .hc-work > img {
-            height: auto !important;
-        }
-    }
-}
-
 @media only screen and (max-width: rem-calc(870px)) {
-    html {
-        font-size: rem-calc(14px) !important;
-    }
-
     .quote-container {
         width: auto !important;
     }
@@ -439,18 +328,6 @@
             position: relative !important;
             margin-bottom: .5em;
         }
-    }
-
-    .slick-prev {
-        left: rem-calc(50px) !important;
-        height: auto !important;
-        top: -1.5rem !important;
-    }
-
-    .slick-next {
-        right: rem-calc(50px) !important;
-        height: auto !important;
-        top: -1.5rem !important;
     }
 
     .locations {

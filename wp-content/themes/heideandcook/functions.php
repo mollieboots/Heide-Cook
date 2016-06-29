@@ -57,6 +57,8 @@ add_action('init', function() {
         'mobile_menu' => 'Mobile Menu',
     ]);
 
+    add_image_size('slider', 500, 332, true);
+
     if(function_exists('acf_add_options_page')) {
         acf_add_options_page([
             'page_title' => 'Theme Options',
