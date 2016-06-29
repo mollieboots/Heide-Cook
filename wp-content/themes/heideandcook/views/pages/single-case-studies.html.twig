@@ -1,25 +1,41 @@
 {# single case studies page #}
 {% extends 'base.html.twig' %}
 {% block content %}
-    <div class="row">
-        <div class="medium-6 large-8 columns">
-            <img src="{{ SP.ACF.get_field('image').url }}" alt="">
-        </div>
-        <div class="medium-6 large-4 columns">
-            <div class="details">
-                {% for detail in SP.ACF.get_field('details') %}
-                    <h4>{{ detail.title }}</h4>
-                    <div>
-                        {{ detail.content }}
-                    </div>
-                {% endfor %}
+    <div class="case-study">
+        <div class="row">
+            <div class="medium-6 large-8 columns">
+                <img src="{{ SP.ACF.get_field('image').url }}" alt="">
             </div>
-            <div class="testimonial text-center">
-                <img src="{{ SP.ACF.get_field('testimony_image').url }}" alt="">
-                <blockquote>{{ SP.ACF.get_field('testimony') }}</blockquote>
-                <cite>{{ SP.ACF.get_field('testimony_author') }}</cite>
+            <div class="medium-6 large-4 columns">
+                <div class="details">
+                    {% for detail in SP.ACF.get_field('details') %}
+                        <h4>{{ detail.title }}</h4>
+                        <div>
+                            {{ detail.content }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="testimonial text-center">
+                    <blockquote>
+                        <img src="{{ SP.ACF.get_field('testimony_image').url }}" alt="">
+                        {{ SP.ACF.get_field('testimony') }}
+                        <cite>{{ SP.ACF.get_field('testimony_author') }}</cite>
+                    </blockquote>
+                </div>
             </div>
         </div>
     </div>
-    {# @TODO slider #}
+    <section class="recent-work">
+        <div class="row column text-centered">
+            <h1 class="green-header">Related Cases</h1>
+        </div>
+        <div class="recent-work-slider">
+            {% for case in SP.ACF.get_field('related_cases') %}
+                <div class="hc-work">
+                    <h3>{{ case.case.post_title }}</h3>
+                    {{ SP.WordPress.featuredImage(case.case.ID) }}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
