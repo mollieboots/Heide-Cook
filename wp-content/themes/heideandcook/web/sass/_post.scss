@@ -12,13 +12,18 @@ a.button.hollow {
 }
 
 .posts-left {
-    
+
     .more-posts {
-        text-align: center;
-        #load-more {
-            display: inline-block;
-            margin: 6rem auto 5rem auto;
-        }
+      text-align: center;
+      #load-more {
+        display: inline-block;
+        margin: 6rem auto 5rem auto;
+      }
+      #load-more:hover {
+        color: $light-green;
+        border-color: $light-green;
+        transition: .25s;
+      }
     }
 }
 

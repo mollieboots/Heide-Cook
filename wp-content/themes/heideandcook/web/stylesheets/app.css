@@ -6278,6 +6278,10 @@ a.button.hollow {
   .posts-left .more-posts #load-more {
     display: inline-block;
     margin: 6rem auto 5rem auto; }
+  .posts-left .more-posts #load-more:hover {
+    color: #62a745;
+    border-color: #62a745;
+    transition: .25s; }
 
 .posts-right a.button.hollow:hover {
   color: #fff;
@@ -6295,6 +6299,9 @@ a.button.hollow {
 .alignleft {
   float: left;
   padding: 0 1rem 1rem 0; }
+
+.menu-wrapper .top > .column, .menu-wrapper .top > .columns, .menu-wrapper .bottom > .column, .menu-wrapper .bottom > .columns {
+  padding: 0px; }
 
 .title-bar {
   background-color: #fff;
@@ -6329,6 +6336,9 @@ a.button.hollow {
 
 #main-menu .top {
   background-color: #f3f4f4; }
+  #main-menu .top li a:nth-of-type(2) {
+    font-size: 1.2rem;
+    font-weight: bold; }
 
 #main-menu .bottom .row {
   position: relative; }

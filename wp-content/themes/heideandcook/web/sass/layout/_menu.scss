@@ -1,3 +1,11 @@
+@import "settings";
+
+.menu-wrapper {
+    .top > .column, .bottom > .column {
+        padding: 0px;
+    }
+}
+
 .title-bar {
   background-color: $white;
   padding: 0;
@@ -37,6 +45,12 @@
   }
   .top {
     background-color: $light-gray;
+    li {
+      a:nth-of-type(2) {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
   }
   .bottom {
     .row {
