@@ -1,4 +1,4 @@
-<div class="hero-header" style="background-image: url({{ SP.ACF.get_field('header_image').url }});">
+<div class="hero-header {% if SP.ACF.get_field('header_style') == "video" %}video{% else %}standard{% endif %}" style="background-image: url({{ SP.ACF.get_field('header_image').url }});">
     <div class="row column">
         {% if SP.ACF.get_field('header_style') == "video" %}
             <div class="lightbox">
