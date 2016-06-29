@@ -7,40 +7,7 @@ $data = [];
 
 setup_postdata($post);
 
-if(is_404()) {
-    $template = 'pages/404.html.twig';
-}
-elseif(is_post_type_archive('case_studies') || get_post_field('post_name', get_post()) == 'case-studies') {
-    $template = 'pages/archive-case-studies.html.twig';
-    $teasers = [];
-    $loop = new \WP_Query([
-        'post_type' => 'case_studies'
-    ]);
-    while($loop->have_posts()) {
-        $loop->the_post();
-        setup_postdata($loop->post);
-        $teasers[] = $twig->render('panels/case-studies-teaser.html.twig');
-    }
-    $data['teasers'] = $teasers;
-    wp_reset_postdata();
-    setup_postdata($post);
-}
-elseif(is_home()) {
-    $template = 'pages/post.html.twig';
-    $teasers = [];
-    while(have_posts()) {
-        the_post();
-        $teasers[] = $twig->render('panels/blog-teaser.html.twig');
-    }
-    $data['teasers'] = $teasers;
-    wp_reset_postdata();
-    setup_postdata($post);
-}
-elseif(get_post_type() == 'case_studies') {
-    $template = 'pages/single-case-studies.html.twig';
-}
-else {
-    $template = 'base.html.twig';
+function handle_content_rows($twig, &$data) {
     $flexibleContent = [];
     while(have_rows('content')) {
         the_row();
@@ -78,6 +45,45 @@ else {
         }
     }
     $data['content'] = $flexibleContent;
+}
+handle_content_rows($twig, $data);
+
+if(is_404()) {
+    $template = 'pages/404.html.twig';
+}
+elseif(is_post_type_archive('case_studies') || get_post_field('post_name', get_post()) == 'case-studies') {
+    $template = 'pages/archive-case-studies.html.twig';
+    $teasers = [];
+    $loop = new \WP_Query([
+        'post_type' => 'case_studies',
+        'post_status' => 'publish',
+        'posts_per_page' => -1
+    ]);
+    while($loop->have_posts()) {
+        $loop->the_post();
+        setup_postdata($loop->post);
+        $teasers[] = $twig->render('panels/case-studies-teaser.html.twig');
+    }
+    $data['teasers'] = $teasers;
+    wp_reset_postdata();
+    setup_postdata($post);
+}
+elseif(is_home()) {
+    $template = 'pages/post.html.twig';
+    $teasers = [];
+    while(have_posts()) {
+        the_post();
+        $teasers[] = $twig->render('panels/blog-teaser.html.twig');
+    }
+    $data['teasers'] = $teasers;
+    wp_reset_postdata();
+    setup_postdata($post);
+}
+elseif(get_post_type() == 'case_studies') {
+    $template = 'pages/single-case-studies.html.twig';
+}
+else {
+    $template = 'base.html.twig';
 }
 
 echo $twig->render($template, $data);

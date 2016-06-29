@@ -1,0 +1,47 @@
+.case-studies {
+  padding: rem-calc(60px) 0;
+
+  a {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+    &:hover {
+      &::after {
+        background-color: rgba(200,200,200,0.5);
+      }
+    }
+  }
+  h3 {
+    position: absolute;
+    top: 50%;
+    left: rem-calc(20px);
+    right: rem-calc(20px);
+    transform: translateY(-50%);
+    color: $white;
+    z-index: 2;
+  }
+  .teaser {
+    position: relative;
+    text-align: center;
+    margin-bottom: map_get($grid-column-gutter, medium);
+  }
+
+  .large-teasers {
+    display: none;
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+  .small-teasers {
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+}
