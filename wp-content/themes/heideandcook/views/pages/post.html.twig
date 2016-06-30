@@ -31,7 +31,7 @@
                     </form>
                 </div>
             </section>
-            <section>
+            <section id="categories">
                 <h3>Categories</h3>
                 {% for category in SP.WordPress.getCategories() %}
                     <a href="{{ SP.WordPress.getCategoryURL(category.term_id) }}" class="hollow button">{{ category.name }}</a>
