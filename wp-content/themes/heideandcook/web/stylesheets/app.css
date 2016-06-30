@@ -6108,6 +6108,9 @@ table.hover tr:nth-of-type(even):hover {
 .green {
   color: #006940; }
 
+.row.header-bar > h1 {
+  text-transform: uppercase; }
+
 .row.posts-content {
   margin-top: 2rem; }
 
@@ -6136,17 +6139,26 @@ a.button.hollow {
     transition: background-color 0.1s ease-out, color 0.25s ease-out; }
   .posts-right h3 {
     margin-bottom: .25rem; }
+  .posts-right #search-post ::-webkit-input-placeholder {
+    text-transform: uppercase;
+    color: #006940;
+    font-size: .9rem;
+    font-weight: bold; }
+  .posts-right #search-post ::-moz-placeholder {
+    text-transform: uppercase;
+    color: #006940;
+    font-size: .9rem;
+    font-weight: bold; }
+  .posts-right #search-post :-ms-input-placeholder {
+    text-transform: uppercase;
+    color: #006940;
+    font-size: .9rem;
+    font-weight: bold; }
+  .posts-right #search-post input:-moz-placeholder {
+    text-transform: uppercase; }
   .posts-right #search-post div > input.input-group-field {
     border: 3px solid #a7a7a7;
     border-radius: 3px; }
-    .posts-right #search-post div > input.input-group-field ::-webkit-input-placeholder {
-      text-transform: uppercase; }
-    .posts-right #search-post div > input.input-group-field ::-moz-placeholder {
-      text-transform: uppercase; }
-    .posts-right #search-post div > input.input-group-field :-ms-input-placeholder {
-      text-transform: uppercase; }
-    .posts-right #search-post div > input.input-group-field input:-moz-placeholder {
-      text-transform: uppercase; }
   .posts-right #search-post div > div > button > i {
     margin-left: -2.8125rem;
     color: #a7a7a7; }
@@ -6242,7 +6254,8 @@ article.blog.teaser {
     font-size: 1.0625rem; }
   #main-menu .top .number {
     font-size: 1.25rem;
-    font-weight: bold; }
+    font-weight: bold;
+    padding-left: 0px; }
 
 #main-menu .bottom .row {
   position: relative; }

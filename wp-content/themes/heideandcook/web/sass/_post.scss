@@ -1,5 +1,9 @@
 @import "settings";
 
+.row.header-bar > h1 {
+    text-transform: uppercase;
+}
+
 .row.posts-content {
     margin-top: 2rem;
 }
@@ -41,13 +45,29 @@ a.button.hollow {
     }
 
     #search-post {
+        ::-webkit-input-placeholder {
+            text-transform: uppercase;
+            color: $dark-green;
+            font-size: .9rem;
+            font-weight: bold;
+        }
+        ::-moz-placeholder {
+            text-transform: uppercase;
+            color: $dark-green;
+            font-size: .9rem;
+            font-weight: bold;
+        }
+        :-ms-input-placeholder {
+            text-transform: uppercase;
+            color: $dark-green;
+            font-size: .9rem;
+            font-weight: bold;
+        }
+        input:-moz-placeholder { text-transform: uppercase; };
         div > input.input-group-field {
             border: 3px solid $medium-gray;
             border-radius: 3px;
-            ::-webkit-input-placeholder { text-transform: uppercase; };
-            ::-moz-placeholder { text-transform: uppercase; };
-            :-ms-input-placeholder { text-transform: uppercase; };
-            input:-moz-placeholder { text-transform: uppercase; };
+
         }
         div > div > button > i {
             margin-left: rem-calc(-45px);
