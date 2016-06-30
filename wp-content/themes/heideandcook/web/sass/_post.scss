@@ -1,7 +1,15 @@
 @import "settings";
 
+.blog {
+    background-color: $light-gray;
+}
+
+.row.header-bar > h1 {
+    text-transform: uppercase;
+}
+
 .row.posts-content {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 a.button.hollow {
@@ -9,6 +17,7 @@ a.button.hollow {
     color: $dark-green;
     font-weight: bold;
     text-transform: uppercase;
+    margin: 0px .5rem .8rem 0px;
 }
 
 .posts-left {
@@ -17,7 +26,7 @@ a.button.hollow {
       text-align: center;
       #load-more {
         display: inline-block;
-        margin: 6rem auto 5rem auto;
+        margin: 3rem auto 5rem auto;
       }
       #load-more:hover {
         color: $light-green;
@@ -28,6 +37,7 @@ a.button.hollow {
 }
 
 .posts-right {
+    margin-top: 1rem;
     a.button.hollow:hover {
         color: $white;
         background: $orange;
@@ -35,7 +45,49 @@ a.button.hollow {
         transition: background-color 0.1s ease-out, color 0.25s ease-out;
     }
 
-    h3 {
-        margin-bottom: .25rem;
+    #search-post {
+        ::-webkit-input-placeholder {
+            text-transform: uppercase;
+            color: $dark-green;
+            font-size: .9rem;
+            font-weight: bold;
+        }
+        ::-moz-placeholder {
+            text-transform: uppercase;
+            color: $dark-green;
+            font-size: .9rem;
+            font-weight: bold;
+        }
+        :-ms-input-placeholder {
+            text-transform: uppercase;
+            color: $dark-green;
+            font-size: .9rem;
+            font-weight: bold;
+        }
+        input:-moz-placeholder { text-transform: uppercase; };
+        div > input.input-group-field {
+            border: 3px solid $medium-gray;
+            border-radius: 3px;
+
+        }
+        div > div > button > i {
+            margin-left: rem-calc(-45px);
+            color: $medium-gray;
+        }
+    }
+    #categories {
+        h3 {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 2rem 0px .75rem 0px;
+        }
+    }
+}
+
+article.blog.teaser {
+    margin: 1rem 0px 5rem 0px;
+
+    .content {
+        margin-top: 1.5rem;
     }
 }

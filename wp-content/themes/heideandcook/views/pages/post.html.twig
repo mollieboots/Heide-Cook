@@ -23,7 +23,7 @@
                             <input class="input-group-field" type="search" placeholder="Search Blog" name="s">
                             <input type="hidden" name="post_type" value="post" />
                             <div class="input-group-button">
-                                <button type="submit" class="button" value="Search">
+                                <button type="submit" class="" value="Search">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </div>
@@ -31,7 +31,7 @@
                     </form>
                 </div>
             </section>
-            <section>
+            <section id="categories">
                 <h3>Categories</h3>
                 {% for category in SP.WordPress.getCategories() %}
                     <a href="{{ SP.WordPress.getCategoryURL(category.term_id) }}" class="hollow button">{{ category.name }}</a>

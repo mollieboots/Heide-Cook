@@ -1,6 +1,6 @@
 <div class="our-partners">
     <div class="row column">
-        <h3 class="green-header">{{ SP.ACF.get_sub_field('title') }}</h3>
+        <h5 class="green-header">{{ SP.ACF.get_sub_field('title') }}</h5>
         <div class="partners">
             {% for partner in SP.ACF.get_sub_field('partners') %}
                 <img src="{{ partner.image.url }}" />
