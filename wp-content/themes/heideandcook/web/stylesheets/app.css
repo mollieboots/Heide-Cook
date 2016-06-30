@@ -6121,7 +6121,8 @@ a.button.hollow {
   border: 3px solid #006940;
   color: #006940;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 0px .5rem .8rem 0px; }
 
 .posts-left .more-posts {
   text-align: center; }
@@ -6167,8 +6168,6 @@ a.button.hollow {
     font-weight: bold;
     text-transform: uppercase;
     margin: 2rem 0px .75rem 0px; }
-  .posts-right #categories a.hollow.button {
-    margin: 0px .5rem .8rem 0px; }
 
 article.blog.teaser {
   margin: 1rem 0px 5rem 0px; }

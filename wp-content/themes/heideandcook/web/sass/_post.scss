@@ -17,6 +17,7 @@ a.button.hollow {
     color: $dark-green;
     font-weight: bold;
     text-transform: uppercase;
+    margin: 0px .5rem .8rem 0px;
 }
 
 .posts-left {
@@ -79,9 +80,6 @@ a.button.hollow {
             font-weight: bold;
             text-transform: uppercase;
             margin: 2rem 0px .75rem 0px;
-        }
-        a.hollow.button {
-            margin: 0px .5rem .8rem 0px;
         }
     }
 }
