@@ -6189,7 +6189,7 @@ article.blog.teaser {
   color: #62a745; }
 
 .custom-close:hover:after {
-  color: #006940; }
+  color: #538e3b; }
 
 .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened {
   border-top: 0.625rem solid #006940;
@@ -6205,6 +6205,28 @@ article.blog.teaser {
     font-size: 2.5rem; }
   .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened label.gfield_label {
     color: #4a4a4a; }
+
+.fancybox-type-iframe .fancybox-skin {
+  padding: 0px !important;
+  border-radius: 0px; }
+
+.fancybox-type-iframe .fancybox-inner {
+  overflow: hidden !important;
+  margin: 0px; }
+
+.fancybox-type-iframe .custom-close {
+  top: -4.2rem;
+  right: .25rem; }
+
+.fancybox-type-iframe .fancybox-title.fancybox-title-outside-wrap {
+  font-family: 'Cabin', sans-serif;
+  font-size: 3rem;
+  height: 2.5rem;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  text-align: right;
+  margin-right: 3rem;
+  font-weight: bold; }
 
 .menu-wrapper .top > .column, .menu-wrapper .top > .columns, .menu-wrapper .bottom > .column, .menu-wrapper .bottom > .columns {
   padding: 0px; }

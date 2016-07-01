@@ -17,7 +17,7 @@
 }
 
 .custom-close:hover:after {
-    color: $dark-green;
+    color: scale-color($button-background, $lightness: -15%);
 }
 
 .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened {
@@ -42,14 +42,33 @@
     label.gfield_label {
         color: $dark-gray;
     }
+}
 
-    #field_1_1 {
-
+.fancybox-type-iframe {
+    .fancybox-skin {
+        padding: 0px !important;
+        border-radius: 0px;
     }
-    #field_1_2 {
 
+    .fancybox-inner {
+        overflow: hidden !important;
+
+        margin: 0px;
     }
-    #field_1_3 {
 
+    .custom-close {
+        top: -4.2rem;
+        right: .25rem;
+    }
+
+    .fancybox-title.fancybox-title-outside-wrap {
+        font-family: 'Cabin', sans-serif;
+        font-size: 3rem;
+        height: 2.5rem;
+        text-transform: uppercase;
+        color: $dark-gray;
+        text-align: right;
+        margin-right: 3rem;
+        font-weight: bold;
     }
 }
