@@ -1,0 +1,55 @@
+@import "settings";
+
+.custom-close {
+    background-image: none;
+    top: rem-calc(-6px);
+    right: rem-calc(20px);
+}
+
+.custom-close:after {
+    content: "\f00d";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 3.25rem;
+    color: $light-green;
+}
+
+.custom-close:hover:after {
+    color: $dark-green;
+}
+
+.fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened {
+    border-top: rem-calc(10px) solid $dark-green;
+    border-radius: 0px;
+    width: rem-calc(700px) !important;
+
+    .fancybox-inner {
+        width: auto !important;
+    }
+
+    .gform_heading {
+        text-align: center;
+    }
+
+    h3.gform_title {
+        text-transform: uppercase;
+        color: $dark-green;
+        font-size: 2.5rem;
+    }
+
+    label.gfield_label {
+        color: $dark-gray;
+    }
+
+    #field_1_1 {
+
+    }
+    #field_1_2 {
+
+    }
+    #field_1_3 {
+
+    }
+}
