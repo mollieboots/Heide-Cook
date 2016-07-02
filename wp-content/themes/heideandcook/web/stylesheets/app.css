@@ -6459,6 +6459,8 @@ article.blog.teaser {
       border-radius: 3px;
       color: #f3f4f4;
       margin: 0px .2rem; }
+      .hero-header .prev-next a i {
+        margin-top: .5rem; }
     .hero-header .prev-next a:hover {
       color: #62a745;
       border-color: #62a745;
@@ -6738,7 +6740,7 @@ article.blog.teaser {
   .case-study .details {
     margin-bottom: 5rem; }
     .case-study .details h4 {
-      margin-bottom: 0;
+      margin-bottom: .5rem;
       line-height: 1; }
     .case-study .details div {
       margin-bottom: 1.875rem; }

@@ -27,8 +27,8 @@
             {% endif %}
             {% if (SP.WordPress.getType() == 'post' and not teaser|default(false)) or (SP.WordPress.getType() == 'case_studies' and not SP.WordPress.isPostTypeArchive('case_studies')) %}
                 <div class="prev-next">
-                    {{ SP.WordPress.getPreviousLink('%link', '&lt;') }}
-                    {{ SP.WordPress.getNextLink('%link', '&gt;') }}
+                    {{ SP.WordPress.getPreviousLink('%link', '<i class="fa fa-angle-left" aria-hidden="true"></i>') }}
+                    {{ SP.WordPress.getNextLink('%link', '<i class="fa fa-angle-right" aria-hidden="true"></i>') }}
                 </div>
             {% endif %}
         {% else %}
