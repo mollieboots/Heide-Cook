@@ -3,6 +3,7 @@ jQuery(document).ready(function(){
 
   jQuery('.services.menu-item a').on('click', function(){
     jQuery('#mega-menu').slideToggle();
+    return false;
   });
 
   jQuery('.recent-work-slider').slick({
@@ -39,27 +40,6 @@ jQuery(document).ready(function(){
   }]
   });
 
-
-// jQuery('.fancybox').fancybox({
-//        helpers: {
-//            title: {
-//                type: 'outside',
-//                position: 'top',
-//            },
-//            overlay: {
-//                css: {
-//                    'background' : 'rgba(255, 255, 255, 0.9)'
-//                }
-//            }
-//        },
-//        tpl: {
-//            closeBtn: '<a title="Close" class="fancybox-item fancybox-close my-close" href="javascript:;"></a>',
-//            next: '<a title="Next" class="fancybox-nav fancybox-next my-next" href="javascript:;"><span></span></a>',
-//            prev: '<a title="Previous" class="fancybox-nav fancybox-prev my-prev" href="javascript:;"><span></span></a>'
-//        },
-//        padding: 0,
-//    });
-
   jQuery(".fancybox").fancybox({
     helpers: {
         title: {
@@ -74,7 +54,3 @@ jQuery(document).ready(function(){
     "minWidth" : "610px",
   });
 });
-
-if (jQuery('.accordion-title').attr('aria-expanded') === "true") {
-  console.log("open");
-}
