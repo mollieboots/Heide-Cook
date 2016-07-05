@@ -1,22 +1,5 @@
 @import "settings";
 
-.fancybox-wrap.fancybox-type-inline {
-    width: 700px !important;
-    .fancybox-skin {
-        border-top: rem-calc(10px) solid $light-green;
-        border-radius: 0px;
-    }
-    .fancybox-inner {
-        width: 100% !important;
-    }
-    #quote-lightbox {
-
-    }
-    .gform_body > ul#gform_fields_1 {
-
-    }
-}
-
 //sliders
 .index-lightbox {
     height: rem-calc(500px);
@@ -143,13 +126,22 @@
         }
     }
 
+    .italic::before {
+        display: inline-block;
+        height: rem-calc(20px);
+        width: rem-calc(28px);
+        content: " ";
+        background-image: url("../images/quotation.png");
+        background-repeat: no-repeat;
+    }
+
     img.photo {
         position: absolute;
         right: 10%;
     }
 
     .row.why-choose-us-content {
-        padding-bottom: 3rem !important;
+        padding-bottom: 3rem;
     }
 
     .accordion {
@@ -342,17 +334,26 @@
 
         img {
             position: relative !important;
-            margin: auto;
-            margin-bottom: .5rem;
+            margin: 0 auto;
+            z-index: 1;
+        }
+        .row.why-choose-us-content {
+            padding-bottom: 0;
         }
     }
-
+}
     @include breakpoint(medium) {
         .why-choose-us-content > img {
             position: relative !important;
             margin-bottom: .5em;
         }
+
+    .why-choose-us {
+        img {
+            z-index: 1;
+        }
     }
+
 
     .locations {
         .tabs {

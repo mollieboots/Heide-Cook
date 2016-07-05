@@ -1,8 +1,10 @@
 {# list of post #}
 {% extends 'base.html.twig' %}
 {% block header %}
-    <div class="row column header-bar">
-        <h1>{{ SP.WordPress.Title() }}</h1>
+    <div class="header-bar">
+        <div class="row column">
+            <h1>{{ SP.WordPress.Title() }}</h1>
+        </div>
     </div>
 {% endblock %}
 {% block content %}

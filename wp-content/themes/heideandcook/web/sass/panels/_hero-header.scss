@@ -53,6 +53,10 @@
       border-radius: 3px;
       color: $light-gray;
       margin: 0px .2rem;
+
+      i {
+          margin-top: .5rem;
+      }
     }
 
     a:hover {
