@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
          slidesToShow: 2
        }
      }]
-   });
+  });
 
   jQuery(".fancybox").fancybox({
     helpers: {
@@ -39,3 +39,7 @@ jQuery(document).ready(function(){
     "minWidth" : "610px",
   });
 });
+
+if (jQuery('.accordion-title').attr('aria-expanded') === "true") {
+  console.log("open");
+}

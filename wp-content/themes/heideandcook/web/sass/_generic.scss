@@ -1,17 +1,22 @@
 @import "settings";
 
-.generic-content {
+.generic-content, .generic-content-reversed {
     margin: 2.5rem 0px;
 
     .button {
         background-color: $light-green;
         margin-bottom: 0px;
-        padding: .8rem 2rem;
+        padding: .9rem 2rem;
         text-transform: uppercase;
+        font-size: 1rem;
 
         a {
             color: $white;
         }
+    }
+
+    .button:hover {
+        background: scale-color($button-background, $lightness: -15%);
     }
 }
 
