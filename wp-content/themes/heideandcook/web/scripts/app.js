@@ -7,12 +7,23 @@ jQuery(document).ready(function(){
   });
 
   jQuery('.recent-work-slider').slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-  });
+     infinite: true,
+     arrows: true,
+     dots: false,
+     slidesToShow: 4,
+     slidesToScroll: 1,
+     responsive: [{
+         breakpoint: 700,
+         settings: {
+           slidesToShow: 1
+         }
+       }, {
+       breakpoint: 1024,
+       settings: {
+         slidesToShow: 2
+       }
+     }]
+   });
 
   jQuery(".fancybox").fancybox({
     helpers: {
