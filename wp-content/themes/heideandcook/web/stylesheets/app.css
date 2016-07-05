@@ -6090,10 +6090,16 @@ table.hover tr:nth-of-type(even):hover {
   .offices .tabs-title.is-active > a:hover {
     background: #538e3b;
     border: #538e3b 2px solid; }
-  .offices .employee h5.orange {
-    text-transform: uppercase; }
-  .offices .employee .green {
-    margin-bottom: .1rem; }
+  .offices .employee img {
+    margin-bottom: .5rem; }
+  .offices .employee h6.orange {
+    text-transform: uppercase;
+    margin-bottom: .75rem; }
+  .offices .employee p {
+    color: #4a4a4a; }
+  .offices .employee p.green {
+    color: #006940;
+    margin-bottom: .25rem; }
   .offices .tabs-panel > div.content {
     margin-bottom: 2.5rem;
     margin-top: 1rem; }
