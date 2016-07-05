@@ -6775,7 +6775,7 @@ article.blog.teaser {
   text-align: center;
   overflow: hidden; }
   .recent-work .text-centered {
-    padding-top: 2.5rem;
+    padding-top: 3.75rem;
     padding-bottom: 2.5rem; }
   .recent-work .slick-prev:before, .recent-work .slick-next:before {
     content: ""; }
