@@ -141,7 +141,7 @@
     }
 
     .row.why-choose-us-content {
-        padding-bottom: 3rem !important;
+        padding-bottom: 3rem;
     }
 
     .accordion {
@@ -335,7 +335,9 @@
         img {
             position: relative !important;
             margin: auto;
-            margin-bottom: .5rem;
+        }
+        .row.why-choose-us-content {
+            padding-bottom: 0;
         }
     }
 
