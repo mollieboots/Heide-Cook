@@ -1,22 +1,5 @@
 @import "settings";
 
-.fancybox-wrap.fancybox-type-inline {
-    width: 700px !important;
-    .fancybox-skin {
-        border-top: rem-calc(10px) solid $light-green;
-        border-radius: 0px;
-    }
-    .fancybox-inner {
-        width: 100% !important;
-    }
-    #quote-lightbox {
-
-    }
-    .gform_body > ul#gform_fields_1 {
-
-    }
-}
-
 //sliders
 .index-lightbox {
     height: rem-calc(500px);
