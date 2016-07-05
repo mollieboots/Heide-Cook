@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
          slidesToShow: 2
        }
      }]
-   });
+  });
 
   jQuery(".fancybox").fancybox({
     helpers: {

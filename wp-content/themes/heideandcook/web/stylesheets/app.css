@@ -6003,15 +6003,18 @@ table.hover tr:nth-of-type(even):hover {
   .locations .tabs-content {
     text-align: center; } }
 
-.generic-content {
+.generic-content, .generic-content-reversed {
   margin: 2.5rem 0px; }
-  .generic-content .button {
+  .generic-content .button, .generic-content-reversed .button {
     background-color: #62a745;
     margin-bottom: 0px;
-    padding: .8rem 2rem;
-    text-transform: uppercase; }
-    .generic-content .button a {
+    padding: .9rem 2rem;
+    text-transform: uppercase;
+    font-size: 1rem; }
+    .generic-content .button a, .generic-content-reversed .button a {
       color: #fff; }
+  .generic-content .button:hover, .generic-content-reversed .button:hover {
+    background: #538e3b; }
 
 .capabilities-grid {
   margin-right: 0px;
@@ -6059,7 +6062,8 @@ table.hover tr:nth-of-type(even):hover {
 .about-mission {
   margin: 3rem 0px; }
   .about-mission .button {
-    padding: .8rem 2rem; }
+    padding: .8rem 2rem;
+    font-size: 1rem; }
     .about-mission .button a {
       color: #fff; }
   .about-mission .column.large-8 > img, .about-mission .large-8.columns > img {
@@ -6234,6 +6238,9 @@ article.blog.teaser {
   text-align: right;
   margin-right: 3rem;
   font-weight: bold; }
+
+.fancybox-skin {
+  border-radius: 0px; }
 
 .menu-wrapper .top > .column, .menu-wrapper .top > .columns, .menu-wrapper .bottom > .column, .menu-wrapper .bottom > .columns {
   padding: 0px; }
