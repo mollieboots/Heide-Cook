@@ -126,6 +126,15 @@
         }
     }
 
+    .italic::before {
+        display: inline-block;
+        height: rem-calc(20px);
+        width: rem-calc(28px);
+        content: " ";
+        background-image: url("../images/quotation.png");
+        background-repeat: no-repeat;
+    }
+
     img.photo {
         position: absolute;
         right: 10%;

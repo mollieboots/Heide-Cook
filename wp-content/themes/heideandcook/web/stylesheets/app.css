@@ -5834,6 +5834,13 @@ table.hover tr:nth-of-type(even):hover {
       right: 2rem;
       display: inline;
       margin-right: .2rem; }
+  .why-choose-us .italic::before {
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.75rem;
+    content: " ";
+    background-image: url("../images/quotation.png");
+    background-repeat: no-repeat; }
   .why-choose-us img.photo {
     position: absolute;
     right: 10%; }
