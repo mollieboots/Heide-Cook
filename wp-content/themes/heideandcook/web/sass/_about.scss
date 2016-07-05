@@ -61,12 +61,19 @@
     }
 
     .employee {
-        h5.orange {
-            text-transform: uppercase;
+        img {
+            margin-bottom: .5rem;
         }
-
-        .green {
-            margin-bottom: .1rem;
+        h6.orange {
+            text-transform: uppercase;
+            margin-bottom: .75rem;
+        }
+        p {
+            color: $dark-gray;
+        }
+        p.green {
+            color: $dark-green;
+            margin-bottom: .25rem;
         }
     }
 
