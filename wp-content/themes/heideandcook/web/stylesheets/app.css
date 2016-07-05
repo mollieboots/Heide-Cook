@@ -5845,7 +5845,7 @@ table.hover tr:nth-of-type(even):hover {
     position: absolute;
     right: 10%; }
   .why-choose-us .row.why-choose-us-content {
-    padding-bottom: 3rem !important; }
+    padding-bottom: 3rem; }
   .why-choose-us .accordion {
     background: none;
     color: #db8835; }
@@ -5981,8 +5981,9 @@ table.hover tr:nth-of-type(even):hover {
     background-image: none; }
     .why-choose-us img {
       position: relative !important;
-      margin: auto;
-      margin-bottom: .5rem; } }
+      margin: auto; }
+    .why-choose-us .row.why-choose-us-content {
+      padding-bottom: 0; } }
 
 @media screen and (max-width: 43.6875em) and (min-width: 43.75em) {
   .why-choose-us-content > img {
