@@ -1,0 +1,72 @@
+.custom-close {
+    background-image: none;
+    top: rem-calc(-6px);
+    right: rem-calc(20px);
+}
+
+.custom-close:after {
+    content: "\f00d";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 3.25rem;
+    color: $light-green;
+}
+
+.custom-close:hover:after {
+    color: scale-color($button-background, $lightness: -15%);
+}
+
+.fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened {
+    border-top: rem-calc(10px) solid $dark-green;
+    border-radius: 0px;
+    width: rem-calc(700px) !important;
+
+    .fancybox-inner {
+        width: auto !important;
+    }
+
+    .gform_heading {
+        text-align: center;
+    }
+
+    h3.gform_title {
+        text-transform: uppercase;
+        color: $dark-green;
+        font-size: 2.5rem;
+    }
+
+    label.gfield_label {
+        color: $dark-gray;
+    }
+}
+
+.fancybox-type-iframe {
+    .fancybox-skin {
+        padding: 0px !important;
+        border-radius: 0px;
+    }
+
+    .fancybox-inner {
+        overflow: hidden !important;
+
+        margin: 0px;
+    }
+
+    .custom-close {
+        top: -4.2rem;
+        right: .25rem;
+    }
+
+    .fancybox-title.fancybox-title-outside-wrap {
+        font-family: 'Cabin', sans-serif;
+        font-size: 3rem;
+        height: 2.5rem;
+        text-transform: uppercase;
+        color: $dark-gray;
+        text-align: right;
+        margin-right: 3rem;
+        font-weight: bold;
+    }
+}
