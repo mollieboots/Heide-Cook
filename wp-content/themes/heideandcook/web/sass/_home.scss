@@ -334,19 +334,26 @@
 
         img {
             position: relative !important;
-            margin: auto;
+            margin: 0 auto;
+            z-index: 1;
         }
         .row.why-choose-us-content {
             padding-bottom: 0;
         }
     }
-
+}
     @include breakpoint(medium) {
         .why-choose-us-content > img {
             position: relative !important;
             margin-bottom: .5em;
         }
+
+    .why-choose-us {
+        img {
+            z-index: 1;
+        }
     }
+
 
     .locations {
         .tabs {
