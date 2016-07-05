@@ -39,7 +39,3 @@ jQuery(document).ready(function(){
     "minWidth" : "610px",
   });
 });
-
-if (jQuery('.accordion-title').attr('aria-expanded') === "true") {
-  console.log("open");
-}
