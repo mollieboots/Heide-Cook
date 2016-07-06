@@ -6203,8 +6203,10 @@ article.blog.teaser {
 
 .custom-close {
   background-image: url("../images/close-icon.png");
-  background-size: 1.875rem;
   background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.875rem;
+  width: 1.875rem;
   top: 1.45rem;
   right: .5rem; }
 

@@ -1,7 +1,9 @@
 .custom-close {
     background-image: url("../images/close-icon.png");
-    background-size: rem-calc(30px);
     background-repeat: no-repeat;
+    background-size:contain;
+    height: rem-calc(30px);
+    width: rem-calc(30px);
     top: 1.45rem;
     right: .5rem;
 }
