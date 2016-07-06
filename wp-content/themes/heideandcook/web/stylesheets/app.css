@@ -6023,11 +6023,16 @@ table.hover tr:nth-of-type(even):hover {
   margin-bottom: 5rem;
   background-color: #f3f4f4; }
   .capabilities-grid h2.green-header {
-    margin-top: 5rem; }
+    margin-top: 5rem;
+    margin-bottom: 3rem; }
   .capabilities-grid div.row.small-up-1.medium-up-2 {
-    padding-bottom: 3rem; }
+    padding-bottom: 2rem; }
+    .capabilities-grid div.row.small-up-1.medium-up-2 .column, .capabilities-grid div.row.small-up-1.medium-up-2 .columns {
+      margin-bottom: 3rem; }
   .capabilities-grid h4.green-header {
-    margin-top: .5rem; }
+    margin-bottom: 0px; }
+  .capabilities-grid img {
+    margin-bottom: .5rem; }
 
 .capabilities-grid::before {
   left: 50%;
@@ -6429,9 +6434,7 @@ form > .gform_footer > .gform_button.button:hover {
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
-      text-align: center;
       line-height: 1.75rem;
-      vertical-align: middle;
       padding: 0.3125rem; }
   .footer .copyright {
     color: #006940;
