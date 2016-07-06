@@ -34,4 +34,18 @@
     font-size: .75rem;
     margin-top: 1rem;
   }
+
+  h3.gf_progressbar_title {
+    display: inline-block !important;
+    font-size: 0px !important;
+
+    span {
+      color: $dark-green;
+      font-size: .9rem;
+      font-weight: bold;
+      position: absolute;
+      right: 0;
+      bottom: -1.1rem;
+    }
+  }
 }
