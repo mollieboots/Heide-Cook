@@ -42,6 +42,16 @@
     }
 }
 
+form > .gform_footer > .gform_button.button {
+    background: $dark-green;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+form > .gform_footer > .gform_button.button:hover {
+    background: scale-color($dark-green, $lightness: -15%);
+}
+
 .fancybox-type-iframe {
     .fancybox-skin {
         padding: 0px !important;
