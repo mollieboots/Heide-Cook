@@ -6206,7 +6206,8 @@ article.blog.teaser {
   right: .5rem; }
 
 .custom-close:hover {
-  color: #538e3b; }
+  background-image: url("../images/close-icon-hover.png");
+  transition: .25s; }
 
 .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened {
   border-top: 0.625rem solid #006940;
@@ -6240,8 +6241,8 @@ form > .gform_footer > .gform_button.button:hover {
   margin: 0px; }
 
 .fancybox-type-iframe .custom-close {
-  top: -4.2rem;
-  right: .25rem; }
+  top: -3rem;
+  right: -.45rem; }
 
 .fancybox-type-iframe .fancybox-title.fancybox-title-outside-wrap {
   font-family: 'Cabin', sans-serif;
