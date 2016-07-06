@@ -6252,7 +6252,7 @@ form > .gform_footer > .gform_button.button:hover {
 
 .fancybox-type-iframe .custom-close {
   top: -3rem;
-  right: -.45rem; }
+  right: 0px; }
 
 .fancybox-type-iframe .fancybox-title.fancybox-title-outside-wrap {
   font-family: 'Cabin', sans-serif;
