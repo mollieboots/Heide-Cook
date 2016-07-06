@@ -82,6 +82,12 @@ elseif(is_home()) {
 elseif(get_post_type() == 'case_studies') {
     $template = 'pages/single-case-studies.html.twig';
 }
+elseif (is_page()) {
+    $template = 'base.html.twig';
+}
+elseif(is_single()){
+    $template = 'pages/single-post.html.twig';
+}
 else {
     $template = 'base.html.twig';
 }
