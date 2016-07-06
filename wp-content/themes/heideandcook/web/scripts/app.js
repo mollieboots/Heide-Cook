@@ -25,12 +25,26 @@ jQuery(document).ready(function(){
      }]
   });
 
-  jQuery(".fancybox").fancybox({
+  jQuery(".fancybox-media").fancybox({
     helpers: {
         title: {
             type: 'outside',
             position: 'top',
         },
+        media: {}
+    },
+    tpl: {
+      closeBtn : '<a title="Close" class="fancybox-item fancybox-close custom-close" href="javascript:;"></a>',
+    },
+    "scrolling" : "no",
+    "minWidth" : "610px",
+  });
+  jQuery(".fancybox").fancybox({
+    helpers: {
+        title: {
+            type: 'outside',
+            position: 'top',
+        }
     },
     tpl: {
       closeBtn : '<a title="Close" class="fancybox-item fancybox-close custom-close" href="javascript:;"></a>',

@@ -22,7 +22,8 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_register_script( 'slick', get_template_directory_uri() . '/src/slick/slick/slick.js', ['jquery'] );
     wp_register_script( 'fancybox', get_template_directory_uri() . '/src/fancybox/source/jquery.fancybox.pack.js', ['jquery'] );
-    wp_register_script( 'app_script', get_template_directory_uri() . '/web/scripts-min/app.min.js', ['slick', 'fancybox'] );
+    wp_register_script( 'fancybox-media', get_template_directory_uri() . '/src/fancybox/source/helpers/jquery.fancybox-media.js', ['jquery']);
+    wp_register_script( 'app_script', get_template_directory_uri() . '/web/scripts-min/app.min.js', ['slick', 'fancybox', 'fancybox-media'] );
 
     wp_enqueue_style( 'app' );
     wp_enqueue_script( 'slick' );

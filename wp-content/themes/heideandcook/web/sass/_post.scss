@@ -2,8 +2,12 @@
     background-color: $light-gray;
 }
 
-.row.header-bar > h1 {
-    text-transform: uppercase;
+.header-bar {
+    background-image: url("../images/blog-background.png");
+    h1 {
+        text-transform: uppercase;
+        color: white;
+    }
 }
 
 .row.posts-content {
