@@ -6262,9 +6262,6 @@ form > .gform_footer > .gform_button.button:hover {
 .fancybox-skin {
   border-radius: 0px; }
 
-.gform_wrapper:not(.ginput_container_multiselect) select {
-  background-image: url(); }
-
 .gform_body > .gform_wrapper > [type='text'], select, input:not(.button) {
   box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
   border-radius: 0px !important;
