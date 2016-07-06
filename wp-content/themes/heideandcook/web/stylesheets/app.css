@@ -6437,6 +6437,16 @@ form > .gform_footer > .gform_button.button:hover {
     color: #006940;
     font-size: .75rem;
     margin-top: 1rem; }
+  .footer h3.gf_progressbar_title {
+    display: inline-block !important;
+    font-size: 0px !important; }
+    .footer h3.gf_progressbar_title span {
+      color: #006940;
+      font-size: .9rem;
+      font-weight: bold;
+      position: absolute;
+      right: 0;
+      bottom: -1.1rem; }
 
 .hero-header {
   background-image: url("../images/pipes.png");
