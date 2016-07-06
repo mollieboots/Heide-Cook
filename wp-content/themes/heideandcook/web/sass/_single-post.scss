@@ -1,0 +1,40 @@
+@import "settings";
+
+
+.large-letters{
+    float: left;
+    font-size: rem-calc(55px);
+    margin-right: rem-calc(15px);
+    line-height: 1;
+    font-weight: bold;
+    position: relative;
+    top: rem-calc(6px);
+}
+
+.large-content p {
+    font-size: rem-calc(26px);
+    line-height: 2rem;
+    margin-top: rem-calc(20px);
+    margin-bottom: rem-calc(25px);
+}
+
+.blog-img {
+    float: left;
+    margin-right: rem-calc(20px);
+}
+
+.regular-content {
+    margin-bottom: rem-calc(60px);
+}
+
+.share {
+    color: white;
+    text-align: center;
+    margin-bottom: rem-calc(60px);
+    .fa-envelope, .fa-facebook, .fa-linkedin, .fa-twitter, .fa-google-plus {
+        margin-right: rem-calc(20px);
+        background-color: $dark-green;
+        height: rem-calc(32px);
+        width: rem-calc(32px);
+    }
+}
