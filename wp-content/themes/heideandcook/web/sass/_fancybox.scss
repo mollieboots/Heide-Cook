@@ -5,7 +5,7 @@
     height: rem-calc(30px);
     width: rem-calc(30px);
     top: 1.45rem;
-    right: .5rem;
+    right: .75rem;
 }
 
 .custom-close:hover {
@@ -34,6 +34,13 @@
 
     label.gfield_label {
         color: $dark-gray;
+    }
+
+    div.gform_body > div.gform_wrapper > [type='text'], select, input:not(.button) {
+        box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
+        border-radius: 0px !important;
+        padding: 3px 0 2px 6px !important;
+        color: $medium-gray !important;
     }
 }
 
@@ -78,11 +85,4 @@ form > .gform_footer > .gform_button.button:hover {
 
 .fancybox-skin {
     border-radius: 0px;
-}
-
-.gform_body > .gform_wrapper > [type='text'], select, input:not(.button) {
-    box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
-    border-radius: 0px !important;
-    padding: 3px 0 2px 6px !important;
-    color: $medium-gray !important;
 }

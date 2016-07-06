@@ -6208,7 +6208,7 @@ article.blog.teaser {
   height: 1.875rem;
   width: 1.875rem;
   top: 1.45rem;
-  right: .5rem; }
+  right: .75rem; }
 
 .custom-close:hover {
   background-image: url("../images/close-icon-hover.png");
@@ -6228,6 +6228,11 @@ article.blog.teaser {
     font-size: 2.5rem; }
   .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened label.gfield_label {
     color: #4a4a4a; }
+  .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened div.gform_body > div.gform_wrapper > [type='text'], .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened select, .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened input:not(.button) {
+    box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
+    border-radius: 0px !important;
+    padding: 3px 0 2px 6px !important;
+    color: #a7a7a7 !important; }
 
 form > .gform_footer > .gform_button.button {
   background: #006940;
@@ -6261,12 +6266,6 @@ form > .gform_footer > .gform_button.button:hover {
 
 .fancybox-skin {
   border-radius: 0px; }
-
-.gform_body > .gform_wrapper > [type='text'], select, input:not(.button) {
-  box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
-  border-radius: 0px !important;
-  padding: 3px 0 2px 6px !important;
-  color: #a7a7a7 !important; }
 
 .large-letters {
   float: left;
