@@ -1,21 +1,16 @@
 .custom-close {
-    background-image: none;
-    top: rem-calc(-6px);
-    right: rem-calc(20px);
+    background-image: url("../images/close-icon.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: rem-calc(30px);
+    width: rem-calc(30px);
+    top: 1.45rem;
+    right: .75rem;
 }
 
-.custom-close:after {
-    content: "\f00d";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    font-size: 3.25rem;
-    color: $light-green;
-}
-
-.custom-close:hover:after {
-    color: scale-color($button-background, $lightness: -15%);
+.custom-close:hover {
+    background-image: url("../images/close-icon-hover.png");
+    transition: .25s;
 }
 
 .fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened {
@@ -39,6 +34,13 @@
 
     label.gfield_label {
         color: $dark-gray;
+    }
+
+    div.gform_body > div.gform_wrapper > [type='text'], select, input:not(.button) {
+        box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
+        border-radius: 0px !important;
+        padding: 3px 0 2px 6px !important;
+        color: $medium-gray !important;
     }
 }
 
@@ -65,8 +67,8 @@ form > .gform_footer > .gform_button.button:hover {
     }
 
     .custom-close {
-        top: -4.2rem;
-        right: .25rem;
+        top: -3rem;
+        right: -.45rem;
     }
 
     .fancybox-title.fancybox-title-outside-wrap {
