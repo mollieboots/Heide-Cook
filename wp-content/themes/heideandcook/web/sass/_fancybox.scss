@@ -36,7 +36,7 @@
         color: $dark-gray;
     }
 
-    div.gform_body > div.gform_wrapper > [type='text'], select, input:not(.button) {
+    div.gform_wrapper > [type='text'], select, input:not(.button), textarea {
         box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
         border-radius: 0px !important;
         padding: 3px 0 2px 6px !important;
