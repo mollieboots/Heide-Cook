@@ -4,14 +4,11 @@
 
 .header-bar {
     background-image: url("../images/blog-background.png");
+    margin-bottom: 3rem;
     h1 {
         text-transform: uppercase;
         color: white;
     }
-}
-
-.row.posts-content {
-    margin-top: 2rem;
 }
 
 a.button.hollow {
@@ -23,12 +20,12 @@ a.button.hollow {
 }
 
 .posts-left {
-
     .more-posts {
       text-align: center;
       #load-more {
         display: inline-block;
-        margin: 3rem auto 5rem auto;
+        margin-bottom: 4rem;
+        padding-top: 1rem;
       }
       #load-more:hover {
         color: $light-green;
@@ -39,7 +36,6 @@ a.button.hollow {
 }
 
 .posts-right {
-    margin-top: 1rem;
     a.button.hollow:hover {
         color: $white;
         background: $orange;
@@ -48,6 +44,7 @@ a.button.hollow {
     }
 
     #search-post {
+        margin-bottom: 2rem;
         ::-webkit-input-placeholder {
             text-transform: uppercase;
             color: $dark-green;
@@ -81,15 +78,15 @@ a.button.hollow {
         h3 {
             font-weight: bold;
             text-transform: uppercase;
-            margin: 2rem 0px .75rem 0px;
+            margin-bottom: .75rem;
         }
     }
 }
 
 article.blog.teaser {
-    margin: 1rem 0px 5rem 0px;
+    margin-bottom: 5rem;
 
     .content {
-        margin-top: 1.5rem;
+        padding-top: 1.5rem;
     }
 }
