@@ -20,10 +20,11 @@ add_action('wp_enqueue_scripts', function() {
         'fancybox-css'
     ] );
 
+    wp_register_script( 'sharethis', 'http://w.sharethis.com/button/buttons.js' );
     wp_register_script( 'slick', get_template_directory_uri() . '/src/slick/slick/slick.js', ['jquery'] );
     wp_register_script( 'fancybox', get_template_directory_uri() . '/src/fancybox/source/jquery.fancybox.pack.js', ['jquery'] );
     wp_register_script( 'fancybox-media', get_template_directory_uri() . '/src/fancybox/source/helpers/jquery.fancybox-media.js', ['jquery']);
-    wp_register_script( 'app_script', get_template_directory_uri() . '/web/scripts-min/app.min.js', ['slick', 'fancybox', 'fancybox-media'] );
+    wp_register_script( 'app_script', get_template_directory_uri() . '/web/scripts-min/app.min.js', ['sharethis', 'slick', 'fancybox', 'fancybox-media'] );
 
     wp_enqueue_style( 'app' );
     wp_enqueue_script( 'slick' );
@@ -59,6 +60,7 @@ add_action('init', function() {
     ]);
 
     add_image_size('slider', 500, 332, true);
+    add_image_size('case_teasers', 680, 0, false);
 
     if(function_exists('acf_add_options_page')) {
         acf_add_options_page([
@@ -67,4 +69,8 @@ add_action('init', function() {
             'icon_url' => 'dashicons-sayenko',
         ]);
     }
+});
+
+add_filter('get_the_excerpt', function ($text) {
+    return rtrim($text, '[&hellip;]');
 });

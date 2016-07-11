@@ -1,12 +1,14 @@
 <section class="locations">
     <div class="tabs-row">
-        <dl class="tabs" data-tabs id="location-tabs">
-            {% for location in SP.ACF.get_field('locations', 'option') %}
-                <dd class="tabs-title {% if loop.first %}is-active{% endif %}">
-                    <a href="#location-panel-{{ loop.index }}" aria-selected="true">{{ location.name }}</a>
-                </dd>
-            {% endfor %}
-        </dl>
+        <div class="row column">
+            <dl class="tabs" data-tabs id="location-tabs">
+                {% for location in SP.ACF.get_field('locations', 'option') %}
+                    <dd class="tabs-title {% if loop.first %}is-active{% endif %}">
+                        <a href="#location-panel-{{ loop.index }}" aria-selected="true">{{ location.name }}</a>
+                    </dd>
+                {% endfor %}
+            </dl>
+        </div>
     </div>
     <div class="tabs-content" data-tabs-content="location-tabs">
         {% for location in SP.ACF.get_field('locations', 'option') %}

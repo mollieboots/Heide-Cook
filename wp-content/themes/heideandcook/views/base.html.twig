@@ -17,6 +17,11 @@
     {% include "layout/quote-lightbox.html.twig" %}
 {% endblock %}
 {% block body %}
+
+    {% if start_loop is not defined or start_loop %}
+        {{ SP.WordPress.thePost() }}
+    {% endif %}
+
     {% block header %}
         {% include "layout/header.html.twig" %}
     {% endblock %}

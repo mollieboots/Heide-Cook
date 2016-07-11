@@ -68,7 +68,7 @@ elseif(is_post_type_archive('case_studies') || get_post_field('post_name', get_p
     wp_reset_postdata();
     setup_postdata($post);
 }
-elseif(is_home()) {
+elseif(is_home() || is_archive() || is_search()) {
     $template = 'pages/post.html.twig';
     $teasers = [];
     while(have_posts()) {

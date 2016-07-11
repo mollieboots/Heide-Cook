@@ -5,7 +5,7 @@
     </div>
     <div class="row why-choose-us-content">
         <div class="large-6 columns">
-            <ul class="accordion" data-allow-all-closed="true" data-accordion>
+            <ul class="accordion" data-allow-all-closed="true" data-multi-expand="true" data-allow-all-closed="true" data-accordion>
                 {% for item in SP.ACF.get_sub_field('accordion') %}
                     <li class="accordion-item" data-accordion-item>
                         <a href="#" class="accordion-title">{{ item.title }}</a>
@@ -18,13 +18,14 @@
         </div>
         <div class="large-6 columns">
             <div class="quote-container">
-                <p class="italic">
-                    Franzen irony distillery,  keytar dreamcatcher literally gochujang tote bag ramps hammock shabby
-                    chic chillwave bespoke deep v. Slow-carb vinyl tilde mixtape freegan intelligentsia hammock hella hashtag.
-               </p>
-                <p class="montserrat green-paragraph">- {{ SP.ACF.get_sub_field('testimony_author') }}</p>
-                <img src="{{ SP.ACF.get_sub_field('image').url }}" alt="">
+                <blockquote>
+                    {{ SP.ACF.get_sub_field('testimony') }}
+               </blockquote>
+                <cite>{{ SP.ACF.get_sub_field('testimony_author') }}</cite>
             </div>
        </div>
+    </div>
+    <div class="testimony-author row column">
+        <img src="{{ SP.ACF.get_sub_field('image').url }}">
     </div>
 </section>

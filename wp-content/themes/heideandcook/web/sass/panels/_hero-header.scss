@@ -7,17 +7,22 @@
   position: relative;
   h1 {
     color: $white;
+    font-size: rem-calc(48px);
     line-height:1;
     text-transform: uppercase;
   }
   h3, h4 {
     color: $light-green;
+    font-size: rem-calc(32px);
     line-height:1;
   }
   .hollow.button {
     color: $white;
     border-color: $white;
     text-transform: uppercase;
+    font-size: rem-calc(14px);
+    padding: rem-calc(12px) rem-calc(24px);
+    margin-bottom: rem-calc(20px);
     &:hover {
       color: $light-green;
       border-color: $light-green;
@@ -25,7 +30,7 @@
   }
   .date {
     color: $medium-gray;
-    font-size: rem-calc(14px);
+    font-size: rem-calc(18px);
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -55,7 +60,11 @@
       margin: 0px .2rem;
 
       i {
-          margin-top: .5rem;
+        margin-top: .5rem;
+        &::before {
+          position: relative;
+          top: -2px;
+        }
       }
     }
 

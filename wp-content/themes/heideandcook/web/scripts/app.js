@@ -1,3 +1,6 @@
+var switchTo5x=true;
+stLight.options({publisher: "31abfba6-0978-4139-8479-d6e96f61d25f", doNotHash: true, doNotCopy: true, hashAddressBar: false})
+
 jQuery(document).ready(function(){
   jQuery(document).foundation();
 
@@ -30,15 +33,13 @@ jQuery(document).ready(function(){
         title: {
             type: 'outside',
             position: 'top',
-        },
-        media: {}
+        }
     },
     tpl: {
       closeBtn : '<a title="Close" class="fancybox-item fancybox-close custom-close" href="javascript:;"></a>',
     },
-    "scrolling" : "no",
-    "minWidth" : "610px",
   });
+
   jQuery(".fancybox").fancybox({
     helpers: {
         title: {

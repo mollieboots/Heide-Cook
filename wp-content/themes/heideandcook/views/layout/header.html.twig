@@ -4,7 +4,7 @@
             <div class="lightbox">
                 <h1>{{ SP.WordPress.title() }}</h1>
                 <h3>{{ SP.ACF.get_field('secondary_title') }}</h3>
-                <a class="fancybox-media" href="{{ SP.ACF.get_field('video') }}" title="{{ SP.ACF.get_field('video_title') }}" allowfullscreen></a>
+                <a class="fancybox-media fancybox.iframe" href="{{ SP.ACF.get_field('video') }}" title="{{ SP.ACF.get_field('video_title') }}" allowfullscreen></a>
             </div>
         {% elseif SP.ACF.get_field('header_style') == "standard" %}
             {% if SP.WordPress.getType() == 'post' or SP.WordPress.isHome()%}
@@ -39,7 +39,7 @@
     <div class="hero-author">
         <div class="row column">
             {{ SP.WordPress.getAvatar(126) }}
-            <p class="author">{{ SP.WordPress.getAuthor() }}</p>
+            <p class="author">BY {{ SP.WordPress.getAuthor() }}</p>
         </div>
     </div>
 {% endif %}
