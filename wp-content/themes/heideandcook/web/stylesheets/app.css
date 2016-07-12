@@ -7842,6 +7842,10 @@ form > .gform_footer > .gform_button.button:hover {
   font-weight: bold; }
 
 /* line 99, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/_fancybox.scss */
+.fancybox-overlay {
+  background: none; }
+
+/* line 103, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/_fancybox.scss */
 .fancybox-skin {
   border-radius: 0; }
 
