@@ -83,11 +83,11 @@
     }
     img {
         display: block;
-        margin: 0 auto rem-calc(12px) auto;
+        margin: 0 auto rem-calc(8px) auto;
         @include breakpoint(medium) {
             display: inline-block;
             max-height: 4rem;
-            margin: rem-calc(12px);
+            margin: rem-calc(8px);
             &:first-of-type {
                 margin-left: 0;
             }
