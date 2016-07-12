@@ -1,0 +1,14 @@
+<style type="text/css">
+    h1 a {
+    {% if SP.ACF.get_field('login_logo', 'option') %}
+        background-image: url('{{ SP.ACF.get_field('login_logo', 'option').url }}') !important;
+    {% elseif SP.ACF.get_field('menu_logo', 'option') %}
+        background-image: url('{{ SP.ACF.get_field('menu_logo', 'option').url }}') !important;
+    {% else %}
+        background-image: url('{{ SP.WordPress.templateURI }}/src/web/images/logo.png') !important;
+    {% endif %}
+        background-size: contain !important;
+        width: 320px !important;
+        height: 120px !important;
+    }
+</style>
