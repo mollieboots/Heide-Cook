@@ -8524,8 +8524,9 @@ form > .gform_footer > .gform_button.button:hover {
     /* line 7, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_horizontal-menu.scss */
     .horizontal-menu .menu a {
       color: #006940;
-      padding: 1rem 1.5rem; }
-      /* line 10, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_horizontal-menu.scss */
+      padding: 1rem 1.5rem;
+      font-weight: bold; }
+      /* line 11, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_horizontal-menu.scss */
       .horizontal-menu .menu a:hover, .horizontal-menu .menu a:active, .horizontal-menu .menu a.active {
         color: #62a745; }
 

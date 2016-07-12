@@ -7,6 +7,7 @@
     a {
       color: $dark-green;
       padding: 1rem 1.5rem;
+      font-weight: bold;
       &:hover, &:active, &.active {
         color: $light-green;
       }
