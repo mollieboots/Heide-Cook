@@ -1,1 +1,27 @@
-{# single post #}
+{% extends 'base.html.twig' %}
+{% block content %}
+    <div class="single-post">
+        <div class="row">
+            <div class="large-7 columns large-centered">
+                <div class="large-content-container">
+                    <div class="large-letters">
+                        {{ SP.ACF.get_field('large_letters') }}
+                    </div>
+                    <div class="large-content">
+                        {{ SP.ACF.get_field('large_content') }}
+                    </div>
+                </div>
+                <div class="regular-content">
+                    {{ SP.WordPress.content() }}
+                </div>
+                <div class="share">
+                    <span class='st_email_large' displayText='Email'></span>
+                    <span class='st_facebook_large' displayText='Facebook'></span>
+                    <span class='st_linkedin_large' displayText='LinkedIn'></span>
+                    <span class='st_twitter_large' displayText='Tweet'></span>
+                    <span class='st_googleplus_large' displayText='Google +'></span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

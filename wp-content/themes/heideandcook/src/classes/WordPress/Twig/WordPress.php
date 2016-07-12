@@ -42,6 +42,11 @@ class WordPress
         return $content;
     }
 
+    public function thePost()
+    {
+        the_post();
+    }
+
     public function excerpt($post = null)
     {
         return get_the_excerpt($post);
@@ -150,6 +155,11 @@ class WordPress
         ob_start();
         do_shortcode($content, $ignore);
         return ob_get_clean();
+    }
+
+    public function searchForm()
+    {
+        return get_search_form(false);
     }
 
     public function getForm($id_or_title, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex = 1)

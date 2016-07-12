@@ -1,0 +1,26 @@
+.content-services {
+  text-align: center;
+  padding-bottom: rem-calc(100px);
+  margin-top: 4rem;
+  h1 {
+    margin-bottom: rem-calc(12px);
+  }
+  a {
+    font-size: rem-calc(18px);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    max-width: rem-calc(650px);
+    margin: 0 auto rem-calc(70px);
+  }
+  .service-icon {
+    height: rem-calc(100px);
+    margin-bottom: 1.5rem;;
+  }
+  h6 {
+    text-transform: uppercase;
+    font-size: rem-calc(18px);
+  }
+}

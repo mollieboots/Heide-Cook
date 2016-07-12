@@ -1,9 +1,10 @@
 .recent-work {
   text-align: center;
   overflow: hidden;
+  padding-bottom: rem-calc(6px);
 
   .text-centered {
-    padding-top: rem-calc(40px);
+    padding-top: rem-calc(60px);
     padding-bottom: rem-calc(40px);
   }
 
@@ -12,8 +13,8 @@
   }
   .slick-prev, .slick-next {
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 2.375rem;
+    width: rem-calc(38px);
+    height: rem-calc(65px);
     @include breakpoint(medium) {
       top: -4.5rem;
     }
@@ -22,15 +23,15 @@
     left: rem-calc($global-padding);
     background-image: url("../images/left-slider-arrow.png");
     z-index: 1;
-    @include breakpoint(medium) {
-      left: rem-calc(250px);
+    @include breakpoint(large) {
+      left: rem-calc(340px);
     }
   }
   .slick-next {
     right: rem-calc($global-padding);
     background-image: url("../images/right-slider-arrow.png");
-    @include breakpoint(medium) {
-      right: rem-calc(250px);
+    @include breakpoint(large) {
+      right: rem-calc(340px);
     }
   }
   .slick-next:hover, .slick-prev:hover {

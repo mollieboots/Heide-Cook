@@ -22,9 +22,7 @@
       width: 2.5rem;
       height: 2.5rem;;
       border-radius: 50%;
-      text-align: center;
       line-height: rem-calc(28px);
-      vertical-align: middle;
       padding: rem-calc(5px);
     }
   }
@@ -33,5 +31,19 @@
     color: $dark-green;
     font-size: .75rem;
     margin-top: 1rem;
+  }
+
+  h3.gf_progressbar_title {
+    display: inline-block !important;
+    font-size: 0px !important;
+
+    span {
+      color: $dark-green;
+      font-size: .9rem;
+      font-weight: bold;
+      position: absolute;
+      right: 0;
+      bottom: -1.1rem;
+    }
   }
 }

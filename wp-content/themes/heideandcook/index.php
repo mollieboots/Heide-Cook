@@ -68,7 +68,7 @@ elseif(is_post_type_archive('case_studies') || get_post_field('post_name', get_p
     wp_reset_postdata();
     setup_postdata($post);
 }
-elseif(is_home()) {
+elseif(is_home() || is_archive() || is_search()) {
     $template = 'pages/post.html.twig';
     $teasers = [];
     while(have_posts()) {
@@ -81,6 +81,12 @@ elseif(is_home()) {
 }
 elseif(get_post_type() == 'case_studies') {
     $template = 'pages/single-case-studies.html.twig';
+}
+elseif (is_page()) {
+    $template = 'base.html.twig';
+}
+elseif(is_single()){
+    $template = 'pages/single-post.html.twig';
 }
 else {
     $template = 'base.html.twig';
