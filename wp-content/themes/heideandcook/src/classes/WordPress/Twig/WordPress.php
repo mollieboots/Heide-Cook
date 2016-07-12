@@ -18,7 +18,7 @@ class WordPress
 
     public function title($post = 0, $before = '', $after = '')
     {
-        if(!$post && !in_the_loop())
+        if(!$post && !in_the_loop() && !is_front_page())
         {
             return wp_title('', false);
         }
