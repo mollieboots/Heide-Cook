@@ -40,6 +40,10 @@ jQuery(document).ready(function(){
         title: {
             type: 'outside',
             position: 'top',
+        },
+        overlay: {
+            opacity: 0.2,
+            css: {'background-color': 'rgba(0, 105, 64, 0.5)'}
         }
     },
     tpl: {
@@ -52,6 +56,10 @@ jQuery(document).ready(function(){
         title: {
             type: 'outside',
             position: 'top',
+        },
+        overlay: {
+            opacity: 0.2,
+            css: {'background-color': 'rgba(0, 105, 64, 0.5)'}
         }
     },
     tpl: {
