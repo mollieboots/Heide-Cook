@@ -12,12 +12,17 @@
     {{ SP.WordPress.thePost() }}
     <div class="row posts-content">
         <div class="large-8 columns posts-left">
+            {% if not teasers|length %}
+                <h2>No results Found</h2>
+            {% endif %}
             {% for teaser in teasers %}
                 {{ teaser }}
             {% endfor %}
-            <div class="more-posts">
-                <a href="" id="load-more" class="dark-green hollow button">Load More</a>
-            </div>
+            {% if teasers|length == 10 %}
+                <div class="more-posts">
+                    <a href="" id="load-more" class="dark-green hollow button">Load More</a>
+                </div>
+            {% endif %}
         </div>
         <div class="large-4 columns posts-right">
             <section>
