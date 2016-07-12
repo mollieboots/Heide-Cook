@@ -5,7 +5,11 @@
     <div class="row column">
         {% if SP.ACF.get_field('header_style') == "video" %}
             <div class="lightbox">
-                <h1>{{ SP.WordPress.title() }}</h1>
+                {% if SP.ACF.get_field('title') %}
+                    <h1>{{ SP.ACF.get_field('title') }}</h1>
+                {% else %}
+                    <h1>{{ SP.WordPress.title() }}</h1>
+                {% endif %}
                 <h3>{{ SP.ACF.get_field('secondary_title') }}</h3>
                 <a class="fancybox-media fancybox.iframe" href="{{ SP.ACF.get_field('video') }}" title="{{ SP.ACF.get_field('video_title') }}" allowfullscreen></a>
             </div>
@@ -23,7 +27,11 @@
                     {% endfor %}
                 </div>
             {% endif %}
-            <h1>{{ SP.WordPress.title() }}</h1>
+            {% if SP.ACF.get_field('title') %}
+                <h1>{{ SP.ACF.get_field('title') }}</h1>
+            {% else %}
+                <h1>{{ SP.WordPress.title() }}</h1>
+            {% endif %}
             <h4>{{ SP.ACF.get_field('secondary_title') }}</h4>
             {% if SP.WordPress.getType() == 'post' %}
                 <p class="date">April 17, 2016</p>
