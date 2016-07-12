@@ -7842,6 +7842,10 @@ form > .gform_footer > .gform_button.button:hover {
   font-weight: bold; }
 
 /* line 99, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/_fancybox.scss */
+.fancybox-overlay {
+  background: none; }
+
+/* line 103, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/_fancybox.scss */
 .fancybox-skin {
   border-radius: 0; }
 
@@ -8037,7 +8041,7 @@ form > .gform_footer > .gform_button.button:hover {
   top: -1.75rem; }
   /* line 121, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #main-menu .bottom .large-logo img {
-    margin-top: -4px;
+    margin-top: -2px;
     height: 5.3125rem; }
 
 /* line 127, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
