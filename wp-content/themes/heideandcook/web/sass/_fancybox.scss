@@ -4,43 +4,57 @@
     background-size:contain;
     height: rem-calc(30px);
     width: rem-calc(30px);
-    top: 1.45rem;
-    right: .75rem;
+    top: rem-calc(25px);
+    right: rem-calc(25px);
 }
-
 .custom-close:hover {
     background-image: url("../images/close-icon-hover.png");
     transition: .25s;
 }
-
-.fancybox-wrap.fancybox-mobile.fancybox-type-inline.fancybox-opened {
+.fancybox-wrap.fancybox-type-inline.fancybox-opened {
     border-top: rem-calc(10px) solid $dark-green;
-    border-radius: 0px;
-    width: rem-calc(700px) !important;
+    border-radius: 0;
+    font-size: rem-calc(15px);
+    text-align: center;
 
-    .fancybox-inner {
-        width: auto !important;
-    }
-
-    .gform_heading {
-        text-align: center;
-    }
-
-    h3.gform_title {
+    h1 {
         text-transform: uppercase;
         color: $dark-green;
         font-size: 2.5rem;
     }
-
+    h2, h3, h4, h5, h6 {
+        color: $dark-green;
+    }
+    .content {
+        padding-top: rem-calc(40px);
+    }
+    .fancybox-inner {
+        width: auto !important;
+        height: auto !important;
+    }
+    .gform_wrapper {
+        margin-top: rem-calc(50px);
+    }
+    h3.gform_title {
+        display: none;
+    }
     label.gfield_label {
         color: $dark-gray;
     }
-
+    .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label {
+        display: none;
+    }
+    .gform_wrapper label.gfield_label {
+        font-size: rem-calc(12px);
+    }
     div.gform_wrapper > [type='text'], select, input:not(.button), textarea {
         box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
         border-radius: 0px !important;
         padding: 3px 0 2px 6px !important;
         color: $medium-gray !important;
+    }
+    .gform_wrapper ul.gform_fields li.gfield {
+        margin: 0;
     }
 }
 
@@ -49,26 +63,25 @@ form > .gform_footer > .gform_button.button {
     text-transform: uppercase;
     border-radius: 3px;
 }
-
 form > .gform_footer > .gform_button.button:hover {
     background: scale-color($dark-green, $lightness: -15%);
 }
 
 .fancybox-type-iframe {
     .fancybox-skin {
-        padding: 0px !important;
-        border-radius: 0px;
+        padding: 0 !important;
+        border-radius: 0;
     }
 
     .fancybox-inner {
         overflow: hidden !important;
 
-        margin: 0px;
+        margin: 0;
     }
 
     .custom-close {
         top: -3rem;
-        right: 0px;
+        right: 0;
     }
 
     .fancybox-title.fancybox-title-outside-wrap {
@@ -84,5 +97,5 @@ form > .gform_footer > .gform_button.button:hover {
 }
 
 .fancybox-skin {
-    border-radius: 0px;
+    border-radius: 0;
 }
