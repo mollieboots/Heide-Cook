@@ -69,4 +69,10 @@ jQuery(document).ready(function(){
     "maxWidth" : "600px",
     "fitToView": false
   });
+
+    jQuery(".contact-scroll").click(function() {
+        jQuery('html, body').animate({
+            scrollTop: jQuery("#contact-form").offset().top
+        }, 2000);
+    });
 });
