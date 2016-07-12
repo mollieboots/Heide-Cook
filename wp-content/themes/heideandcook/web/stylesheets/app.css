@@ -8037,47 +8037,48 @@ form > .gform_footer > .gform_button.button:hover {
   top: -1.75rem; }
   /* line 121, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #main-menu .bottom .large-logo img {
-    margin-top: -10px; }
+    margin-top: -4px;
+    height: 5.3125rem; }
 
-/* line 126, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+/* line 127, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
 #main-menu .bottom .services a::after {
   content: "\f105";
   font-family: "FontAwesome";
   padding-left: 1rem; }
 
-/* line 131, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+/* line 132, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
 #main-menu .bottom .services.active a::after {
   content: "\f107"; }
 
-/* line 134, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+/* line 135, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
 #main-menu .bottom .services a {
   padding-right: 1rem; }
 
-/* line 138, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+/* line 139, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
 #main-menu .bottom li {
   text-transform: uppercase;
   font-size: 1rem; }
-  /* line 141, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+  /* line 142, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #main-menu .bottom li:last-of-type a {
     padding-right: 0; }
-  /* line 144, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+  /* line 145, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #main-menu .bottom li:first-of-type a {
     padding-left: 0; }
-  /* line 147, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+  /* line 148, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #main-menu .bottom li.active a, #main-menu .bottom li a {
     background-color: transparent;
     padding: 1.4rem 1.875rem;
     font-weight: bold;
     color: #636466; }
-    /* line 152, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+    /* line 153, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
     #main-menu .bottom li.active a:hover, #main-menu .bottom li a:hover {
       color: #006940; }
 
-/* line 160, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+/* line 161, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
 #mega-menu {
   display: none;
   position: relative; }
-  /* line 163, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+  /* line 164, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #mega-menu .row {
     position: absolute;
     left: 50%;
@@ -8087,14 +8088,14 @@ form > .gform_footer > .gform_button.button:hover {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 2.5rem 1.875rem 5rem;
     border-bottom: 0.5625rem solid #62a745; }
-  /* line 171, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+  /* line 172, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #mega-menu .icon {
     height: 80px;
     margin-bottom: 1rem; }
-    /* line 174, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+    /* line 175, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
     #mega-menu .icon img {
       height: 100%; }
-  /* line 179, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+  /* line 180, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #mega-menu p {
     text-transform: uppercase;
     padding: 0;
@@ -8103,15 +8104,15 @@ form > .gform_footer > .gform_button.button:hover {
     font-weight: bold;
     overflow: visible;
     white-space: nowrap; }
-  /* line 189, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+  /* line 190, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
   #mega-menu .menu a {
     padding: .5rem 0; }
   @media screen and (max-width: 43.6875em) {
-    /* line 160, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+    /* line 161, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
     #mega-menu {
       display: none !important; } }
   @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
-    /* line 160, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
+    /* line 161, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/layout/_menu.scss */
     #mega-menu {
       display: none !important; } }
 
