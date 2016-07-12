@@ -1,13 +1,15 @@
-.blog {
+.blog, .archive, .search {
     background-color: $light-gray;
 }
 
 .header-bar {
     background-image: url("../images/blog-background.png");
     margin-bottom: 3rem;
+    padding: rem-calc(15px) 0;
     h1 {
         text-transform: uppercase;
         color: white;
+        margin: 0;
     }
 }
 
@@ -63,14 +65,28 @@ a.button.hollow {
             font-size: .9rem;
             font-weight: bold;
         }
-        input:-moz-placeholder { text-transform: uppercase; };
-        div > input.input-group-field {
+        input:-moz-placeholder {
+            text-transform: uppercase;
+            color: $dark-green;
+            font-size: .9rem;
+            font-weight: bold;
+        };
+        .input-group {
+            position: relative;
+        }
+        .input-group-button {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+        input.input-group-field {
+            height: auto;
             border: 3px solid $medium-gray;
             border-radius: 3px;
-
+            padding: rem-calc(16px);
         }
-        div > div > button > i {
-            margin-left: rem-calc(-45px);
+        button > i {
+            //margin-left: rem-calc(-45px);
             color: $medium-gray;
         }
     }

@@ -77,9 +77,23 @@
 
 .our-partners {
     margin-bottom: 3rem;
-
+    text-align: center;
+    @include breakpoint(medium) {
+        text-align: left;
+    }
     img {
-        max-height: 4rem;
-        display: inline-block;
+        display: block;
+        margin: 0 auto rem-calc(12px) auto;
+        @include breakpoint(medium) {
+            display: inline-block;
+            max-height: 4rem;
+            margin: rem-calc(12px);
+            &:first-of-type {
+                margin-left: 0;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
     }
 }
