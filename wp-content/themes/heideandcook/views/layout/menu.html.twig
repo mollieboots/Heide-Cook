@@ -77,7 +77,9 @@
                         <ul class="vertical menu">
                             <li><p>{{ menu.title }}</p></li>
                             {% for link in menu.links %}
-                                <li><a href="{{ SP.WordPress.URL(link.page.ID) }}">{{ link.page.post_title }}</a></li>
+                                {% if link.page %}
+                                    <li><a href="{{ SP.WordPress.URL(link.page.ID) }}">{{ link.page.post_title }}</a></li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
                     </div>
