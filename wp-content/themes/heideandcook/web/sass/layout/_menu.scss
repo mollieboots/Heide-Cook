@@ -103,7 +103,7 @@
     float: right;
   }
   .top {
-    background-color: #dddddd;
+    background-color: $light-gray;
 
     .login, .number, .button {
       padding: rem-calc(12px) rem-calc(30px);
