@@ -39,10 +39,11 @@ add_action('wp_enqueue_scripts', function() {
     ] );
 
     wp_register_script( 'sharethis', 'http://w.sharethis.com/button/buttons.js' );
+    wp_register_script( 'youtube', 'http://www.youtube.com/player_api' );
     wp_register_script( 'slick', get_template_directory_uri() . '/src/slick/slick/slick.js', ['jquery'] );
     wp_register_script( 'fancybox', get_template_directory_uri() . '/src/fancyBox/source/jquery.fancybox.pack.js', ['jquery'] );
     wp_register_script( 'fancybox-media', get_template_directory_uri() . '/src/fancyBox/source/helpers/jquery.fancybox-media.js', ['jquery']);
-    wp_register_script( 'app_script', get_template_directory_uri() . '/web/scripts-min/app.min.js', ['sharethis', 'slick', 'fancybox', 'fancybox-media'] );
+    wp_register_script( 'app_script', get_template_directory_uri() . '/web/scripts-min/app.min.js', ['sharethis', 'youtube', 'slick', 'fancybox', 'fancybox-media'] );
 
     wp_enqueue_style( 'app' );
     wp_enqueue_script( 'sharethis' );

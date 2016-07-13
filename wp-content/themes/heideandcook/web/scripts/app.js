@@ -35,6 +35,19 @@ jQuery(document).ready(function(){
      }]
   });
 
+    // Fires whenever a player has finished loading
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // Fires when the player's state changes.
+    function onPlayerStateChange(event) {
+        // Go to the next video after the current one is finished playing
+        if (event.data === 0) {
+            jQuery.fancybox.next();
+        }
+    }
+
   jQuery(".fancybox-media").fancybox({
     helpers: {
         title: {
@@ -49,6 +62,18 @@ jQuery(document).ready(function(){
     tpl: {
       closeBtn : '<a title="Close" class="fancybox-item fancybox-close custom-close" href="javascript:;"></a>',
     },
+      beforeShow  : function() {
+          // Find the iframe ID
+          var id = jQuery.fancybox.inner.find('iframe').attr('id');
+
+          // Create video player object and add event listeners
+          var player = new YT.Player(id, {
+              events: {
+                  'onReady': onPlayerReady,
+                  'onStateChange': onPlayerStateChange
+              }
+          });
+      }
   });
 
   jQuery(".fancybox").fancybox({
