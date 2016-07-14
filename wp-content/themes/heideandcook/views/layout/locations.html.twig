@@ -18,18 +18,20 @@
                         <div class="row">
                             <div class="medium-4 columns">
                                 <div class="phone">
-                                    {{ location.phone }}
+                                    <a href="tel:{{ location.phone|preg_replace('/[^0-9,]/', '') }}">{{ location.phone }}</a>
                                 </div>
                             </div>
                             <div class="medium-4 columns">
                                 <div class="email">
-                                    {{ location.email }}
+                                    <a href="mailto:{{ location.email }}">{{ location.email }}</a>
                                 </div>
                             </div>
                             <div class="medium-4 columns">
                                 <div class="address">
-                                    {{ location.address_line_1 }}<br />
-                                    {{ location.address_line_2 }}
+                                    <a href="{{ location.google_maps_link }}">
+                                        {{ location.address_line_1 }}<br />
+                                        {{ location.address_line_2 }}
+                                    </a>
                                 </div>
                             </div>
                         </div>

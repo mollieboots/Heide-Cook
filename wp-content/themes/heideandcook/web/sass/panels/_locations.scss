@@ -67,6 +67,8 @@
   }
   .address::before {
     content: "\f041";
+    position: relative;
+    top: rem-calc(-6px);
   }
 
   @include breakpoint(medium) {
