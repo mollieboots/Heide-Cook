@@ -24,6 +24,10 @@ $fa-font-path: "../libs/font-awesome/fonts";
 @import "panels/content-services";
 @import "panels/why-choose-us";
 
+select {
+  appearance: caret;
+}
+
 .no-js .top-bar {
   display: none;
 }
