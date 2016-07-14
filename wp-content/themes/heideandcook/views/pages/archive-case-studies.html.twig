@@ -1,6 +1,27 @@
+{% if SP.WordPress.getType() == 'case_studies' %}
+    {% set start_loop = false %}
+{% endif %}
 {% extends 'base.html.twig' %}
 {% block content %}
     {{ parent() }}
+    <div class="horizontal-menu">
+        <div class="row column">
+            <div class="menu-centered">
+                <ul class="vertical medium-horizontal menu">
+                    <li><a href="{{ SP.WordPress.siteURL() }}/case-studies" class="{% if not SP.WordPress.getTerms(SP.WordPress.ID(), 'case_studies_tags') %}active{% endif %}">All</a></li>
+                    {% for category in SP.WordPress.getCategories({taxonomy: 'case_studies_tags'}) %}
+                        <li>
+                            <a href="{{ SP.WordPress.categoryURL(category.term_id) }}" class="
+                                {% if SP.WordPress.getTerms(SP.WordPress.ID(), 'case_studies_tags') and SP.WordPress.getTerms(SP.WordPress.ID(), 'case_studies_tags')[0].term_id == category.term_id %}active{% endif %}"
+                            >
+                                {{ category.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
     {# for small and medium screens only #}
     <div class="case-studies">
         <div class="small-teasers row">
