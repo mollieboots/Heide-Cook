@@ -5,6 +5,20 @@
   padding: rem-calc(90px) 0;
   text-align: center;
   position: relative;
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 0;
+  }
+  .row {
+    position: relative;
+    z-index: 1;
+  }
   h1, h1 a {
     color: $white;
     font-size: rem-calc(48px);
