@@ -56,7 +56,7 @@ jQuery(document).ready(function(){
         },
         overlay: {
             opacity: 0.2,
-            css: {'background-color': 'rgba(0, 105, 64, 0.35)'}
+            css: {'background-color': 'rgba(255, 255, 255, 0.65)'}
         }
     },
     tpl: {
@@ -84,7 +84,7 @@ jQuery(document).ready(function(){
         },
         overlay: {
             opacity: 0.2,
-            css: {'background-color': 'rgba(0, 105, 64, 0.35)'}
+            css: {'background-color': 'rgba(255, 255, 255, 0.65)'}
         }
     },
     tpl: {
