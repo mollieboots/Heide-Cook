@@ -8619,6 +8619,10 @@ form > .gform_footer > .gform_button.button:hover {
   .case-studies .small-teasers {
     display: none; } }
 
+/* line 55, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_case-studies.scss */
+.archive.tax-case_studies_tags {
+  background-color: #fff; }
+
 /* line 1, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_case-study.scss */
 .case-study {
   padding: 3.75rem 0; }
