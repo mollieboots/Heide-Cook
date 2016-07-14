@@ -205,6 +205,11 @@
     padding: .5rem 0;
   }
 
+  select {
+    -moz-appearance: normal-input;
+    -webkit-appearance: menulist;
+  }
+
   @include breakpoint(small only) {
     display: none !important;
   }
