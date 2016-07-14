@@ -11,8 +11,11 @@
   .tabs {
     border: none;
     background-color: $light-gray;
-    display: inline-block;
+    display: block;
     text-align: center;
+    @include breakpoint(medium) {
+      display: inline-block;
+    }
   }
 
   .tabs-panel {
