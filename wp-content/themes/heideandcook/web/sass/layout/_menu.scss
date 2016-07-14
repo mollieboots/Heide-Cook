@@ -90,7 +90,7 @@
     width: 100%;
   }
   .menu-wrapper {
-    background-color:$white;
+    background-color: rgba(255,255,255,0.9);
   }
 
   .top, .bottom {
@@ -126,7 +126,6 @@
   .bottom {
     .row {
       position: relative;
-      background-color: rgba(255, 255, 255, 0.9);
     }
     .large-logo {
       position: absolute;

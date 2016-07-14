@@ -11,7 +11,7 @@
       text-decoration: underline;
     }
   }
-  p {
+  .row:first-of-type {
     max-width: rem-calc(650px);
     margin: 0 auto rem-calc(70px);
   }

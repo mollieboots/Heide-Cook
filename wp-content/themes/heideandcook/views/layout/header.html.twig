@@ -1,11 +1,15 @@
 <div
     class="hero-header {% if SP.ACF.get_field('header_style') == "video" %}video{% else %}standard{% endif %}"
-    style="background-image: url({{ SP.ACF.get_field('header_image').sizes.header }});"
+    {% if SP.ACF.get_field('header_image') %}style="background-image: url({{ SP.ACF.get_field('header_image').sizes.header }});"{% endif %}
 >
     <div class="row column">
         {% if SP.ACF.get_field('header_style') == "video" %}
             <div class="lightbox">
-                <h1>{{ SP.WordPress.title() }}</h1>
+                {% if SP.ACF.get_field('title') %}
+                    <h1>{{ SP.ACF.get_field('title') }}</h1>
+                {% else %}
+                    <h1>{{ SP.WordPress.title() }}</h1>
+                {% endif %}
                 <h3>{{ SP.ACF.get_field('secondary_title') }}</h3>
                 <a class="fancybox-media fancybox.iframe" href="{{ SP.ACF.get_field('video') }}" title="{{ SP.ACF.get_field('video_title') }}" allowfullscreen></a>
             </div>
@@ -16,19 +20,33 @@
                         <a href="{{ SP.WordPress.getCategoryURL(category.term_id) }}" class="hollow button">{{ category.name }}</a>
                     {% endfor %}
                 </div>
-            {% elseif SP.WordPress.getType() == 'case_studies' and not SP.WordPress.isPostTypeArchive('case_studies') %}
+            {% elseif SP.WordPress.getType() == 'case_studies' and not SP.WordPress.isPostTypeArchive('case_studies') and not SP.WordPress.isTax() %}
                 <div class="categories">
                     {% for category in  SP.WordPress.getTerms(SP.WordPress.ID(), 'case_studies_tags') %}
                         <a href="{{ SP.WordPress.getCategoryURL(category.term_id) }}" class="hollow button">{{ category.name }}</a>
                     {% endfor %}
                 </div>
             {% endif %}
-            <h1>{{ SP.WordPress.title() }}</h1>
-            <h4>{{ SP.ACF.get_field('secondary_title') }}</h4>
+            {% if SP.ACF.get_field('title') and not teaser|default(false) %}
+                <h1>{{ SP.ACF.get_field('title') }}</h1>
+            {% elseif SP.ACF.get_field('title') and teaser|default(false) %}
+                <h1><a href="{{ SP.WordPress.URL() }}">{{ SP.ACF.get_field('title') }}</a></h1>
+            {% elseif teaser|default(false) %}
+                <h1><a href="{{ SP.WordPress.URL() }}">{{ SP.WordPress.title() }}</a></h1>
+            {% else %}
+                <h1>{{ SP.WordPress.title() }}</h1>
+            {% endif %}
+            {% if not SP.WordPress.isTax() %}
+            {% if teaser|default(false) %}
+                <h4><a href="{{ SP.WordPress.URL() }}">{{ SP.ACF.get_field('secondary_title') }}</a></h4>
+                {% else %}
+                    <h4>{{ SP.ACF.get_field('secondary_title') }}</h4>
+                {% endif %}
+            {% endif %}
             {% if SP.WordPress.getType() == 'post' %}
                 <p class="date">April 17, 2016</p>
             {% endif %}
-            {% if (SP.WordPress.getType() == 'post' and not teaser|default(false)) or (SP.WordPress.getType() == 'case_studies' and not SP.WordPress.isPostTypeArchive('case_studies')) %}
+            {% if (SP.WordPress.getType() == 'post' and not teaser|default(false)) or (SP.WordPress.getType() == 'case_studies' and not SP.WordPress.isPostTypeArchive('case_studies') and not SP.WordPress.isTax()) %}
                 <div class="prev-next">
                     {{ SP.WordPress.getPreviousLink('%link', '<i class="fa fa-angle-left" aria-hidden="true"></i>') }}
                     {{ SP.WordPress.getNextLink('%link', '<i class="fa fa-angle-right" aria-hidden="true"></i>') }}

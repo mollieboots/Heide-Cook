@@ -35,6 +35,19 @@ jQuery(document).ready(function(){
      }]
   });
 
+    // Fires whenever a player has finished loading
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // Fires when the player's state changes.
+    function onPlayerStateChange(event) {
+        // Go to the next video after the current one is finished playing
+        if (event.data === 0) {
+            jQuery.fancybox.next();
+        }
+    }
+
   jQuery(".fancybox-media").fancybox({
     helpers: {
         title: {
@@ -43,12 +56,24 @@ jQuery(document).ready(function(){
         },
         overlay: {
             opacity: 0.2,
-            css: {'background-color': 'rgba(0, 105, 64, 0.35)'}
+            css: {'background-color': 'rgba(255, 255, 255, 0.65)'}
         }
     },
     tpl: {
       closeBtn : '<a title="Close" class="fancybox-item fancybox-close custom-close" href="javascript:;"></a>',
     },
+      beforeShow  : function() {
+          // Find the iframe ID
+          var id = jQuery.fancybox.inner.find('iframe').attr('id');
+
+          // Create video player object and add event listeners
+          var player = new YT.Player(id, {
+              events: {
+                  'onReady': onPlayerReady,
+                  'onStateChange': onPlayerStateChange
+              }
+          });
+      }
   });
 
   jQuery(".fancybox").fancybox({
@@ -59,7 +84,7 @@ jQuery(document).ready(function(){
         },
         overlay: {
             opacity: 0.2,
-            css: {'background-color': 'rgba(0, 105, 64, 0.35)'}
+            css: {'background-color': 'rgba(255, 255, 255, 0.65)'}
         }
     },
     tpl: {
@@ -69,4 +94,10 @@ jQuery(document).ready(function(){
     "maxWidth" : "600px",
     "fitToView": false
   });
+
+    jQuery(".contact-scroll").click(function() {
+        jQuery('html, body').animate({
+            scrollTop: jQuery("#contact-form").offset().top
+        }, 2000);
+    });
 });
