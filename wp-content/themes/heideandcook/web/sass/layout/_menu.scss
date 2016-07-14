@@ -68,6 +68,21 @@
 
 .admin-bar #main-menu .is-stuck {
   margin-top: 32px !important;
+  @media screen and (max-width:782px) {
+    margin-top: 46px !important;
+  }
+  @media screen and (max-width:600px) {
+    margin-top: 0 !important;
+  }
+}
+.admin-bar #main-menu {
+  margin-top: 32px !important;
+  @media screen and (max-width:782px) {
+    margin-top: 46px !important;
+  }
+  @media screen and (max-width:600px) {
+    margin-top: 0 !important;
+  }
 }
 #main-menu {
   .sticky {
@@ -75,7 +90,7 @@
     width: 100%;
   }
   .menu-wrapper {
-    background-color:$white;
+    background-color: rgba(255,255,255,0.9);
   }
 
   .top, .bottom {
@@ -118,7 +133,8 @@
       top: rem-calc(-28px);
 
       img {
-        margin-top: -10px;
+        margin-top: -2px;
+        height: rem-calc(85px);
       }
     }
     .services {
@@ -187,6 +203,11 @@
 
   .menu a {
     padding: .5rem 0;
+  }
+
+  select {
+    -moz-appearance: normal-input;
+    -webkit-appearance: menulist;
   }
 
   @include breakpoint(small only) {

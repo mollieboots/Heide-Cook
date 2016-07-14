@@ -1,7 +1,7 @@
 //locations tabs
 .locations {
   background-color: $light-gray;
-  color: $medium-gray;
+  color: $anchor-gray;
 
   .tabs-row {
     border-bottom: rem-calc(3px) solid $medium-gray;
@@ -12,6 +12,7 @@
     border: none;
     background-color: $light-gray;
     display: inline-block;
+    text-align: center;
   }
 
   .tabs-panel {
@@ -37,6 +38,7 @@
     background-color: $light-gray;
     border: none;
     padding: 2.25rem 0;
+    text-align: center;
   }
 
   .phone, .email, .address {
@@ -65,6 +67,8 @@
   }
   .address::before {
     content: "\f041";
+    position: relative;
+    top: rem-calc(-6px);
   }
 
   @include breakpoint(medium) {
@@ -74,7 +78,7 @@
       float: left;
       position: relative;
       a {
-        padding: 2.25rem 4.5rem;
+        padding: rem-calc(30px) rem-calc(40px);
       }
       &.is-active:after {
         content: "";

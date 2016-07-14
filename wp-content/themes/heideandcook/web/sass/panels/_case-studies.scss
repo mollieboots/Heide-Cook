@@ -1,5 +1,7 @@
 .case-studies {
-  padding: rem-calc(60px) 0;
+  @include breakpoint(medium) {
+    padding: rem-calc(60px) 0;
+  }
 
   a {
     &::after {
@@ -26,6 +28,11 @@
     transform: translateY(-50%);
     color: $white;
     z-index: 2;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    max-width: none;
   }
   .teaser {
     position: relative;

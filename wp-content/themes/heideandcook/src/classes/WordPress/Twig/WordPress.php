@@ -18,7 +18,11 @@ class WordPress
 
     public function title($post = 0, $before = '', $after = '')
     {
-        if(!$post && !in_the_loop())
+        if(!$post && is_archive()) {
+            return get_the_archive_title();
+        }
+
+        if(!$post && !in_the_loop() && !is_front_page())
         {
             return wp_title('', false);
         }
@@ -34,12 +38,22 @@ class WordPress
         return $title;
     }
 
+    public function archiveTitle()
+    {
+        return get_the_archive_title();
+    }
+
     public function content($more_link_text = null, $strip_teaser = false)
     {
         $content = get_the_content($more_link_text, $strip_teaser);
         $content = apply_filters( 'the_content', $content );
         $content = str_replace( ']]>', ']]&gt;', $content );
         return $content;
+    }
+
+    public function thePost()
+    {
+        the_post();
     }
 
     public function excerpt($post = null)
@@ -92,6 +106,11 @@ class WordPress
     public function isPostTypeArchive($post_types = '')
     {
         return is_post_type_archive($post_types);
+    }
+
+    public function isTax($taxonomy = '', $term = '')
+    {
+        return is_tax($taxonomy, $term);
     }
 
     public function getType($post = null)
@@ -152,8 +171,23 @@ class WordPress
         return ob_get_clean();
     }
 
+    public function searchForm()
+    {
+        return get_search_form(false);
+    }
+
     public function getForm($id_or_title, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex = 1)
     {
         return gravity_form($id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, false);
+    }
+
+    public function query($var, $default = '')
+    {
+        return get_query_var($var, $default);
+    }
+
+    public function postTypeArchiveURL($post_type)
+    {
+        return get_post_type_archive_link($post_type);
     }
 }

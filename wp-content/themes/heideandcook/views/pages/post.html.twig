@@ -1,24 +1,33 @@
 {# list of post #}
+{% set start_loop = false %}
 {% extends 'base.html.twig' %}
 {% block header %}
-    <div class="row column header-bar">
-        <h1>{{ SP.WordPress.Title() }}</h1>
+    <div class="header-bar">
+        <div class="row column">
+            <h1>{{ SP.WordPress.Title() }}</h1>
+        </div>
     </div>
 {% endblock %}
 {% block content %}
+    {{ SP.WordPress.thePost() }}
     <div class="row posts-content">
         <div class="large-8 columns posts-left">
+            {% if not teasers|length %}
+                <h2>No results Found</h2>
+            {% endif %}
             {% for teaser in teasers %}
                 {{ teaser }}
             {% endfor %}
-            <div class="more-posts">
-                <a href="" id="load-more" class="dark-green hollow button">Load More</a>
-            </div>
+            {% if teasers|length == 10 %}
+                <div class="more-posts">
+                    <a href="" id="load-more" class="dark-green hollow button">Load More</a>
+                </div>
+            {% endif %}
         </div>
         <div class="large-4 columns posts-right">
             <section>
                 <div id="search">
-                    <form role="search" method="get" id="search-post" action="{{ SP.WordPress.URL() }}">
+                    <form role="search" method="get" id="search-post" action="{{ SP.WordPress.siteURL() }}">
                         <div class="input-group">
                             <input class="input-group-field" type="search" placeholder="Search Blog" name="s">
                             <input type="hidden" name="post_type" value="post" />

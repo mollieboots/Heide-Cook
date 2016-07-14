@@ -1,0 +1,111 @@
+.custom-close {
+    background-image: url("../images/close-icon.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: rem-calc(30px);
+    width: rem-calc(30px);
+    top: rem-calc(25px);
+    right: rem-calc(25px);
+}
+.custom-close:hover {
+    background-image: url("../images/close-icon-hover.png");
+    transition: .25s;
+}
+.fancybox-wrap {
+    border-top: rem-calc(10px) solid $dark-green;
+    border-radius: 0;
+    font-size: rem-calc(15px);
+    text-align: center;
+
+    h1 {
+        text-transform: uppercase;
+        color: $dark-green;
+        font-size: 2.5rem;
+    }
+    h2, h3, h4, h5, h6 {
+        color: $dark-green;
+    }
+    .content {
+        padding-top: rem-calc(40px);
+    }
+    .fancybox-inner {
+        width: auto !important;
+        height: auto !important;
+    }
+    .gform_wrapper {
+        margin-top: rem-calc(50px);
+        label.gfield_label {
+            color: $dark-gray;
+            margin-bottom: rem-calc(5px);
+        }
+    }
+    h3.gform_title {
+        display: none;
+    }
+    .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label,
+    .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+        display: none;
+    }
+    .gform_wrapper label.gfield_label {
+        font-size: rem-calc(12px);
+    }
+    div.gform_wrapper > [type='text'], select, input:not(.button), textarea {
+        box-shadow: inset 0 2px 2px rgba(10, 10, 10, 0.1) !important;
+        border-radius: 0px !important;
+        padding: 3px 0 2px 6px !important;
+        color: $medium-gray !important;
+    }
+    .gform_wrapper ul.gform_fields li.gfield {
+        margin: 0;
+    }
+    @include breakpoint(small only) {
+        width: 100% !important;
+        left: 0 !important;
+    }
+}
+
+form > .gform_footer > .gform_button.button {
+    background: $dark-green;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+form > .gform_footer > .gform_button.button:hover {
+    background: scale-color($dark-green, $lightness: -15%);
+}
+
+.fancybox-type-iframe {
+    .fancybox-skin {
+        padding: 0 !important;
+        border-radius: 0;
+    }
+
+    .fancybox-inner {
+        overflow: hidden !important;
+
+        margin: 0;
+    }
+
+    .custom-close {
+        top: -3rem;
+        right: 0;
+    }
+
+    .fancybox-title.fancybox-title-outside-wrap {
+        font-family: 'Cabin', sans-serif;
+        font-size: 3rem;
+        height: 2.5rem;
+        text-transform: uppercase;
+        color: $dark-gray;
+        text-align: right;
+        margin-right: 3rem;
+        font-weight: bold;
+    }
+}
+
+.fancybox-overlay {
+    background: none;
+}
+
+.fancybox-skin {
+    border-radius: 0;
+}

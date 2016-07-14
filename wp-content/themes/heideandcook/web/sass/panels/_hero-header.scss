@@ -5,19 +5,41 @@
   padding: rem-calc(90px) 0;
   text-align: center;
   position: relative;
-  h1 {
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 0;
+  }
+  .row {
+    position: relative;
+    z-index: 1;
+  }
+  h1, h1 a {
     color: $white;
+    font-size: rem-calc(48px);
     line-height:1;
     text-transform: uppercase;
   }
-  h3, h4 {
+  h3, h4, h3 a, h4, a {
     color: $light-green;
+    font-size: rem-calc(32px);
     line-height:1;
+  }
+  h1 a:hover, h3 a:hover, h4 a:hover, a:hover {
+    color: $anchor-color-hover;
   }
   .hollow.button {
     color: $white;
     border-color: $white;
     text-transform: uppercase;
+    font-size: rem-calc(14px);
+    padding: rem-calc(12px) rem-calc(24px);
+    margin-bottom: rem-calc(20px);
     &:hover {
       color: $light-green;
       border-color: $light-green;
@@ -25,7 +47,7 @@
   }
   .date {
     color: $medium-gray;
-    font-size: rem-calc(14px);
+    font-size: rem-calc(18px);
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -53,6 +75,14 @@
       border-radius: 3px;
       color: $light-gray;
       margin: 0px .2rem;
+
+      i {
+        margin-top: .5rem;
+        &::before {
+          position: relative;
+          top: -2px;
+        }
+      }
     }
 
     a:hover {

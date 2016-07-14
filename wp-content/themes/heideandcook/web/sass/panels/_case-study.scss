@@ -3,7 +3,7 @@
   .details {
     margin-bottom: rem-calc(80px);
     h4 {
-      margin-bottom: 0;
+      margin-bottom: .5rem;
       line-height: 1;
     }
     div {
@@ -38,6 +38,7 @@
       cite {
         text-indent: 0;
         font-size: rem-calc(20px);
+        font-style: normal;
         color: $dark-green;
       }
     }
