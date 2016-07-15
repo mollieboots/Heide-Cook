@@ -8836,7 +8836,7 @@ form > .gform_footer > .gform_button.button:hover {
     .why-choose-us .accordion .accordion-title::before {
       content: url("../images/expand.png");
       left: -35px;
-      top: 0.875rem; }
+      top: 1rem; }
     /* line 58, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
     .why-choose-us .accordion .is-active .accordion-title::before {
       content: url("../images/expand-open.png"); }
@@ -8847,13 +8847,14 @@ form > .gform_footer > .gform_button.button:hover {
     font-weight: bold;
     text-transform: uppercase;
     margin-left: 1.875rem;
-    padding: .8rem .5rem;
+    padding: .8rem;
     border: none !important;
-    background-color: transparent; }
-    /* line 72, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
+    background-color: transparent;
+    line-height: 1.5rem; }
+    /* line 73, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
     .why-choose-us a.accordion-title:hover {
       background-color: transparent; }
-  /* line 77, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
+  /* line 78, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
   .why-choose-us .accordion-content {
     position: relative;
     background: none;
@@ -8861,10 +8862,10 @@ form > .gform_footer > .gform_button.button:hover {
     padding: 0px;
     padding-left: 1rem;
     border: none !important; }
-    /* line 85, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
+    /* line 86, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
     .why-choose-us .accordion-content p {
       margin: 0px 1.875rem 1.25rem 1.375rem; }
-  /* line 90, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
+  /* line 91, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
   .why-choose-us::before {
     top: 0;
     left: 50%;
@@ -8878,7 +8879,7 @@ form > .gform_footer > .gform_button.button:hover {
     border-top-color: #fff;
     border-width: 2.8125rem 2.5rem; }
   @media screen and (min-width: 43.75em) {
-    /* line 103, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
+    /* line 104, C:/Users/Mollie/Desktop/heideandcook/wp-content/themes/heideandcook/web/sass/panels/_why-choose-us.scss */
     .why-choose-us::after {
       left: 50%;
       bottom: 0px;

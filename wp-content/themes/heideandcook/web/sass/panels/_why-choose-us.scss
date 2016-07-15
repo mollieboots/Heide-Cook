@@ -53,7 +53,7 @@
     .accordion-title::before {
       content: url("../images/expand.png");
       left: -35px;
-      top: rem-calc(14px);
+      top: rem-calc(16px);
     }
     .is-active .accordion-title::before {
       content: url("../images/expand-open.png");
@@ -66,9 +66,10 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-left: rem-calc(30px);
-    padding: .8rem .5rem;
+    padding: .8rem;
     border: none !important;
     background-color: transparent;
+    line-height: 1.5rem;
     &:hover {
       background-color: transparent;
     }
